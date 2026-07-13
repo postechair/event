@@ -1,8 +1,7 @@
-import PageFoot from "@/components/PageFoot";
-
 export default function GuideTable() {
   return (
-    <section className="page" id="compare" data-screen-label="선택 가이드 · 비교표형">
+    <section className="sec alt" id="compare" data-screen-label="선택 가이드 · 비교표형">
+      <div className="wrap">
       <div className="eyebrow">나에게 맞는 행사 찾기</div>
       <h2 className="ptitle">한 표로 비교하는<br />3개의 AI 행사</h2>
       <p className="psub">투입 시간·숙련도·목표를 기준으로 세 행사를 내 상황에 맞게 비교해보세요.</p>
@@ -26,12 +25,13 @@ export default function GuideTable() {
           </tbody>
         </table>
       </div>
+      <div className="scrollhint">← 옆으로 밀어 3개 행사를 비교하세요</div>
       <div className="chiprow">
 
 
         <span className="chip">꾸준히 함께 성장 → ① Working Group</span><span className="chip">집중·몰입·체계적 → ② 고급교육</span><span className="chip">시간 제약없이 자유롭게 참여 → ③ 공모전</span>
       </div>
-      <PageFoot right={<>인사팀 · AIR센터 &nbsp;|&nbsp; 나에게 맞는 AI 행사 선택 가이드</>} />
+      </div>
     </section>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import PageFoot from "@/components/PageFoot";
 
 export default function GuideDiagnostic() {
   const [sel, setSel] = useState<(number | null)[]>([null, null, null]);
@@ -25,7 +24,8 @@ export default function GuideDiagnostic() {
     sel[q] === a ? "res hot" : "res";
 
   return (
-    <section className="page" id="guide" data-screen-label="선택 가이드 · 진단형">
+    <section className="sec" id="guide" data-screen-label="선택 가이드 · 진단형">
+      <div className="wrap"><div className="narrow">
       <div className="eyebrow">나에게 맞는 행사 찾기</div>
       <h2 className="ptitle">세 가지 질문으로 찾는<br />나의 AI 행사</h2>
       <p className="psub">순서대로 따라오세요. 답을 고르면 나에게 맞는 행사로 이어집니다. 여러 개가 해당돼도 좋습니다 — 하나만 골라도, 함께 참여해도 됩니다.</p>
@@ -59,7 +59,7 @@ export default function GuideDiagnostic() {
         <div className="lg"><div className="lgh"><span className="lgn">2</span>고급교육</div><div className="lgd">체계적으로 몰입하며 과제를 완수하고 수료·인증을 원하는 분</div></div>
         <div className="lg"><div className="lgh"><span className="lgn">3</span>공모전</div><div className="lgd">이미 AX 결과물이 있거나 자유롭게 도전하고 그 성과를 인정받고 싶은 분</div></div>
       </div>
-      <PageFoot right={<>인사팀 · AIR센터 &nbsp;|&nbsp; 나에게 맞는 AI 행사 선택 가이드</>} />
+      </div></div>
     </section>
   );
 }

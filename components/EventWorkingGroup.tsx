@@ -1,8 +1,7 @@
-import PageFoot from "@/components/PageFoot";
-
 export default function EventWorkingGroup() {
   return (
-    <section className="page" id="pg-wg" data-screen-label="① Working Group">
+    <section className="sec" id="pg-wg" data-screen-label="① Working Group">
+      <div className="wrap"><div className="narrow">
       <div className="eyebrow">행사 안내 ①</div>
       <div className="ev" style={{ marginTop: 14 }}>
         <div className="band"><span className="bb">지속형 · 실무 공동 구현</span><h2 className="bt">Working Group</h2><span className="bm">전 직원 · 하반기 소규모 운영</span></div>
@@ -27,7 +26,6 @@ export default function EventWorkingGroup() {
             <div className="infok">지원 &amp; 참여 안내</div>
             <ul>
               <li>참여 기간 중 <b>AI 라이선스(Claude Pro)</b>와 AIR센터의 밀착 멘토링을 지원합니다.</li>
-              <li>참여는 <b>자율</b>이며, 불참하셔도 불이익은 전혀 없습니다.</li>
               <li>별도 교육이 불필요할 만큼 AX가 일상화될 때까지 <b>지속 운영</b>할 계획입니다.</li>
             </ul>
           </div>
@@ -35,7 +33,7 @@ export default function EventWorkingGroup() {
           <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>꾸준히 시간을 내어 <b>내 업무를 AI로 실제 바꾸고 싶은 분</b>, 혼자보다 AIR센터와 밀착해 함께 배우며 지속적으로 성장하고 싶은 분.</p></div>
         </div>
       </div>
-      <PageFoot right={<>인사팀 · AIR센터 &nbsp;|&nbsp; 02</>} />
+      </div></div>
     </section>
   );
 }

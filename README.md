@@ -45,27 +45,31 @@ git push          # → GitHub Pages 가 main /docs 를 서빙
 
 루트 사이트(`postechair.github.io` 자체)로 옮길 때는 `BASE_PATH="" pnpm build`.
 
-## 시각 검증
+## 검증
 
-디자인 원본을 로컬 렌더링해 카드(.page) 7장을 reference 로 추출하고,
-구현 페이지의 동일 카드와 pixelmatch(임계 0.2, 일치율 97% 기준)로 비교한다.
+2026-07-13 웹 네이티브 리셸 이후 A4 pixelmatch 는 폐기하고 3종 검사로 대체했다.
+기준선은 `visual/baseline/index.html` (리셸 직전 빌드).
 
 ```bash
-node visual/gen-refs.mjs     # design/render → visual/ref/*.png (디자인 기준)
-pnpm build
-bash visual/check-all.sh     # out/ 서빙 → 카드별 비교 → visual/out/*.diff.png
+pnpm deploy:docs                # 빌드 + docs/ 동기화
+node visual/verify-links.mjs    # 외부 폼 4종 + mailto 존재 assert
+node visual/verify-content.mjs  # 구 텍스트 ⊆ 신 산출물 (승인된 예외 제외)
+# docs/ 서빙 후: 반응형 오버플로·앵커 가림·진단 인터랙션·모바일 CTA
+mkdir -p visual/serve && ln -s ../../docs visual/serve/event
+(cd visual/serve && python3 -m http.server 3105 &) && node visual/smoke.mjs 3105
 ```
 
 ## 구조
 
 ```
-app/            layout / page / globals.css(디자인 스타일 이식) / icon.png
-components/     Cover, GuideDiagnostic(클릭 인터랙티브), GuideTable,
+app/            layout / page / globals.css(DS 토큰 + 웹 네이티브 레이아웃) / icon.png
+components/     SiteNav(sticky 네비), Hero(히어로+빠른 바로가기 타일),
+                GuideDiagnostic(클릭 인터랙티브), GuideTable,
                 EventWorkingGroup, EventEducation, EventCompetition,
-                ApplySection, PageFoot
+                ApplySection, SiteFooter, MobileCta
 styles/         POSTECH AIR DS v1.0 토큰 CSS + Pretendard 폰트
 assets/         POSTECH 로고 (공식 원본)
-design/         디자인 SSoT 보관본 + reference 렌더 환경
-visual/         시각 검증 스크립트·reference·결과
+design/         디자인 SSoT 보관본 (A4 원본 — 콘텐츠의 출처)
+visual/         검증 스크립트(verify-links/verify-content/smoke) + baseline
 docs/           배포 산출물 (GitHub Pages 가 서빙 — 직접 수정 금지)
 ```
