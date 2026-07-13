@@ -1,0 +1,165 @@
+/* ============================================================
+   Wanted Design System (WDS) — Colors & Type
+   Semantic alias layer + typography scale.
+   Builds on fig-tokens.css (raw Figma Variables).
+   Base font: Pretendard JP · Brand font: Wanted Sans
+   ============================================================ */
+
+/* ---- Base font: Pretendard (self-hosted, uploaded by user) ----
+   Pretendard is the open parent of the design system's "Pretendard JP".
+   For Korean + Latin (this system's scope) they are visually identical.
+   Single variable file covers weights 100–900.
+   Brand font also maps to the self-hosted Pretendard (no separate brand-font
+   file is bundled for POSTECH AIR DS — avoids a missing/external brand font). */
+@font-face{
+  font-family:"Pretendard";
+  font-weight:100 900;
+  font-display:swap;
+  src:url("fonts/PretendardVariable.woff2") format("woff2-variations");
+}
+
+:root {
+  /* ---------- Font families ---------- */
+  --font-base: "Pretendard", -apple-system, BlinkMacSystemFont,
+    system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-brand: "Pretendard", -apple-system, BlinkMacSystemFont,
+    system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-mono: "SF Mono", "SFMono-Regular", ui-monospace, "JetBrains Mono",
+    "Menlo", monospace;
+
+  /* ============================================================
+     SEMANTIC COLOR ALIASES  (friendly names → WDS tokens)
+     All resolve through fig-tokens.css; flip with
+     [data-theme="dark"] / .dark on a parent.
+     ============================================================ */
+
+  /* Foreground / label */
+  --fg-strong: var(--label-strong-2);        /* near-black, max contrast */
+  --fg-normal: var(--label-normal);          /* default body text */
+  --fg-neutral: var(--label-neutral);        /* 88% — secondary */
+  --fg-alternative: var(--label-alternative);/* 61% — tertiary */
+  --fg-assistive: var(--label-assistive);    /* 28% — hints/placeholder */
+  --fg-disable: var(--label-disable);        /* 16% — disabled */
+
+  /* Background / surface */
+  --bg: var(--background-normal-normal);          /* page background */
+  --bg-alternative: var(--background-normal-alternative);
+  --bg-elevated: var(--background-elevated-normal);   /* cards/sheets */
+  --bg-elevated-alt: var(--background-elevated-alternative);
+
+  /* Fill (neutral translucent surfaces) */
+  --fill-subtle: var(--fill-alternative);   /* 5%  */
+  --fill: var(--fill-normal-3);             /* 8%  */
+  --fill-strong: var(--fill-strong-2);      /* 16% */
+
+  /* Lines / borders */
+  --line-subtle: var(--line-normal-alternative-2); /* 8%  hairline */
+  --line: var(--line-normal-normal-2);             /* 22% default border */
+  --line-strong: var(--line-normal-strong);        /* 52% */
+
+  /* Brand primary — POSTECH Red (retheme of the foundation)
+     Overrides fig-tokens' blue primary. POSTECH Red = Pantone 215C #A61955. */
+  --primary: #A61955;          /* POSTECH Red */
+  --primary-strong: #991550;   /* hover  */
+  --primary-heavy: #7E1444;    /* pressed */
+  --primary-bg: #F6E4EC;       /* tonal surface (red-95) */
+  --primary-bg-active: #EFC9D9;/* tonal pressed (red-90) */
+  --primary-ring: #F6E4EC;     /* focus ring */
+
+  /* Status tonal backgrounds */
+  --status-positive-bg: var(--green-95);
+  --status-negative-bg: var(--red-95);
+
+  /* Inverse (e.g. tooltips, toasts) */
+  --inverse-bg: var(--inverse-background-2);
+  --inverse-fg: var(--inverse-label-2);
+
+  /* Static (do not flip with theme) */
+  --static-white: var(--common-100);
+  --static-black: var(--common-0);
+
+  /* Dimmer / scrim */
+  --dimmer: var(--material-dimmer);
+
+  /* ============================================================
+     RADIUS  (WDS radius scale, px)
+     ============================================================ */
+  --radius-2xs: 4px;
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-full: 999px;
+
+  /* ============================================================
+     SPACING  (4px base grid)
+     ============================================================ */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  /* ============================================================
+     ELEVATION  (WDS soft neutral shadows, light theme)
+     ============================================================ */
+  --shadow-emphasize: 0 1px 4px 0 rgba(23,23,23,0.06), 0 0 2px 0 rgba(23,23,23,0.07);
+  --shadow-normal: 0 1px 8px 0 rgba(23,23,23,0.08), 0 0 2px 0 rgba(23,23,23,0.07);
+  --shadow-strong: 0 6px 16px 0 rgba(23,23,23,0.10), 0 0 2px 0 rgba(23,23,23,0.07);
+  --shadow-heavy: 0 12px 24px 0 rgba(23,23,23,0.12), 0 0 2px 0 rgba(23,23,23,0.07);
+}
+
+/* ============================================================
+   TYPOGRAPHY SCALE
+   Pretendard JP · 7 hierarchies / 18 sub-levels.
+   Each class sets size · line-height · letter-spacing.
+   Weight is intentionally NOT fixed on body levels — set per use
+   (headings commonly 600/700, body 400/500).
+   ============================================================ */
+
+.wds-display1 { font-size: 56px; line-height: 1.214;  letter-spacing: -0.032em;  font-weight: 700; }
+.wds-display2 { font-size: 40px; line-height: 1.3;    letter-spacing: -0.0282em; font-weight: 700; }
+.wds-display3 { font-size: 36px; line-height: 1.334;  letter-spacing: -0.027em;  font-weight: 700; }
+
+.wds-title1   { font-size: 32px; line-height: 1.375;  letter-spacing: -0.0253em; font-weight: 700; }
+.wds-title2   { font-size: 28px; line-height: 1.358;  letter-spacing: -0.0236em; font-weight: 700; }
+.wds-title3   { font-size: 24px; line-height: 1.334;  letter-spacing: -0.023em;  font-weight: 700; }
+
+.wds-heading1 { font-size: 22px; line-height: 1.364;  letter-spacing: -0.0194em; font-weight: 600; }
+.wds-heading2 { font-size: 20px; line-height: 1.4;    letter-spacing: -0.012em;  font-weight: 600; }
+
+.wds-headline1 { font-size: 18px; line-height: 1.445; letter-spacing: -0.002em;  font-weight: 600; }
+.wds-headline2 { font-size: 17px; line-height: 1.412; letter-spacing: 0em;       font-weight: 600; }
+
+.wds-body1, .wds-body1-normal  { font-size: 16px; line-height: 1.5;   letter-spacing: 0.0057em; font-weight: 400; }
+.wds-body1-reading             { font-size: 16px; line-height: 1.625; letter-spacing: 0.0057em; font-weight: 400; }
+.wds-body2, .wds-body2-normal  { font-size: 15px; line-height: 1.467; letter-spacing: 0.0096em; font-weight: 400; }
+.wds-body2-reading             { font-size: 15px; line-height: 1.6;   letter-spacing: 0.0096em; font-weight: 400; }
+
+.wds-label1, .wds-label1-normal { font-size: 14px; line-height: 1.429; letter-spacing: 0.0145em; font-weight: 500; }
+.wds-label1-reading             { font-size: 14px; line-height: 1.571; letter-spacing: 0.0145em; font-weight: 500; }
+.wds-label2   { font-size: 13px; line-height: 1.385; letter-spacing: 0.0194em; font-weight: 600; }
+
+.wds-caption1 { font-size: 12px; line-height: 1.334; letter-spacing: 0.0252em; font-weight: 500; }
+.wds-caption2 { font-size: 11px; line-height: 1.273; letter-spacing: 0.0311em; font-weight: 600; }
+
+/* ---- POSTECH Red primary, dark theme (keeps red, not blue) ---- */
+:root[data-theme="dark"], .dark {
+  --primary: #C2487D;
+  --primary-strong: #B83A70;
+  --primary-heavy: #A61955;
+  --primary-bg: #2E1119;
+  --primary-bg-active: #3D1622;
+  --primary-ring: #3D1622;
+}

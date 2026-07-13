@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+  <meta name="design_doc_mode" content="canvas">
+  <link rel="stylesheet" href="_ds/postech-air-ds-version-1-0-0b54c36e-207f-48bb-bddb-19c56c8663e1/fig-tokens.css">
+  <link rel="stylesheet" href="_ds/postech-air-ds-version-1-0-0b54c36e-207f-48bb-bddb-19c56c8663e1/fig-typography.css">
+  <link rel="stylesheet" href="_ds/postech-air-ds-version-1-0-0b54c36e-207f-48bb-bddb-19c56c8663e1/colors_and_type.css">
+  <link rel="stylesheet" href="_ds/postech-air-ds-version-1-0-0b54c36e-207f-48bb-bddb-19c56c8663e1/styles.css">
+  <script src="_ds/postech-air-ds-version-1-0-0b54c36e-207f-48bb-bddb-19c56c8663e1/_ds_bundle.js"></script>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;background:#e7e3db;font-family:var(--font-base),system-ui,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{color:var(--primary-strong)}
+    /* ---- options scaffold ---- */
+    .dv-turn{padding:46px 52px 40px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+    .dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 24px}
+    .dv-tid{font:700 11px ui-monospace,Menlo,monospace;padding:4px 8px;background:#A61955;color:#fff;border-radius:5px;text-decoration:none}
+    .dv-tname{font:700 15px/1.3 var(--font-base),system-ui;color:#1a1a1a;letter-spacing:-.01em}
+    .dv-tname .sub{font-weight:400;color:rgba(0,0,0,.5);letter-spacing:0}
+    .dv-opts{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}
+    .dv-opt{flex:none;display:flex;flex-direction:column;gap:12px;scroll-margin-top:16px}
+    .dv-oid{font:700 11px ui-monospace,Menlo,monospace;padding:4px 8px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+    .dv-olabel{display:flex;align-items:baseline;gap:9px;font:400 12.5px/1.35 var(--font-base),system-ui;color:rgba(0,0,0,.6)}
+    .dv-olabel b{color:#1a1a1a;font-weight:700}
+    .dv-opt:target .dv-oid{background:#A61955;color:#fff}
+    .dv-next{margin:26px 0 0;font:13px/1.65 var(--font-base),system-ui;color:rgba(0,0,0,.55)}
+    .dv-next a{color:#A61955;font-weight:700}
+    /* ---- A4 page ---- */
+    .page{width:794px;min-height:1123px;background:#fff;box-shadow:0 3px 20px rgba(20,20,19,.16);border-radius:3px;padding:54px 58px 40px;position:relative;display:flex;flex-direction:column}
+    .eyebrow{font:700 12px/1 var(--font-base),system-ui;letter-spacing:.14em;color:var(--primary);text-transform:uppercase;margin:0 0 12px}
+    .ptitle{font-size:33px;line-height:1.18;letter-spacing:-.025em;font-weight:700;color:var(--fg-strong);margin:0}
+    .psub{font-size:15px;line-height:1.6;color:var(--fg-alternative);margin:11px 0 0;max-width:52ch}
+    .foot{margin-top:auto;padding-top:22px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line-subtle)}
+    .foot img{height:13px;opacity:.72;display:block}
+    .foot .fr{font-size:11px;color:var(--fg-assistive);letter-spacing:.01em}
+    /* ---- event sheet ---- */
+    .ev{border:1px solid var(--line-subtle);border-radius:15px;overflow:hidden;box-shadow:var(--shadow-emphasize)}
+    .band{background:var(--primary);padding:17px 22px;display:flex;align-items:center;gap:14px}
+    .band .bb{font:700 12px/1 var(--font-base),system-ui;color:#fff;background:rgba(255,255,255,.2);padding:6px 11px;border-radius:999px;white-space:nowrap;letter-spacing:.01em}
+    .band .bt{font-size:23px;font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1}
+    .band .bm{margin-left:auto;font-size:12.5px;color:rgba(255,255,255,.9);font-weight:500;white-space:nowrap}
+    .evb{padding:22px}
+    /* spec cards */
+    .spec{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .speccard{border:1px solid var(--line-subtle);border-radius:11px;padding:13px 15px;background:var(--bg-elevated)}
+    .speck{font:700 11.5px/1 var(--font-base),system-ui;color:var(--primary);letter-spacing:.01em;margin:0 0 7px}
+    .specv{font-size:14.5px;font-weight:600;color:var(--fg-strong);line-height:1.4}
+    .specv small{display:block;font-size:12px;font-weight:400;color:var(--fg-alternative);margin-top:3px;line-height:1.45}
+    /* tonal info box */
+    .info{background:var(--primary-bg);border-radius:12px;padding:15px 18px;margin-top:14px}
+    .infok{font:700 12px/1 var(--font-base),system-ui;color:var(--primary-heavy);letter-spacing:.02em;margin:0 0 10px}
+    .info ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+    .info li{font-size:13.5px;line-height:1.5;color:var(--fg-normal);padding-left:16px;position:relative}
+    .info li::before{content:"";position:absolute;left:2px;top:8px;width:5px;height:5px;border-radius:999px;background:var(--primary)}
+    .info li b{color:var(--fg-strong);font-weight:700}
+    .sech{font-size:15px;font-weight:700;color:var(--fg-strong);letter-spacing:-.01em;margin:20px 0 12px;display:flex;align-items:center;gap:8px}
+    .sech::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--primary);display:block}
+    /* numbered role/step cards */
+    .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .role{border:1px solid var(--line-subtle);border-radius:12px;padding:15px;background:var(--bg-elevated)}
+    .rolenum{width:26px;height:26px;border-radius:999px;background:var(--primary);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+    .roleh{font-size:14px;font-weight:700;color:var(--fg-strong);line-height:1.3}
+    .roleh .en{display:block;font-size:11px;font-weight:600;color:var(--primary);letter-spacing:.03em;margin-top:2px}
+    .roled{font-size:12.5px;line-height:1.5;color:var(--fg-alternative);margin-top:8px}
+    /* chips */
+    .chiprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .chip{font-size:12.5px;font-weight:600;color:var(--primary-heavy);background:var(--primary-bg);border-radius:999px;padding:7px 13px;line-height:1.3}
+    .fit{background:var(--primary-bg);border:1px solid var(--primary-bg-active);border-radius:12px;padding:14px 16px;margin-top:14px}
+    .fith{font:700 12px/1 var(--font-base),system-ui;color:var(--primary-heavy);margin:0 0 9px;letter-spacing:.02em}
+    .fit p{margin:0;font-size:13.5px;line-height:1.55;color:var(--fg-normal)}
+    /* ---- diagnostic flow ---- */
+    .flow{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+    .q{border:1px solid var(--line-subtle);border-radius:14px;padding:16px 18px;background:var(--bg-elevated);box-shadow:var(--shadow-emphasize)}
+    .qnode{display:flex;align-items:flex-start;gap:12px}
+    .qnum{flex:none;width:34px;height:34px;border-radius:10px;background:var(--primary);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+    .qtext{font-size:15.5px;font-weight:700;color:var(--fg-strong);line-height:1.35}
+    .qtext .note{display:block;font-size:12px;font-weight:400;color:var(--fg-alternative);margin-top:4px}
+    .branches{margin:14px 0 0;display:flex;flex-direction:column;gap:9px}
+    .branch{display:flex;align-items:center;gap:11px}
+    .ans{flex:1;font-size:13.5px;font-weight:500;color:var(--fg-normal);background:var(--fill-subtle);border:1px solid var(--line-subtle);border-radius:9px;padding:10px 13px;line-height:1.35}
+    .arrow{flex:none;color:var(--primary);font-size:15px;font-weight:700}
+    .res{flex:none;min-width:150px;text-align:center;font-size:13.5px;font-weight:700;color:#fff;background:var(--primary);border-radius:9px;padding:10px 12px;text-decoration:none;line-height:1.3}
+    .res.next{color:var(--fg-alternative);background:transparent;border:1px dashed var(--line-strong);font-weight:600}
+    .legend{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+    .lg{border:1px solid var(--line-subtle);border-top:3px solid var(--primary);border-radius:10px;padding:13px 14px;background:var(--bg-elevated)}
+    .lgh{font-size:13.5px;font-weight:700;color:var(--fg-strong);display:flex;align-items:center;gap:7px}
+    .lgn{width:20px;height:20px;border-radius:999px;background:var(--primary);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+    .lgd{font-size:12px;line-height:1.5;color:var(--fg-alternative);margin-top:7px}
+    /* ---- comparison ---- */
+    .cmp{width:100%;border-collapse:separate;border-spacing:0;margin-top:22px;font-size:13px}
+    .cmp th,.cmp td{text-align:left;vertical-align:top;padding:13px 14px;border-bottom:1px solid var(--line-subtle)}
+    .cmp thead th{position:relative;background:var(--primary);color:#fff;border-bottom:none;font-weight:700}
+    .cmp thead th:first-child{background:var(--primary-heavy)}
+    .cmp thead th:first-child{border-top-left-radius:12px}
+    .cmp thead th:last-child{border-top-right-radius:12px}
+    .cmp thead .cn{font-size:11px;font-weight:600;opacity:.85;letter-spacing:.02em}
+    .cmp thead .ct{font-size:15px;font-weight:700;letter-spacing:-.01em;display:block;margin-top:3px}
+    .cmp tbody th{background:var(--primary-bg);color:var(--primary-heavy);font-weight:700;width:120px;font-size:12.5px;white-space:nowrap}
+    .cmp tbody td{color:var(--fg-normal);line-height:1.5}
+    .cmp tbody td b{color:var(--fg-strong);font-weight:700}
+    .cmp tbody tr:last-child th{border-bottom-left-radius:12px}
+    .cmp tbody tr:last-child td:last-child{border-bottom-right-radius:12px}
+    .cmp .em{background:var(--primary-bg)}
+    /* score bars */
+    .bars{display:flex;flex-direction:column;gap:0}
+    .barrow{display:flex;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--line-subtle)}
+    .barrow:last-child{border-bottom:none}
+    .barlab{flex:1;font-size:14px;font-weight:600;color:var(--fg-strong)}
+    .bartrack{flex:none;width:210px;height:11px;border-radius:999px;background:var(--primary-bg)}
+    .barfill{height:100%;border-radius:999px;background:var(--primary)}
+    .barval{flex:none;width:34px;text-align:right;font-size:16px;font-weight:700;color:var(--primary)}
+    /* award / doc lists */
+    .award{border:1px solid var(--line-subtle);border-radius:12px;overflow:hidden}
+    .award .ah{background:var(--primary-bg);display:flex;justify-content:space-between;align-items:center;padding:11px 15px;font-size:13px;font-weight:700;color:var(--primary-heavy)}
+    .arow{display:flex;align-items:center;gap:13px;padding:11px 15px;border-top:1px solid var(--line-subtle)}
+    .arank{flex:none;width:24px;height:24px;border-radius:999px;background:var(--primary);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+    .arank.r2{background:#C2487D}.arank.r3{background:#D98CAE}
+    .ainfo{flex:1}.ainfo .ak{font-size:11.5px;color:var(--fg-alternative);font-weight:500}
+    .ainfo .av{font-size:14px;font-weight:700;color:var(--fg-strong);margin-top:1px}
+    .acount{flex:none;font-size:12.5px;color:var(--fg-alternative);font-weight:600}
+    .docs{display:flex;flex-direction:column;gap:0;border:1px solid var(--line-subtle);border-radius:12px;overflow:hidden}
+    .drow{display:flex;align-items:center;padding:12px 15px;border-bottom:1px solid var(--line-subtle);font-size:13.5px;font-weight:600;color:var(--fg-strong)}
+    .drow:last-child{border-bottom:none}
+    .pill{margin-left:auto;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px}
+    .pill.req{background:var(--primary);color:#fff}
+    .pill.opt{background:var(--fill);color:var(--fg-alternative)}
+    /* timeline */
+    .tl{margin-top:6px;border-left:2px solid var(--primary-bg-active);padding-left:20px;display:flex;flex-direction:column;gap:15px}
+    .tlrow{position:relative}
+    .tlrow::before{content:"";position:absolute;left:-27px;top:2px;width:12px;height:12px;border-radius:999px;background:var(--primary);border:3px solid #fff;box-shadow:0 0 0 1.5px var(--primary)}
+    .tld{font-size:12px;font-weight:700;color:var(--primary);letter-spacing:.01em}
+    .tlt{font-size:14px;font-weight:600;color:var(--fg-strong);margin-top:2px}
+    .tlt small{display:block;font-size:12px;font-weight:400;color:var(--fg-alternative);margin-top:2px}
+    /* link buttons */
+    .links{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+    .linkbtn{display:flex;align-items:center;gap:13px;border:1px solid var(--line);border-radius:12px;padding:13px 16px;text-decoration:none;background:var(--bg-elevated)}
+    .linkbtn .ln{flex:none;width:30px;height:30px;border-radius:8px;background:var(--primary-bg);color:var(--primary-heavy);font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
+    .linkbtn .lt{flex:1}.linkbtn .lt .lk{font-size:13.5px;font-weight:700;color:var(--fg-strong)}
+    .linkbtn .lt .lu{font-size:11px;color:var(--fg-assistive);margin-top:2px;word-break:break-all;line-height:1.35}
+    .linkbtn .lgo{flex:none;font-size:12px;font-weight:700;color:var(--primary)}
+    /* cover */
+    .cover-hero{background:linear-gradient(135deg,#A61955 0%,#7E1444 100%);border-radius:18px;padding:38px 40px;color:#fff;margin-top:20px}
+    .mini3{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:22px}
+    .mini{border:1px solid var(--line-subtle);border-top:4px solid var(--primary);border-radius:13px;padding:17px 16px;background:var(--bg-elevated);display:flex;flex-direction:column;box-shadow:var(--shadow-emphasize)}
+    .mininum{width:30px;height:30px;border-radius:999px;background:var(--primary);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+    .minih{font-size:15.5px;font-weight:700;color:var(--fg-strong);letter-spacing:-.01em;line-height:1.25}
+    .minitag{font-size:11px;font-weight:600;color:var(--primary);margin-top:3px}
+    .minid{font-size:12.5px;line-height:1.55;color:var(--fg-alternative);margin-top:11px;flex:1}
+    .minimeta{margin-top:12px;padding-top:11px;border-top:1px solid var(--line-subtle);display:flex;flex-direction:column;gap:5px}
+    .minimeta div{font-size:11.5px;color:var(--fg-neutral);display:flex;gap:6px}
+    .minimeta b{color:var(--primary-heavy);font-weight:700;flex:none;width:44px}
+    .note-strip{margin-top:20px;background:var(--fill-subtle);border:1px solid var(--line-subtle);border-radius:12px;padding:14px 18px;display:flex;flex-wrap:wrap;gap:8px 26px;font-size:12.5px;color:var(--fg-neutral)}
+    .note-strip b{color:var(--fg-strong)}
+  </style>
+</helmet>
+<section class="dv-turn" id="t1" style="width: 1683px; height: 1250px">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">선택 가이드 방식 <span class="sub">· 진단형 vs 비교표형 — 어느 쪽이 좋을지 골라 주세요</span></span></div>
+  <div class="dv-opts" style="width: 1629px; height: 1159px">
+
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a><b>진단형</b> — 질문을 따라가면 추천 행사에 도착</div>
+      <div class="dv-card page" data-screen-label="선택 가이드 · 진단형">
+        <div class="eyebrow">나에게 맞는 행사 찾기</div>
+        <h2 class="ptitle">세 가지 질문으로 찾는<br>나의 AI 행사</h2>
+        <p class="psub">순서대로 따라오세요. 답을 고르면 나에게 맞는 행사로 이어집니다. 여러 개가 해당돼도 좋습니다 — 하나만 골라도, 함께 참여해도 됩니다.</p>
+        <div class="flow">
+          <div class="q">
+            <div class="qnode"><div class="qnum">Q1</div><div class="qtext">이미 <span style="color:var(--primary)">AI로 만든 산출물</span>이 있나요?<span class="note">코드·앱·업무 자동화·문서 등 — 완성했거나 도전해 본 결과물</span></div></div>
+            <div class="branches">
+              <div class="branch"><span class="ans">네, 보여줄 결과물이 있어요</span><span class="arrow">→</span><a class="res" href="#pg-comp">③ 공모전으로 바로 출품</a></div>
+              <div class="branch"><span class="ans">아직 없어요 · 배우는 중이에요</span><span class="arrow">↓</span><span class="res next">다음 질문으로</span></div>
+            </div>
+          </div>
+          <div class="q">
+            <div class="qnode"><div class="qnum">Q2</div><div class="qtext">얼마나 <span style="color:var(--primary)">시간</span>을 낼 수 있나요?</div></div>
+            <div class="branches">
+              <div class="branch"><span class="ans">매주 꾸준히 · 연말까지 함께</span><span class="arrow">→</span><a class="res" href="#pg-wg">① Working Group</a></div>
+              <div class="branch"><span class="ans">3일 집중 교육이면 가능해요</span><span class="arrow">→</span><a class="res" href="#pg-edu">② 고급교육</a></div>
+              <div class="branch"><span class="ans">지금은 부담 · 내 페이스로</span><span class="arrow">→</span><a class="res" href="#pg-comp">③ 공모전</a></div>
+            </div>
+          </div>
+          <div class="q">
+            <div class="qnode"><div class="qnum">Q3</div><div class="qtext">가장 중요한 <span style="color:var(--primary)">목표</span>는 무엇인가요?</div></div>
+            <div class="branches">
+              <div class="branch"><span class="ans">내 업무를 실제로 바꾸고 계속 성장</span><span class="arrow">→</span><a class="res" href="#pg-wg">① Working Group</a></div>
+              <div class="branch"><span class="ans">체계적으로 배우고 수료·인증 획득</span><span class="arrow">→</span><a class="res" href="#pg-edu">② 고급교육</a></div>
+              <div class="branch"><span class="ans">성과를 인정받고 수상까지</span><span class="arrow">→</span><a class="res" href="#pg-comp">③ 공모전</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="legend">
+          <div class="lg"><div class="lgh"><span class="lgn">1</span>Working Group</div><div class="lgd">꾸준히 시간을 내어 내 업무를 AI로 실제 바꾸고 싶은 분</div></div>
+          <div class="lg"><div class="lgh"><span class="lgn">2</span>고급교육</div><div class="lgd">체계적으로 몰입하며 과제를 완수하고 수료·인증을 원하는 분</div></div>
+          <div class="lg"><div class="lgh"><span class="lgn">3</span>공모전</div><div class="lgd">이미 AX 결과물이 있거나 자유롭게 도전하고 그 성과를 인정받고 싶은 분</div></div>
+        </div>
+        <div class="foot"><img src="assets/postech-wordmark-black.png" alt="POSTECH"><span class="fr">인사팀 · AIR센터 &nbsp;|&nbsp; 나에게 맞는 AI 행사 선택 가이드</span></div>
+      </div>
+    </div>
+
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a><b>비교표형</b> — 한 표로 3개 행사를 나란히 비교</div><div class="dv-card page" data-screen-label="선택 가이드 · 비교표형">
+        <div class="eyebrow">나에게 맞는 행사 찾기</div>
+        <h2 class="ptitle">한 표로 비교하는<br>3개의 AI 행사</h2>
+        <p class="psub">투입 시간·숙련도·목표를 기준으로 세 행사를 내 상황에 맞게 비교해보세요.</p>
+        <table class="cmp">
+          <thead><tr>
+            <th>기준</th>
+            <th><span class="cn">①</span><span class="ct">Working Group<br>(`26 하반기)</span></th>
+            <th><span class="cn">②</span><span class="ct">고급교육</span></th>
+            <th><span class="cn">③</span><span class="ct">공모전</span></th>
+          </tr></thead>
+          <tbody>
+            <tr><th>한 줄 소개</th><td><b>실무 공동 구현</b><br>내 업무 문제를 함께 해결</td><td><b>집중 양성 과정</b><br>1인 1과제 완주형</td><td><b>자유 출품 챌린지</b><br>AX 사례·산출물 제출</td></tr>
+            <tr><th>참여 및 선발 형태&nbsp;</th><td>개인 또는 업무단위 그룹(4명 이하)<br>— 팀별 추천 또는 지원 후 선발 과정 있음</td><td>집합 교육(8명 이내)<br>— 수요에 따라 선발 과정이 발생할 수 있음</td><td>개인 또는 팀(4명 이하)<br>— 제한 없음</td></tr>
+            <tr class="em"><th>필요 시간</th><td><b>높음</b> · 주 1회·1시간+ 미팅 + 개인 실습 (연말까지)</td><td><b>중간</b> · 3일 집중(일 5시간) + 현장 적용</td><td><b>낮음~자유</b> · 내 페이스로 준비해 제출</td></tr>
+            <tr><th>권장 AI 경험수준<br></th><td>중급 이상<br>(AI를 업무에 매일 사용)</td><td>중급 이상<br>(AI를 업무에 매일 사용)</td><td>제한 없음<br></td></tr>
+            <tr class="em"><th>목표·보상</th><td>실적용 가능한 업무 솔루션<br>AI 역량 강화</td><td>수료 + <b><span style="font-weight: normal;">AX Leader 인증</span></b></td><td><b><span style="font-weight: normal;">수상</span></b>(태블릿·해외벤치마킹·포상휴가·상품권 등)</td></tr>
+            <tr><th>일정</th><td>7월부터 연말까지 상시</td><td>차수별 3일(집합교육) <br>+ 현장적용 작업 상시</td><td>10월 14일까지 접수</td></tr>
+            <tr><th>AIR센터 지원</th><td>Claude Pro 라이센스<br>+ 멘토링</td><td>좌동</td><td>좌동 <br>(단, 수요에 따라 지원을 위한 선발 과정이 발생할 수 있음)</td></tr>
+            <tr><th>이런 분께</th><td>장기적으로 꾸준히 참여하며 AX로 업무를 바꾸고 싶은 분</td><td>제대로 배워 인증받고 현업으로도 연계하고 싶은 분</td><td>자유롭게 도전하며 성과를 인정받고 싶은 분</td></tr>
+          </tbody>
+        </table>
+        <div class="chiprow">
+
+
+          <span class="chip">꾸준히 함께 성장 → ① Working Group</span><span class="chip">집중·몰입·체계적 → ② 고급교육</span><span class="chip">시간 제약없이 자유롭게 참여 → ③ 공모전</span>
+        </div>
+        <div class="foot"><img src="assets/postech-wordmark-black.png" alt="POSTECH"><span class="fr">인사팀 · AIR센터 &nbsp;|&nbsp; 나에게 맞는 AI 행사 선택 가이드</span></div>
+      </div>
+
+    </div>
+
+  </div>
+  <p class="dv-next">다음을 해볼 수 있어요: "<a href="#1a">1a</a>로 진행해줘" · "<a href="#1b">1b</a>의 비교표를 <a href="#1a">1a</a> 진단 아래에 같이 넣어줘" · "결과 카드에 색을 조금 다르게 써줘"</p>
+</section>
+<section class="dv-turn" id="common">
+  <div class="dv-thd"><a class="dv-tid" href="#common">공통</a><span class="dv-tname">행사 안내 <span class="sub">· 어느 방식을 고르셔도 함께 들어가는 페이지 (표지 + 3개 행사 + 신청·문의)</span></span></div>
+  <div class="dv-opts" style="width: 1632px; height: 3618px">
+
+    <div class="dv-opt">
+      <div class="dv-olabel">표지 · 개요</div>
+      <div class="page" data-screen-label="표지 · 개요">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+          <img src="assets/postech-signature-horizontal.jpg" alt="POSTECH" style="height:26px">
+          <span style="font-size:12px;font-weight:600;color:var(--fg-alternative)">2026 하반기 · 인사팀 · AIR센터</span>
+        </div>
+        <div class="cover-hero" style="width: 680px; height: 247px">
+          <div style="font-size:12px;font-weight:700;letter-spacing:.14em;opacity:.85;text-transform:uppercase">AI 행사 선택 가이드</div>
+          <div style="font-size:36px;font-weight:700;letter-spacing:-.03em;line-height:1.15;margin-top:14px">나에게 맞는<br>AI 행사 찾기</div>
+          <div style="font-size: 14.5px; line-height: 1.6; margin-top: 14px; opacity: .92; max-width: 60ch; width: 523px; height: 74px">하반기(7월 이후) AIR센터가 준비한 세 가지 AI 행사입니다. 모두 전 직원이 참여 대상이며, 부담·목표·숙련도에 따라 나에게 맞는 하나를 고르면 됩니다. 단, 참여를 위한 여건이 충분한지 확인해보시기 바랍니다.</div>
+        </div>
+        <div class="mini3">
+          <div class="mini" id="mini-wg">
+            <div class="mininum">1</div>
+            <div class="minih">Working Group</div><div class="minitag">지속형 · 실무 공동 구현</div>
+            <div class="minid">소규모로 매주 모여, 내 업무의 실제 문제를 AI로 함께 해결하고 업무에 적용합니다.</div>
+            <div class="minimeta"><div><b>형태</b>소규모 그룹(~10명)</div><div><b>시간</b>주 1회·1시간+</div><div><b>지원</b>Claude Pro·멘토링</div></div>
+          </div>
+          <div class="mini" id="mini-edu">
+            <div class="mininum">2</div>
+            <div class="minih">고급교육</div><div class="minitag">집중 교육 · 인증형</div>
+            <div class="minid">3일 집중 교육과 현장 적용으로 '1인 1과제'를 완주하는 AX Leader 양성 과정입니다.</div>
+            <div class="minimeta"><div><b>형태</b>집합(차수당 8명)</div><div><b>시간</b>3일·일 5시간</div><div><b>보상</b>수료·AX Leader 인증</div></div>
+          </div>
+          <div class="mini" id="mini-comp">
+            <div class="mininum">3</div>
+            <div class="minih">공모전</div><div class="minitag">공모(출품)형 · 챌린지</div>
+            <div class="minid">AI를 활용한 실증 사례와 산출물을 자유롭게 출품하는 챌린지입니다. 시상이 있습니다.</div>
+            <div class="minimeta"><div><b>형태</b>개인·팀(≤4명)</div><div><b>기간</b>7.15~10.14</div><div><b>보상</b>시상(최대 20명)</div></div>
+          </div>
+        </div>
+        <div class="note-strip">
+          <span><b>참여 대상</b> &nbsp;전 직원 (일부 과정은 행정직원 중심)</span>
+          <span><b>문의</b> &nbsp;AIR센터 postech-air@postech.ac.kr</span>
+          <span><b>안내</b> &nbsp;3개 행사 공통</span>
+        </div>
+        <div style="margin-top:16px;font-size:13px;line-height:1.6;color:var(--fg-alternative)">먼저 <b style="color:var(--fg-strong)">선택 가이드</b>로 나에게 맞는 행사를 확인한 뒤, 다음 장의 행사별 상세 안내와 마지막 장의 <b style="color:var(--fg-strong)">신청 방법</b>을 참고하세요.</div>
+        <div class="foot"><img src="assets/postech-wordmark-black.png" alt="POSTECH"><span class="fr">인사팀 · AIR센터 &nbsp;|&nbsp; 01</span></div>
+      </div>
+    </div>
+
+    <div class="dv-opt">
+      <div class="dv-olabel">① 행사 안내 — Working Group</div>
+      <div class="page" id="pg-wg" data-screen-label="① Working Group">
+        <div class="eyebrow">행사 안내 ①</div>
+        <div class="ev" style="margin-top:14px">
+          <div class="band"><span class="bb">지속형 · 실무 공동 구현</span><span class="bt">Working Group</span><span class="bm">전 직원 · 하반기 소규모 운영</span></div>
+          <div class="evb">
+            <div class="spec">
+              <div class="speccard"><div class="speck">목적</div><div class="specv">실무 문제 공동 해결<small>업무에서 실제 발생하는 문제를 정의하고, 활용 가능한 수준까지 함께 구현</small></div></div>
+              <div class="speccard"><div class="speck">대상 · 규모</div><div class="specv">전 직원 · 10명 내외<small>하반기 소규모로 재편 (기존 22명 → 10명 내외)</small></div></div>
+              <div class="speccard"><div class="speck">핵심 원칙</div><div class="specv">주 1회·1시간+ 참여<small>AIR센터 정기 미팅 + 숙련을 위한 개인 시간 투자 필수</small></div></div>
+            </div>
+
+            <div class="sech">추진 배경</div>
+            <p style="margin:0;font-size:13.5px;line-height:1.65;color:var(--fg-neutral)">Working Group은 AX(AI 전환) 교육·실습을 목적으로 구성되어, 그동안 vibe coding 환경 설정과 간단한 코드 실습을 함께 경험해 왔습니다. 하반기에는 개인 실습 중심에서 벗어나, <b style="color:var(--fg-strong)">업무상 실제 문제를 정의하고 이를 해결해 업무에 적용하는 것</b>을 목표로 소규모·고밀도로 운영합니다.</p>
+
+            <div class="sech">이렇게 함께합니다</div>
+            <div class="roles">
+              <div class="role"><div class="rolenum">1</div><div class="roleh">문제 정의<span class="en">Define</span></div><div class="roled">내 업무에서 실제로 불편하거나 반복되는 문제를 함께 구체화합니다.</div></div>
+              <div class="role"><div class="rolenum">2</div><div class="roleh">해결 · 구현<span class="en">Build</span></div><div class="roled">매주 AIR센터와 미팅하며 해결 방법을 찾고 직접 구현해 봅니다.</div></div>
+              <div class="role"><div class="rolenum">3</div><div class="roleh">업무 적용<span class="en">Apply</span></div><div class="roled">실제 업무에 활용할 수 있는 수준까지 완성하고 정착시킵니다.</div></div>
+            </div>
+
+            <div class="info">
+              <div class="infok">지원 &amp; 참여 안내</div>
+              <ul>
+                <li>참여 기간 중 <b>AI 라이선스(Claude Pro)</b>와 AIR센터의 밀착 멘토링을 지원합니다.</li>
+                <li>참여는 <b>자율</b>이며, 불참하셔도 불이익은 전혀 없습니다.</li>
+                <li>별도 교육이 불필요할 만큼 AX가 일상화될 때까지 <b>지속 운영</b>할 계획입니다.</li>
+              </ul>
+            </div>
+
+            <div class="fit"><div class="fith">이런 분께 딱 맞아요</div><p>꾸준히 시간을 내어 <b>내 업무를 AI로 실제 바꾸고 싶은 분</b>, 혼자보다 AIR센터와 밀착해 함께 배우며 지속적으로 성장하고 싶은 분.</p></div>
+          </div>
+        </div>
+        <div class="foot"><img src="assets/postech-wordmark-black.png" alt="POSTECH"><span class="fr">인사팀 · AIR센터 &nbsp;|&nbsp; 02</span></div>
+      </div>
+    </div>
+
+    <div class="dv-opt">
+      <div class="dv-olabel">② 행사 안내 — 고급교육 (AX Leaders)</div>
+      <div class="page" id="pg-edu" data-screen-label="② 고급교육 (AX Leaders)">
+        <div class="eyebrow">행사 안내 ②</div>
+        <div class="ev" style="margin-top:14px">
+          <div class="band"><span class="bb">집중 교육 · 인증형</span><span class="bt">고급교육 · AX Leaders</span><span class="bm">행정직원 · 차수당 8명 이내</span></div>
+          <div class="evb">
+            <div class="spec">
+              <div class="speccard"><div class="speck">목적</div><div class="specv">실무형 AX Leader 육성<small>행정업무를 AI로 혁신하는 부서별 실무 인력 양성</small></div></div>
+              <div class="speccard"><div class="speck">구조</div><div class="specv">집합 교육 + 현장 적용<small>일회성 소양 교육이 아닌 과제 완주형 육성</small></div></div>
+              <div class="speccard"><div class="speck">핵심 원칙</div><div class="specv">1인 1과제 완주<small>내 부서 실제 업무를 기획·개발·테스트까지 완수</small></div></div>
+            </div>
+
+            <div class="sech">POSTECH AX Leader 3대 역할</div>
+            <div class="roles">
+              <div class="role"><div class="rolenum">1</div><div class="roleh">기회 발굴<span class="en">Discover</span></div><div class="roled">업무 프로세스를 진단해 AI 적용 기회를 발굴하고 우선순위를 정합니다.</div></div>
+              <div class="role"><div class="rolenum">2</div><div class="roleh">개발 · 테스트<span class="en">Build &amp; Test</span></div><div class="roled">프롬프트 엔지니어링·노코드 도구로 프로토타입을 만들고 검증합니다.</div></div>
+              <div class="role"><div class="rolenum">3</div><div class="roleh">현장 적용 · 측정<span class="en">Apply &amp; Measure</span></div><div class="roled">결과물을 업무에 정착시키고 KPI로 성과를 측정합니다.</div></div>
+            </div>
+
+            <div class="sech">프로그램 구조 (2단계)</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div class="speccard" style="padding:15px 16px">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px"><span style="font-size:11px;font-weight:700;color:#fff;background:var(--primary);border-radius:999px;padding:3px 9px">1단계</span><span style="font-size:13.5px;font-weight:700;color:var(--fg-strong)">집합 교육 · 3일(일 5시간)</span></div>
+                <div style="font-size:12.5px;line-height:1.6;color:var(--fg-neutral)"><b style="color:var(--fg-strong)">1일차</b> AI 리터러시 · 프롬프트 엔지니어링<br><b style="color:var(--fg-strong)">2일차</b> 프로세스 분석 · 솔루션 설계 · 노코드 실습<br><b style="color:var(--fg-strong)">3일차</b> 구현 개선 · 검증 · 현장 적용안 · 발표</div>
+              </div>
+              <div class="speccard" style="padding:15px 16px">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px"><span style="font-size:11px;font-weight:700;color:#fff;background:var(--primary-heavy);border-radius:999px;padding:3px 9px">2단계</span><span style="font-size:13.5px;font-weight:700;color:var(--fg-strong)">현장 적용 &amp; 성과 발표</span></div>
+                <div style="font-size:12.5px;line-height:1.6;color:var(--fg-neutral)">부서 실제 적용 (AIR센터 멘토링 지원)<br>적용 후 변화 관리 및 KPI 측정<br>우수 사례 선정 · 성과 공유회 (연말 예정)</div>
+              </div>
+            </div>
+
+            <div class="info">
+              <div class="infok">수료 &amp; 인증</div>
+              <ul>
+                <li><b>교육 수료</b> — 전 일정(3일) 이수 + 프로토타입 완성 시 수료 인정</li>
+                <li><b>AX Leader 인증</b> — 현장 적용까지 완주 시 POSTECH AX Leader로 인증</li>
+              </ul>
+            </div>
+
+            <div class="fit"><div class="fith">이런 분께 딱 맞아요</div><p>기초부터 <b>체계적으로 배우고 싶은 분</b>, 3일 집중 참여가 가능하고 수료·인증이라는 분명한 목표를 원하는 행정직원.</p></div>
+          </div>
+        </div>
+        <div class="foot"><img src="assets/postech-wordmark-black.png" alt="POSTECH"><span class="fr">인사팀 · AIR센터 &nbsp;|&nbsp; 03</span></div>
+      </div>
+    </div>
+
+    <div class="dv-opt">
+      <div class="dv-olabel">③ 행사 안내 — 공모전 (AX 실증 사례 출품 챌린지)</div>
+      <div class="page" id="pg-comp" data-screen-label="③ 공모전 (AX 실증 사례 출품 챌린지)">
+        <div class="eyebrow">행사 안내 ③</div>
+        <div class="ev" style="margin-top:14px">
+          <div class="band"><span class="bb">공모(출품)형</span><span class="bt">공모전 · AX 실증 사례 출품 챌린지</span><span class="bm">전 직원 대상</span></div>
+          <div class="evb">
+            <div class="spec">
+              <div class="speccard"><div class="speck">지원 자격 · 형태</div><div class="specv">개인 또는 팀<small>전 직원 · 팀은 4명 이하</small></div></div>
+              <div class="speccard"><div class="speck">진행 방식</div><div class="specv">공모(출품)형<small>AI 사용 도구 제한 없음</small></div></div>
+              <div class="speccard"><div class="speck">제출 기간</div><div class="specv">7.15 ~ 10.14<small>2026. 07. 15(수) ~ 10. 14(수)</small></div></div>
+            </div>
+
+            <div class="info">
+              <div class="infok">제출 자료</div>
+              <ul>
+                <li><b>AX 경험 설명서</b> — AI를 활용해 업무상 유의미한 효과가 발생한 사례, 또는 도전적으로 사용해 본 시도에 대한 설명서</li>
+                <li><b>AX 산출물</b> — 해당 과정에서 생성된 산출물 (코드, UI 포함 화면 등)</li>
+              </ul>
+            </div>
+
+            <div class="sech">신청 시 지원</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div class="speccard" style="padding:15px 16px">
+                <div style="font-size:12.5px;font-weight:700;color:var(--primary);margin-bottom:6px">라이선스 지원 &nbsp;·&nbsp; ~7.29(수)</div>
+                <div style="font-size:12.5px;line-height:1.6;color:var(--fg-neutral)">라이선스 신청서 제출자(팀) 심사 후 <b style="color:var(--fg-strong)">AI 라이선스(Claude Pro)</b> 제공. 팀은 팀원 개인별 제공. <span style="color:var(--fg-alternative)">Working Group 등으로 이미 지원받은 경우 제외.</span></div>
+              </div>
+              <div class="speccard" style="padding:15px 16px">
+                <div style="font-size:12.5px;font-weight:700;color:var(--primary);margin-bottom:6px">AIR센터 지원 &nbsp;·&nbsp; ~8.26(수)</div>
+                <div style="font-size:12.5px;line-height:1.6;color:var(--fg-neutral)">컨설팅 신청서 제출자(팀) 심사 후 <b style="color:var(--fg-strong)">AIR센터와의 컨설팅</b> 시행. 개인·팀 구분 없이 가능.</div>
+              </div>
+            </div>
+
+            <div class="sech">서면 평가 <span style="font-size:12px;font-weight:500;color:var(--fg-alternative);margin-left:2px">(100점)</span></div>
+            <div class="bars">
+              <div class="barrow"><span class="barlab">해결 대상 업무문제의 실재성</span><span class="bartrack"><span class="barfill" style="width:100%"></span></span><span class="barval">40</span></div>
+              <div class="barrow"><span class="barlab">AI 활용 역량 수준</span><span class="bartrack"><span class="barfill" style="width:62.5%"></span></span><span class="barval">25</span></div>
+              <div class="barrow"><span class="barlab">업무 효율화 성과</span><span class="bartrack"><span class="barfill" style="width:50%"></span></span><span class="barval">20</span></div>
+              <div class="barrow"><span class="barlab">타 부서 확산 가능성</span><span class="bartrack"><span class="barfill" style="width:37.5%"></span></span><span class="barval">15</span></div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1.35fr 1fr;gap:16px;margin-top:18px">
+              <div>
+                <div class="sech" style="margin-top:0">시상 · 보상 <span style="font-size:11.5px;font-weight:500;color:var(--fg-alternative)">인사팀 협조 · 최대 20명</span></div>
+                <div class="award">
+                  <div class="arow"><span class="arank">1</span><div class="ainfo"><div class="ak">1등 · 개인</div><div class="av">태블릿 PC</div></div><span class="acount">1명</span></div>
+                  <div class="arow"><span class="arank">1</span><div class="ainfo"><div class="ak">1등 · 팀 전원</div><div class="av">해외 벤치마킹</div></div><span class="acount">최대 4명</span></div>
+                  <div class="arow"><span class="arank r2">2</span><div class="ainfo"><div class="ak">2등 · 개인 및 팀 전원 각각</div><div class="av">포상휴가 1일 + 상품권 20만원</div></div><span class="acount">최대 5명</span></div>
+                  <div class="arow"><span class="arank r3">3</span><div class="ainfo"><div class="ak">3등 · 개인 및 팀 전원 각각</div><div class="av">포상휴가 1일 + 상품권 10만원</div></div><span class="acount">최대 10명</span></div>
+                </div>
+              </div>
+              <div>
+                <div class="sech" style="margin-top:0">제출 서류</div>
+                <div class="docs">
+                  <div class="drow">참가신청서<span class="pill req">필수</span></div>
+                  <div class="drow">AX 경험 설명서<span class="pill req">필수</span></div>
+                  <div class="drow">AX 산출물<span class="pill req">필수</span></div>
+                  <div class="drow">AI 라이선스 신청서<span class="pill opt">선택</span></div>
+                  <div class="drow">AIR센터 컨설팅 신청서<span class="pill opt">선택</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fit"><div class="fith">이런 분께 딱 맞아요</div><p>이미 <b>AI로 만든 결과물이 있거나</b>, 정해진 커리큘럼 없이 자유롭게 도전해 성과를 인정받고 수상까지 노리고 싶은 분. 개인·팀 모두 참여할 수 있습니다.</p></div>
+          </div>
+        </div>
+        <div class="foot"><img src="assets/postech-wordmark-black.png" alt="POSTECH"><span class="fr">인사팀 · AIR센터 &nbsp;|&nbsp; 04</span></div>
+      </div>
+    </div>
+
+    <div class="dv-opt">
+      <div class="dv-olabel">신청 방법 · 일정 · 문의</div>
+      <div class="page" id="pg-apply" data-screen-label="신청 · 일정 · 문의">
+        <div class="eyebrow">신청 방법 · 일정 · 문의</div>
+        <h2 class="ptitle">신청하고 시작하기</h2>
+        <p class="psub">나에게 맞는 행사를 정했다면, 아래 방법으로 신청하세요. 행사별로 신청 경로가 다릅니다.</p>
+
+        <div class="sech" style="margin-top:24px">행사별 신청 방법</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          <div class="speccard" style="padding:15px 16px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><span class="lgn">1</span><span style="font-size:14px;font-weight:700;color:var(--fg-strong)">Working Group</span></div>
+            <div style="font-size:12.5px;line-height:1.6;color:var(--fg-neutral)"><b style="color: var(--fg-strong);"><span></span><span style="color: var(--fg-strong);">AIR센터에 참여 의사를 전달해주세요</span></b>. 참여 가능 상황 및 참여에 의해 달성하고자 하는 주제에 대해 충분히 의견을 나눈 뒤 참여를 결정하시면 됩니다.<br><br>E: postech-air@postech.ac.kr<br>P: 054-279-3501</div>
+          </div>
+          <div class="speccard" style="padding:15px 16px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><span class="lgn">2</span><span style="font-size:14px;font-weight:700;color:var(--fg-strong)">고급교육</span></div>
+            <div style="font-size: 12.5px; line-height: 1.6; color: var(--fg-strong)"><b><span style="color: var(--fg-strong);">사전 수요조사 설문</span>에 응답해주세요.</b> 참여 의사와 가능 일정을 받아 차수를 편성합니다.<br><br><br>Link : <a href="https://forms.cloud.microsoft/r/hfkNYYATZj">[사전수요조사]</a><br><br></div>
+          </div>
+          <div class="speccard" style="padding:15px 16px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><span class="lgn">3</span><span style="font-size:14px;font-weight:700;color:var(--fg-strong)">공모전</span></div>
+            <div style="font-size:12.5px;line-height:1.6;color:var(--fg-neutral)">아래 <b style="color:var(--fg-strong)">온라인 신청서</b>를 작성해 제출하세요. 라이선스·컨설팅 지원이 필요하면 해당 신청서도 함께 제출합니다.</div>
+          </div>
+        </div>
+
+        <div class="sech">공모전 신청 링크</div>
+        <div class="links">
+          <a class="linkbtn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">
+            <span class="ln">1</span><span class="lt"><span class="lk">참가신청서 작성 <span class="pill req" style="margin-left:6px">필수</span></span><span class="lu">forms.cloud.microsoft/Pages/ResponsePage.aspx?id=…SEVITVcxTURESS4u</span></span><span class="lgo">열기 →</span>
+          </a>
+          <a class="linkbtn" href="https://forms.cloud.microsoft/r/ge3tZCAkLd" target="_blank" rel="noopener">
+            <span class="ln">2</span><span class="lt"><span class="lk">AX 경험 설명서 (서면평가 양식) <span class="pill req" style="margin-left:6px">필수</span></span><span class="lu">forms.cloud.microsoft/r/ge3tZCAkLd</span></span><span class="lgo">열기 →</span>
+          </a>
+          <a class="linkbtn" href="https://forms.cloud.microsoft/r/VSRvGb0Asb" target="_blank" rel="noopener">
+            <span class="ln">3</span><span class="lt"><span class="lk">컨설팅 신청서 작성 <span class="pill opt" style="margin-left:6px">선택</span></span><span class="lu">forms.cloud.microsoft/r/VSRvGb0Asb</span></span><span class="lgo">열기 →</span>
+          </a>
+        </div>
+
+        <div class="sech">하반기 주요 일정</div>
+        <div class="tl">
+          <div class="tlrow"><div class="tld">7. 15 (수)</div><div class="tlt">공모전 접수 시작<small>Working Group은 7월부터 상시 · 고급교육은 사전 수요조사 후 차수 편성</small></div></div>
+          <div class="tlrow"><div class="tld">7. 29 (수)</div><div class="tlt">공모전 · 라이선스 신청 마감</div></div>
+          <div class="tlrow"><div class="tld">8. 26 (수)</div><div class="tlt">공모전 · 컨설팅 신청 마감</div></div>
+          <div class="tlrow"><div class="tld">10. 14 (수)</div><div class="tlt">공모전 접수 마감</div></div>
+          <div class="tlrow"><div class="tld">연말</div><div class="tlt">우수 사례 성과 공유회<small>고급교육 현장 적용 성과 발표와 함께 진행</small></div></div>
+        </div>
+
+        <div class="note-strip" style="margin-top:auto">
+          <span><b>문의</b> &nbsp;AIR센터 &nbsp;postech-air@postech.ac.kr &nbsp;<span style="color:var(--fg-alternative)">(3개 행사 공통)</span></span>
+        </div>
+        <div class="foot"><img src="assets/postech-wordmark-black.png" alt="POSTECH"><span class="fr">인사팀 · AIR센터 &nbsp;|&nbsp; 05</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

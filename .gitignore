@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+*.tsbuildinfo
+
+# misc
+.DS_Store
+*.log
+
+# 시각 검증 산출물 (스크린샷·diff·서빙 심링크)
+visual/out/
+visual/serve/

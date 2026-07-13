@@ -1,0 +1,22 @@
+/* ============================================================
+   Wanted Design System (WDS) — global stylesheet
+   Import this one file to get the full system.
+   ============================================================ */
+@import "./fig-tokens.css";       /* raw Figma Variables (palette + modes) */
+@import "./fig-typography.css";   /* text/effect styles (if any) */
+@import "./colors_and_type.css";  /* semantic aliases + type scale */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  color: var(--fg-normal);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--primary-bg-active); }
