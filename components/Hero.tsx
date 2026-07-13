@@ -30,7 +30,7 @@ export default function Hero() {
             <span className="tile-pill">Event 3</span>
             <a className="tile-t" href="#pg-comp">③ 공모전 신청</a>
             <span className="minitag">공모(출품)형 · 챌린지</span>
-            <span className="minid">AI를 활용한 실증 사례와 산출물을 자유롭게 출품하는 챌린지입니다. 시상이 있습니다.</span>
+            <span className="minid">AI를 활용한 실증 사례와 산출물을 자유롭게 출품하는 챌린지입니다.</span>
             <div className="minimeta"><div><b>형태</b>개인·팀(≤4명)</div><div><b>기간</b>7.15~10.14</div><div><b>보상</b>시상(최대 20명)</div></div>
             <span className="tile-links">
               <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">참가신청서 (AI 라이선스 신청 포함) ↗</a>
