@@ -10,6 +10,7 @@ export default function EventWorkingGroup() {
             <div className="speccard"><div className="speck">목적</div><div className="specv">실무 문제 공동 해결<small>업무에서 실제 발생하는 문제를 정의하고, 활용 가능한 수준까지 함께 구현</small></div></div>
             <div className="speccard"><div className="speck">대상 · 규모</div><div className="specv">전 직원 · 10명 내외<small>하반기 소규모로 재편 (기존 22명 → 10명 내외)</small></div></div>
             <div className="speccard"><div className="speck">핵심 원칙</div><div className="specv">주 1회·1시간+ 참여<small>AIR센터 정기 미팅 + 숙련을 위한 개인 시간 투자 필수</small></div></div>
+            <div className="speccard"><div className="speck">활동 기간</div><div className="specv">7월 ~ 연말<small>7월부터 연말까지 상시</small></div></div>
           </div>
 
           <div className="sech">추진 배경</div>

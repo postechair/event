@@ -8,8 +8,9 @@ export default function EventEducation() {
         <div className="evb">
           <div className="spec">
             <div className="speccard"><div className="speck">목적</div><div className="specv">실무형 AX Leader 육성<small>행정업무를 AI로 혁신하는 부서별 실무 인력 양성</small></div></div>
-            <div className="speccard"><div className="speck">구조</div><div className="specv">집합 교육 + 현장 적용<small>일회성 소양 교육이 아닌 과제 완주형 육성</small></div></div>
+            <div className="speccard"><div className="speck">대상 · 규모</div><div className="specv">행정직원 · 차수당 8명 이내<small>수요에 따라 선발 과정이 발생할 수 있음</small></div></div>
             <div className="speccard"><div className="speck">핵심 원칙</div><div className="specv">1인 1과제 완주<small>내 부서 실제 업무를 기획·개발·테스트까지 완수</small></div></div>
+            <div className="speccard"><div className="speck">활동 기간</div><div className="specv">차수별 3일(집합교육)<small>현장적용 작업 상시</small></div></div>
           </div>
 
           <div className="sech">POSTECH AX Leader 3대 역할</div>
