@@ -73,7 +73,7 @@ export default function EventCompetition() {
             </div>
             <div className="sech">일정</div>
             <div className="tl">
-              <div className="tlrow"><div className="tld">7. 15 (수)</div><div className="tlt">공모전 접수 시작<small>Working Group은 7월부터 상시 · AX부트캠프(고급교육)는 사전 수요조사 후 차수 편성</small></div></div>
+              <div className="tlrow"><div className="tld">7. 15 (수)</div><div className="tlt">공모전 접수 시작</div></div>
               <div className="tlrow"><div className="tld">7. 29 (수)</div><div className="tlt">공모전 · 라이선스 신청 마감</div></div>
               <div className="tlrow"><div className="tld">8. 26 (수)</div><div className="tlt">공모전 · 컨설팅 신청 마감</div></div>
               <div className="tlrow"><div className="tld">10. 14 (수)</div><div className="tlt">공모전 접수 마감</div></div>
