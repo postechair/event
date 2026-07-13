@@ -55,7 +55,10 @@ export default function EventCompetition() {
           </div>
 
           <div className="fit"><div className="fith">이런 분께 딱 맞아요</div>
-            <p>이미 <b>AI를 활용하여 업무 효율을 높이거나 업무를 자동화하는 등 AX 경험이 있거나</b>, 정해진 커리큘럼 없이 자유롭게 도전해 성과를 인정받고 수상까지 노리고 싶은 분.</p>
+            <ul>
+              <li><b>AI를 활용하여 업무 효율을 높이거나 업무를 자동화하는 등 AX 경험</b>이 있는 분</li>
+              <li>정해진 커리큘럼 없이 자유롭게 도전해 성과를 인정받고 수상까지 노리고 싶은 분</li>
+            </ul>
             <p className="fitnote">※ 개인 또는 팀으로 참여 가능</p>
           </div>
 

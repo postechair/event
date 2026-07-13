@@ -31,7 +31,12 @@ export default function EventWorkingGroup() {
             </ul>
           </div>
 
-          <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>꾸준히 시간을 내어 <b>내 업무를 AI로 실제 바꾸고 싶은 분</b>, 혼자보다 AIR센터와 밀착해 함께 배우며 지속적으로 성장하고 싶은 분.</p></div>
+          <div className="fit"><div className="fith">이런 분께 딱 맞아요</div>
+            <ul>
+              <li>꾸준히 시간을 내어 <b>내 업무를 AI로 실제 바꾸고 싶은 분</b></li>
+              <li>혼자보다 AIR센터와 밀착해 함께 배우며 지속적으로 성장하고 싶은 분</li>
+            </ul>
+          </div>
 
           <div className="fit"><div className="fith">신청 방법</div><p>AIR센터에 직접 문의(이메일, 전화 등)</p></div>
         </div>
