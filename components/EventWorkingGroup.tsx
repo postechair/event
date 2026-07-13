@@ -4,7 +4,7 @@ export default function EventWorkingGroup() {
       <div className="wrap">
       <div className="eyebrow">행사 안내 ①</div>
       <div className="ev" style={{ marginTop: 14 }}>
-        <div className="band"><span className="bb">지속형 · 실무 공동 구현</span><h2 className="bt">Working Group</h2><span className="bm">전 직원 · 하반기 소규모 운영</span></div>
+        <div className="band"><span className="bb">지속형 · 실무 공동 구현</span><h2 className="bt">Working Group</h2></div>
         <div className="evb">
           <div className="spec">
             <div className="speccard"><div className="speck">목적</div><div className="specv">실무 문제 공동 해결<small>업무에서 실제 발생하는 문제를 정의하고, 활용 가능한 수준까지 함께 구현</small></div></div>

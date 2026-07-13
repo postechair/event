@@ -4,7 +4,7 @@ export default function EventCompetition() {
       <div className="wrap">
       <div className="eyebrow">행사 안내 ③</div>
       <div className="ev" style={{ marginTop: 14 }}>
-        <div className="band"><span className="bb">공모(출품)형</span><h2 className="bt">공모전 · AX 실증 사례 출품 챌린지</h2><span className="bm">전 직원 대상</span></div>
+        <div className="band"><span className="bb">공모(출품)형</span><h2 className="bt">공모전 · AX 실증 사례 출품 챌린지</h2></div>
         <div className="evb">
           <div className="spec">
             <div className="speccard"><div className="speck">지원 자격 · 형태</div><div className="specv">개인 또는 팀<small>전 직원 · 팀은 4명 이하</small></div></div>
