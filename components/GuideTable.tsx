@@ -20,7 +20,7 @@ export default function GuideTable() {
             <tr className="em"><th scope="row">목표·보상</th><td>실적용 가능한 업무 솔루션<br />AI 역량 강화</td><td>수료 + <b><span style={{ fontWeight: "normal" }}>AX Leader 인증</span></b></td><td><b><span style={{ fontWeight: "normal" }}>수상</span></b>(태블릿·해외벤치마킹·포상휴가·상품권 등)</td></tr>
             <tr><th scope="row">일정</th><td>7월부터 연말까지 상시</td><td>차수별 3일(집합교육) <br />+ 현장적용 작업 상시</td><td>10월 14일까지 접수</td></tr>
             <tr><th scope="row">AIR센터 지원</th><td>Claude Pro 라이센스<br />+ 멘토링</td><td>좌동</td><td>좌동 <br />(단, 수요에 따라 지원을 위한 선발 과정이 발생할 수 있음)</td></tr>
-            <tr><th scope="row">이런 분께</th><td>장기적으로 꾸준히 참여하며 AX로 업무를 바꾸고 싶은 분</td><td>제대로 배워 인증받고 현업으로도 연계하고 싶은 분</td><td>자유롭게 도전하며 성과를 인정받고 싶은 분</td></tr>
+            <tr><th scope="row">추천대상</th><td>장기적으로 꾸준히 참여하며 AX로 업무를 바꾸고 싶은 분</td><td>체계적이고 집중적으로 학습·실습하고 현업으로도 연계하고 싶은 분</td><td>자유롭게 도전하며 성과를 인정받고 싶은 분</td></tr>
           </tbody>
         </table>
       </div>

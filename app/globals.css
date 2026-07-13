@@ -257,6 +257,10 @@ button.ans:hover { border-color: var(--line); background: var(--fill); }
 .note-strip { margin-top: 20px; background: var(--fill-subtle); border: 1px solid var(--line-subtle); border-radius: 12px; padding: 14px 18px; display: flex; flex-wrap: wrap; gap: 8px 26px; font-size: 14.5px; color: var(--fg-neutral); }
 .note-strip b { color: var(--fg-strong); }
 
+/* 신청방법 핑크 영역 (행사 ③ — 링크·일정 포함 컨테이너) */
+.applyzone { background: var(--primary-bg); border: 1px solid var(--primary-bg-active); border-radius: 12px; padding: 16px 18px 18px; margin-top: 14px; }
+.applyzone > .applyp { margin: 0; font-size: 15.5px; line-height: 1.55; color: var(--fg-normal); }
+
 /* 신청 방법 카드 내 링크 재안내 (공모전) */
 .cardlinks { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
 .cardlinks div { display: flex; align-items: center; gap: 8px; }

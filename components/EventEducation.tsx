@@ -10,7 +10,7 @@ export default function EventEducation() {
             <div className="speccard"><div className="speck">목적</div><div className="specv">실무형 AX Leader 육성<small>행정업무를 AI로 혁신하는 부서별 실무 인력 양성</small></div></div>
             <div className="speccard"><div className="speck">대상 · 규모</div><div className="specv">행정직원 · 차수당 8명 이내<small>수요에 따라 선발 과정이 발생할 수 있음</small></div></div>
             <div className="speccard"><div className="speck">핵심 원칙</div><div className="specv">1인 1과제 완주<small>내 부서 실제 업무를 기획·개발·테스트까지 완수</small></div></div>
-            <div className="speccard"><div className="speck">활동 기간</div><div className="specv">차수별 3일(집합교육)<small>현장적용 작업 상시</small></div></div>
+            <div className="speccard"><div className="speck">활동 기간</div><div className="specv">3일(집합교육) + 교육 후 활동(현장적용)</div></div>
           </div>
 
           <div className="sech">POSTECH AX Leader 3대 역할</div>
@@ -41,6 +41,8 @@ export default function EventEducation() {
           </div>
 
           <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>기초부터 <b>체계적으로 배우고 싶은 분</b>, 3일 집중 참여가 가능하고 수료·인증·현장 적용이라는 분명한 목표를 원하는 행정직원.</p></div>
+
+          <div className="fit"><div className="fith">신청 방법</div><p>사전수요조사 설문에 응답 (수요에 따라 선발 과정이 발생할 수 있음)</p></div>
         </div>
       </div>
       </div>

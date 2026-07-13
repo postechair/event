@@ -9,8 +9,8 @@ export default function EventWorkingGroup() {
           <div className="spec">
             <div className="speccard"><div className="speck">목적</div><div className="specv">실무 문제 공동 해결<small>업무에서 실제 발생하는 문제를 정의하고, 활용 가능한 수준까지 함께 구현</small></div></div>
             <div className="speccard"><div className="speck">대상 · 규모</div><div className="specv">전 직원 · 10명 내외<small>하반기 소규모로 재편 (기존 22명 → 10명 내외)</small></div></div>
-            <div className="speccard"><div className="speck">핵심 원칙</div><div className="specv">주 1회·1시간+ 참여<small>AIR센터 정기 미팅 + 숙련을 위한 개인 시간 투자 필수</small></div></div>
-            <div className="speccard"><div className="speck">활동 기간</div><div className="specv">7월 ~ 연말<small>7월부터 연말까지 상시</small></div></div>
+            <div className="speccard"><div className="speck">핵심 원칙</div><div className="specv">주 1회·1시간 필수 + 개인 시간<small>AIR센터 정기 미팅 + 숙련을 위한 개인 시간 투자 필수</small></div></div>
+            <div className="speccard"><div className="speck">활동 기간</div><div className="specv">7월 ~ 연말</div></div>
           </div>
 
           <div className="sech">추진 배경</div>
@@ -32,6 +32,8 @@ export default function EventWorkingGroup() {
           </div>
 
           <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>꾸준히 시간을 내어 <b>내 업무를 AI로 실제 바꾸고 싶은 분</b>, 혼자보다 AIR센터와 밀착해 함께 배우며 지속적으로 성장하고 싶은 분.</p></div>
+
+          <div className="fit"><div className="fith">신청 방법</div><p>AIR센터에 직접 문의(이메일, 전화 등)</p></div>
         </div>
       </div>
       </div>
