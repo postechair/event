@@ -4,21 +4,13 @@ export default function EventCompetition() {
       <div className="wrap">
       <div className="eyebrow">행사 안내 ③</div>
       <div className="ev" style={{ marginTop: 14 }}>
-        <div className="band"><span className="bb">공모(출품)형</span><h2 className="bt">공모전 · AX 실증 사례 출품 챌린지</h2></div>
+        <div className="band"><span className="bb">공모(출품)형</span><h2 className="bt">공모전</h2></div>
         <div className="evb">
           <div className="spec">
             <div className="speccard"><div className="speck">목적</div><div className="specv">자유 출품 챌린지<small>AX 사례·산출물 제출</small></div></div>
             <div className="speccard"><div className="speck">대상 · 규모</div><div className="specv">개인 또는 팀<small>전 직원 · 팀은 4명 이하</small></div></div>
             <div className="speccard"><div className="speck">핵심 원칙</div><div className="specv">공모(출품)형<small>AI 사용 도구 제한 없음</small></div></div>
             <div className="speccard"><div className="speck">활동 기간</div><div className="specv">7.15 ~ 10.14<small>2026. 07. 15(수) ~ 10. 14(수)</small></div></div>
-          </div>
-
-          <div className="info">
-            <div className="infok">제출 자료</div>
-            <ul>
-              <li><b>AX 경험 설명서</b> — AI를 활용해 업무상 유의미한 효과가 발생한 사례, 또는 도전적으로 사용해 본 시도에 대한 설명서</li>
-              <li><b>AX 산출물</b> — 해당 과정에서 생성된 산출물 (코드, UI 포함 화면 등)</li>
-            </ul>
           </div>
 
           <div className="sech">신청 시 지원</div>
