@@ -61,7 +61,7 @@ a:hover { color: var(--primary-strong); }
 .hero-lede { margin: 14px 0 0; font-size: 14.5px; line-height: 1.6; opacity: .92; max-width: 62ch; }
 
 /* 빠른 바로가기 타일 — 행사별 신청 경로 + 직접 폼 링크 */
-.tiles { margin-top: 28px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.tiles { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .tile {
   display: flex;
   flex-direction: column;

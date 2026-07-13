@@ -12,8 +12,8 @@ export default function Hero() {
           <nav className="tiles" aria-label="빠른 바로가기">
             <a className="tile" href="mailto:postech-air@postech.ac.kr">
               <span className="tile-pill">Event 1</span>
-              <span className="tile-t">① Working Group 참여 문의</span>
-              <span className="tile-d">postech-air@postech.ac.kr</span>
+              <span className="tile-t">① Working Group</span>
+              <span className="tile-d">참여문의 : postech-air@postech.ac.kr</span>
             </a>
             <div className="tile tile-multi">
               <span className="tile-pill">Event 2</span>
@@ -30,11 +30,6 @@ export default function Hero() {
                 <a href="https://forms.cloud.microsoft/r/ge3tZCAkLd" target="_blank" rel="noopener">AX 경험 설명서 ↗</a>
               </span>
             </div>
-            <a className="tile" href="#pg-apply">
-              <span className="tile-pill">안내</span>
-              <span className="tile-t">하반기 일정</span>
-              <span className="tile-d">신청 방법 · 일정 · 문의</span>
-            </a>
           </nav>
         </div>
       </section>
