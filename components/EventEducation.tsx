@@ -33,10 +33,11 @@ export default function EventEducation() {
           </div>
 
           <div className="info">
-            <div className="infok">수료</div>
+            <div className="infok">수료 및 현업 연계</div>
             <ul>
-              <li><b>교육 수료</b> — 전 일정(3일) 이수 + 프로토타입 완성 시 수료 인정</li>
-                          </ul>
+              <li>전 일정(3일) 이수 + 프로토타입 완성 시 수료 인정</li>
+              <li>교육 종료 후 현업 연계를 위한 멘토링 지원</li>
+            </ul>
           </div>
 
           <div className="fit"><div className="fith">이런 분께 딱 맞아요</div>
