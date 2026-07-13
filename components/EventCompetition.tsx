@@ -70,11 +70,11 @@ export default function EventCompetition() {
 
           <div className="sech">하반기 주요 일정</div>
           <div className="tl">
-            <div className="tlrow"><div className="tld">7. 15 (수)</div><div className="tlt">공모전 접수 시작<small>Working Group은 7월부터 상시 · 고급교육은 사전 수요조사 후 차수 편성</small></div></div>
+            <div className="tlrow"><div className="tld">7. 15 (수)</div><div className="tlt">공모전 접수 시작<small>Working Group은 7월부터 상시 · AX부트캠프(고급교육)는 사전 수요조사 후 차수 편성</small></div></div>
             <div className="tlrow"><div className="tld">7. 29 (수)</div><div className="tlt">공모전 · 라이선스 신청 마감</div></div>
             <div className="tlrow"><div className="tld">8. 26 (수)</div><div className="tlt">공모전 · 컨설팅 신청 마감</div></div>
             <div className="tlrow"><div className="tld">10. 14 (수)</div><div className="tlt">공모전 접수 마감</div></div>
-            <div className="tlrow"><div className="tld">연말</div><div className="tlt">우수 사례 성과 공유회<small>고급교육 현장 적용 성과 발표와 함께 진행</small></div></div>
+            <div className="tlrow"><div className="tld">연말</div><div className="tlt">우수 사례 성과 공유회<small>AX부트캠프(고급교육) 현장 적용 성과 발표와 함께 진행</small></div></div>
           </div>
 
           <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>이미 <b>AI로 만든 결과물이 있거나</b>, 정해진 커리큘럼 없이 자유롭게 도전해 성과를 인정받고 수상까지 노리고 싶은 분. 개인·팀 모두 참여할 수 있습니다.</p></div>

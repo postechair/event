@@ -12,7 +12,7 @@ export default function ApplySection() {
           <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}><b style={{ color: "var(--fg-strong)" }}>AIR센터에 참여 의사를 전달해주세요</b>. 참여 가능 상황 및 참여에 의해 달성하고자 하는 주제에 대해 충분히 의견을 나눈 뒤 참여를 결정하시면 됩니다.<br /><br />E: postech-air@postech.ac.kr<br />P: 054-279-3501</div>
         </div>
         <div className="speccard" style={{ padding: "15px 16px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}><span className="lgn">2</span><span style={{ fontSize: 16, fontWeight: 700, color: "var(--fg-strong)" }}>고급교육</span></div>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}><span className="lgn">2</span><span style={{ fontSize: 16, fontWeight: 700, color: "var(--fg-strong)" }}>AX부트캠프(고급교육)</span></div>
           <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}><b style={{ color: "var(--fg-strong)" }}>사전 수요조사 설문</b><b>에 응답해주세요.</b> 참여 의사와 가능 일정을 받아 차수를 편성합니다.
             <div className="cardlinks">
               <div><a href="https://forms.cloud.microsoft/r/hfkNYYATZj" target="_blank" rel="noopener">사전수요조사 ↗</a></div>

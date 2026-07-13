@@ -44,10 +44,19 @@ const EXCEPTIONS = [
   /^고급교육 · AX Leaders$/, // ② 밴드 타이틀 "고급교육"으로 축약 (2026-07-13)
   /^공모전 · AX 실증 사례 출품 챌린지$/, // ③ 밴드 타이틀 "공모전"으로 축약 (2026-07-13)
   /출품하는 챌린지입니다\. 시상이 있습니다\.$/, // "시상이 있습니다." 문장 삭제 (2026-07-13)
+  /고급교육은 사전 수요조사 후 차수 편성/, // 용어 개정 + 조사 교정("은"→"는")으로 문자열 변경 (2026-07-13)
 ];
 
 const norm = (s) =>
   s.replace(/ /g, " ").replace(/\s+/g, " ").trim();
+
+/* 승인된 용어 개정 — 기준선 청크에 적용한 형태도 포함으로 인정 (2026-07-13) */
+const TERM_MAP = [["고급교육", "AX부트캠프(고급교육)"]];
+const applyTerms = (s) => {
+  let out = s;
+  for (const [from, to] of TERM_MAP) out = out.split(from).join(to);
+  return out;
+};
 
 const browser = await chromium.launch();
 const page = await browser.newPage();
@@ -82,7 +91,7 @@ for (const raw of chunks) {
   seen.add(c);
   if (EXCEPTIONS.some((re) => re.test(c))) { excepted++; continue; }
   checked++;
-  if (!newText.includes(c)) missing.push(c);
+  if (!newText.includes(c) && !newText.includes(applyTerms(c))) missing.push(c);
 }
 
 console.log(`청크 ${seen.size}건 중 검사 ${checked}건 · 예외 ${excepted}건`);
