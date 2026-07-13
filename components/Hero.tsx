@@ -40,7 +40,7 @@ export default function Hero() {
         </nav>
 
         <div className="note-strip">
-          <span><b>참여 대상</b> &nbsp;전 직원 (일부 과정은 행정직원 중심)</span>
+          <span><b>참여 대상</b> &nbsp;전 직원</span>
           <span><b>문의</b> &nbsp;AIR센터 postech-air@postech.ac.kr</span>
           <span><b>안내</b> &nbsp;3개 행사 공통</span>
         </div>
