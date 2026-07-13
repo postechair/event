@@ -4,9 +4,8 @@ export default function Hero() {
   return (
     <section id="top" className="hero">
       <div className="hero-inner">
-        <div className="hero-eyebrow">AI 행사 선택 가이드</div>
-        <h1 className="hero-title">나에게 맞는 AI 행사 찾기</h1>
-        <p className="hero-lede">하반기(7월 이후) AIR센터가 준비한 세 가지 AI 행사입니다. 모두 전 직원이 참여 대상이며, 부담·목표·숙련도에 따라 나에게 맞는 하나를 고르면 됩니다.</p>
+        <h1 className="hero-title">2026 AIR EVENT</h1>
+        <p className="hero-lede">2026년 하반기 AIR센터가 준비한 세 가지 AI 행사를 안내드립니다. 모두 전 직원이 참여 대상이며, 부담·목표·숙련도에 따라 나에게 맞는 하나를 고르면 됩니다.</p>
 
         <nav className="tiles" aria-label="빠른 바로가기">
           <div className="tile">
@@ -34,7 +33,7 @@ export default function Hero() {
             <span className="minid">AI를 활용한 실증 사례와 산출물을 자유롭게 출품하는 챌린지입니다. 시상이 있습니다.</span>
             <div className="minimeta"><div><b>형태</b>개인·팀(≤4명)</div><div><b>기간</b>7.15~10.14</div><div><b>보상</b>시상(최대 20명)</div></div>
             <span className="tile-links">
-              <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">참가신청서 ↗</a>
+              <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">참가신청서 (AI 라이선스 신청 포함) ↗</a>
               <a href="https://forms.cloud.microsoft/r/ge3tZCAkLd" target="_blank" rel="noopener">AX 경험 설명서 ↗</a>
             </span>
           </div>

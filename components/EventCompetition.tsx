@@ -23,16 +23,16 @@ export default function EventCompetition() {
           <div className="sech">신청 시 지원</div>
           <div className="g2">
             <div className="speccard" style={{ padding: "15px 16px" }}>
-              <div style={{ fontSize: 12.5, fontWeight: 700, color: "var(--primary)", marginBottom: 6 }}>라이선스 지원 &nbsp;·&nbsp; ~7.29(수)</div>
-              <div style={{ fontSize: 12.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}>라이선스 신청서 제출자(팀) 심사 후 <b style={{ color: "var(--fg-strong)" }}>AI 라이선스(Claude Pro)</b> 제공. 팀은 팀원 개인별 제공. <span style={{ color: "var(--fg-alternative)" }}>Working Group 등으로 이미 지원받은 경우 제외.</span></div>
+              <div style={{ fontSize: 14.5, fontWeight: 700, color: "var(--primary)", marginBottom: 6 }}>라이선스 지원 &nbsp;·&nbsp; ~7.29(수)</div>
+              <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}>라이선스 신청서 제출자(팀) 심사 후 <b style={{ color: "var(--fg-strong)" }}>AI 라이선스(Claude Pro)</b> 제공. 팀은 팀원 개인별 제공. <span style={{ color: "var(--fg-alternative)" }}>Working Group 등으로 이미 지원받은 경우 제외.</span></div>
             </div>
             <div className="speccard" style={{ padding: "15px 16px" }}>
-              <div style={{ fontSize: 12.5, fontWeight: 700, color: "var(--primary)", marginBottom: 6 }}>AIR센터 지원 &nbsp;·&nbsp; ~8.26(수)</div>
-              <div style={{ fontSize: 12.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}>컨설팅 신청서 제출자(팀) 심사 후 <b style={{ color: "var(--fg-strong)" }}>AIR센터와의 컨설팅</b> 시행. 개인·팀 구분 없이 가능.</div>
+              <div style={{ fontSize: 14.5, fontWeight: 700, color: "var(--primary)", marginBottom: 6 }}>AIR센터 지원 &nbsp;·&nbsp; ~8.26(수)</div>
+              <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}>컨설팅 신청서 제출자(팀) 심사 후 <b style={{ color: "var(--fg-strong)" }}>AIR센터와의 컨설팅</b> 시행. 개인·팀 구분 없이 가능.</div>
             </div>
           </div>
 
-          <div className="sech">서면 평가 <span style={{ fontSize: 12, fontWeight: 500, color: "var(--fg-alternative)", marginLeft: 2 }}>(100점)</span></div>
+          <div className="sech">서면 평가 <span style={{ fontSize: 14, fontWeight: 500, color: "var(--fg-alternative)", marginLeft: 2 }}>(100점)</span></div>
           <div className="bars">
             <div className="barrow"><span className="barlab">해결 대상 업무문제의 실재성</span><span className="bartrack"><span className="barfill" style={{ width: "100%" }}></span></span><span className="barval">40</span></div>
             <div className="barrow"><span className="barlab">AI 활용 역량 수준</span><span className="bartrack"><span className="barfill" style={{ width: "62.5%" }}></span></span><span className="barval">25</span></div>
@@ -42,7 +42,7 @@ export default function EventCompetition() {
 
           <div className="g2x16">
             <div>
-              <div className="sech" style={{ marginTop: 0 }}>시상 · 보상 <span style={{ fontSize: 11.5, fontWeight: 500, color: "var(--fg-alternative)" }}>인사팀 협조 · 최대 20명</span></div>
+              <div className="sech" style={{ marginTop: 0 }}>시상 · 보상 <span style={{ fontSize: 13.5, fontWeight: 500, color: "var(--fg-alternative)" }}>인사팀 협조 · 최대 20명</span></div>
               <div className="award">
                 <div className="arow"><span className="arank">1</span><div className="ainfo"><div className="ak">1등 · 개인</div><div className="av">태블릿 PC</div></div><span className="acount">1명</span></div>
                 <div className="arow"><span className="arank">1</span><div className="ainfo"><div className="ak">1등 · 팀 전원</div><div className="av">해외 벤치마킹</div></div><span className="acount">최대 4명</span></div>
@@ -65,7 +65,7 @@ export default function EventCompetition() {
           <div className="sech">공모전 신청 링크</div>
           <div className="links">
             <a className="linkbtn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">
-              <span className="ln">1</span><span className="lt"><span className="lk">참가신청서 작성 <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/Pages/ResponsePage.aspx?id=…SEVITVcxTURESS4u</span></span><span className="lgo">열기 →</span>
+              <span className="ln">1</span><span className="lt"><span className="lk">참가신청서 작성 (AI 라이선스 신청 포함) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/Pages/ResponsePage.aspx?id=…SEVITVcxTURESS4u</span></span><span className="lgo">열기 →</span>
             </a>
             <a className="linkbtn" href="https://forms.cloud.microsoft/r/ge3tZCAkLd" target="_blank" rel="noopener">
               <span className="ln">2</span><span className="lt"><span className="lk">AX 경험 설명서 (서면평가 양식) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/r/ge3tZCAkLd</span></span><span className="lgo">열기 →</span>

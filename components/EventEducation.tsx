@@ -22,12 +22,12 @@ export default function EventEducation() {
           <div className="sech">프로그램 구조 (2단계)</div>
           <div className="g2">
             <div className="speccard" style={{ padding: "15px 16px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 9 }}><span style={{ fontSize: 11, fontWeight: 700, color: "#fff", background: "var(--primary)", borderRadius: 999, padding: "3px 9px" }}>1단계</span><span style={{ fontSize: 13.5, fontWeight: 700, color: "var(--fg-strong)" }}>집합 교육 · 3일(일 5시간)</span></div>
-              <div style={{ fontSize: 12.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}><b style={{ color: "var(--fg-strong)" }}>1일차</b> AI 리터러시 · 프롬프트 엔지니어링<br /><b style={{ color: "var(--fg-strong)" }}>2일차</b> 프로세스 분석 · 솔루션 설계 · 노코드 실습<br /><b style={{ color: "var(--fg-strong)" }}>3일차</b> 구현 개선 · 검증 · 현장 적용안 · 발표</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 9 }}><span style={{ fontSize: 13, fontWeight: 700, color: "#fff", background: "var(--primary)", borderRadius: 999, padding: "3px 9px" }}>1단계</span><span style={{ fontSize: 15.5, fontWeight: 700, color: "var(--fg-strong)" }}>집합 교육 · 3일(일 5시간)</span></div>
+              <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}><b style={{ color: "var(--fg-strong)" }}>1일차</b> AI 리터러시 · 프롬프트 엔지니어링<br /><b style={{ color: "var(--fg-strong)" }}>2일차</b> 프로세스 분석 · 솔루션 설계 · 노코드 실습<br /><b style={{ color: "var(--fg-strong)" }}>3일차</b> 구현 개선 · 검증 · 현장 적용안 · 발표</div>
             </div>
             <div className="speccard" style={{ padding: "15px 16px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 9 }}><span style={{ fontSize: 11, fontWeight: 700, color: "#fff", background: "var(--primary-heavy)", borderRadius: 999, padding: "3px 9px" }}>2단계</span><span style={{ fontSize: 13.5, fontWeight: 700, color: "var(--fg-strong)" }}>현장 적용 &amp; 성과 발표</span></div>
-              <div style={{ fontSize: 12.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}>부서 실제 적용 (AIR센터 멘토링 지원)<br />적용 후 변화 관리 및 KPI 측정<br />우수 사례 선정 · 성과 공유회 (연말 예정)</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 9 }}><span style={{ fontSize: 13, fontWeight: 700, color: "#fff", background: "var(--primary-heavy)", borderRadius: 999, padding: "3px 9px" }}>2단계</span><span style={{ fontSize: 15.5, fontWeight: 700, color: "var(--fg-strong)" }}>현장 적용 &amp; 성과 발표</span></div>
+              <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}>부서 실제 적용 (AIR센터 멘토링 지원)<br />적용 후 변화 관리 및 KPI 측정<br />우수 사례 선정 · 성과 공유회 (연말 예정)</div>
             </div>
           </div>
 

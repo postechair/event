@@ -13,7 +13,7 @@ export default function EventWorkingGroup() {
           </div>
 
           <div className="sech">추진 배경</div>
-          <p style={{ margin: 0, fontSize: "13.5px", lineHeight: 1.65, color: "var(--fg-neutral)" }}>Working Group은 AX(AI 전환) 교육·실습을 목적으로 구성되어, 그동안 vibe coding 환경 설정과 간단한 코드 실습을 함께 경험해 왔습니다. 하반기에는 개인 실습 중심에서 벗어나, <b style={{ color: "var(--fg-strong)" }}>업무상 실제 문제를 정의하고 이를 해결해 업무에 적용하는 것</b>을 목표로 소규모·고밀도로 운영합니다.</p>
+          <p style={{ margin: 0, fontSize: "15.5px", lineHeight: 1.65, color: "var(--fg-neutral)" }}>Working Group은 AX(AI 전환) 교육·실습을 목적으로 구성되어, 그동안 vibe coding 환경 설정과 간단한 코드 실습을 함께 경험해 왔습니다. 하반기에는 개인 실습 중심에서 벗어나, <b style={{ color: "var(--fg-strong)" }}>업무상 실제 문제를 정의하고 이를 해결해 업무에 적용하는 것</b>을 목표로 소규모·고밀도로 운영합니다.</p>
 
           <div className="sech">이렇게 함께합니다</div>
           <div className="roles">
