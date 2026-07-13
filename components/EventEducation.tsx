@@ -40,7 +40,7 @@ export default function EventEducation() {
             </ul>
           </div>
 
-          <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>기초부터 <b>체계적으로 배우고 싶은 분</b>, 3일 집중 참여가 가능하고 수료·인증이라는 분명한 목표를 원하는 행정직원.</p></div>
+          <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>기초부터 <b>체계적으로 배우고 싶은 분</b>, 3일 집중 참여가 가능하고 수료·인증·현장 적용이라는 분명한 목표를 원하는 행정직원.</p></div>
         </div>
       </div>
       </div>
