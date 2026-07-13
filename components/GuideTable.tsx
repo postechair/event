@@ -8,7 +8,7 @@ export default function GuideTable() {
         <table className="cmp">
           <thead><tr>
             <th scope="col">기준</th>
-            <th scope="col"><span className="cn">①</span><span className="ct">Working Group<br />(’26 하반기)</span></th>
+            <th scope="col"><span className="cn">①</span><span className="ct">Working Group</span></th>
             <th scope="col"><span className="cn">②</span><span className="ct">AX부트캠프(고급교육)</span></th>
             <th scope="col"><span className="cn">③</span><span className="ct">공모전</span></th>
           </tr></thead>
