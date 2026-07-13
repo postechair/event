@@ -5,7 +5,7 @@ export default function Hero() {
     <section id="top" className="hero">
       <div className="hero-inner">
         <h1 className="hero-title">2026 AIR EVENT</h1>
-        <p className="hero-lede">2026년 하반기 AIR센터가 준비한 세 가지 AI 행사를 안내드립니다. 모두 전 직원이 참여 대상이며, 부담·목표·숙련도에 따라 나에게 맞는 하나를 고르면 됩니다.</p>
+        <p className="hero-lede">2026년 하반기 AIR센터가 준비한 세 가지 AI 행사를 안내드립니다. 모두 전 직원이 참여 대상이며, 부담·목표·숙련도에 따라 내 상황에 맞는 event를 선택하시기 바랍니다.</p>
 
         <nav className="tiles" aria-label="빠른 바로가기">
           <div className="tile">
@@ -42,7 +42,6 @@ export default function Hero() {
         <div className="note-strip">
           <span><b>참여 대상</b> &nbsp;전 직원</span>
           <span><b>문의</b> &nbsp;AIR센터 postech-air@postech.ac.kr</span>
-          <span><b>안내</b> &nbsp;3개 행사 공통</span>
         </div>
       </div>
     </section>
