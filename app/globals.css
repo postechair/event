@@ -56,8 +56,7 @@ a:hover { color: var(--primary-strong); }
 /* ---- 히어로 풀폭 밴드 (cover-hero 그라데이션 승격, 텍스트 값은 표지 원본) ---- */
 .hero { background: linear-gradient(135deg, #A61955 0%, #7E1444 100%); color: #fff; scroll-margin-top: 60px; }
 .hero-inner { max-width: 1140px; margin: 0 auto; padding: 44px 24px 40px; }
-.hero-meta { font-size: 12px; font-weight: 600; color: rgba(255,255,255,.85); text-align: right; }
-.hero-eyebrow { font: 700 12px/1 var(--font-base), system-ui; letter-spacing: .14em; text-transform: uppercase; opacity: .85; margin-top: 4px; }
+.hero-eyebrow { font: 700 12px/1 var(--font-base), system-ui; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
 .hero-title { margin: 14px 0 0; font-size: 36px; font-weight: 700; letter-spacing: -.03em; line-height: 1.15; color: #fff; }
 .hero-lede { margin: 14px 0 0; font-size: 14.5px; line-height: 1.6; opacity: .92; max-width: 62ch; }
 
@@ -74,9 +73,9 @@ a:hover { color: var(--primary-strong); }
   color: #fff;
 }
 a.tile:hover { background: rgba(255,255,255,.16); color: #fff; }
-.tile-pill { align-self: flex-start; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: rgba(255,255,255,.2); white-space: nowrap; }
-.tile-pill.req { background: #fff; color: var(--primary-heavy); }
-.tile-t { font-size: 14.5px; font-weight: 700; line-height: 1.3; }
+.tile-pill { align-self: flex-start; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: rgba(255,255,255,.2); white-space: nowrap; letter-spacing: .04em; }
+/* 타이틀 = 큰 뱃지 (적색 히어로 위 흰색 칩으로 강조) */
+.tile-t { align-self: flex-start; font-size: 16px; font-weight: 800; line-height: 1.25; letter-spacing: -.01em; background: #fff; color: var(--primary-heavy); border-radius: 10px; padding: 8px 13px; }
 .tile-d { font-size: 12px; color: rgba(255,255,255,.8); word-break: break-all; }
 .tile-links { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
 .tile-links a { font-size: 12.5px; font-weight: 700; color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); border-radius: 8px; padding: 7px 10px; text-align: center; }
@@ -86,7 +85,6 @@ a.tile:hover { background: rgba(255,255,255,.16); color: #fff; }
 .sec { width: 100%; padding: 56px 24px; scroll-margin-top: 76px; }
 .sec.alt { background: var(--bg-alternative); border-top: 1px solid var(--line-subtle); border-bottom: 1px solid var(--line-subtle); }
 .sec > .wrap { max-width: 1140px; margin: 0 auto; }
-.narrow { max-width: 900px; margin: 0 auto; }
 .hero-sub { padding-top: 36px; padding-bottom: 44px; }
 
 /* mini 카드 앵커화 (카드 전체 클릭) */
@@ -277,8 +275,8 @@ button.ans:hover { border-color: var(--line); background: var(--fill); }
   .sec { padding: 36px 16px; }
   .hero-inner { padding: 32px 16px 28px; }
   .hero-title { font-size: 30px; }
-  .tiles { grid-template-columns: 1fr 1fr; }
-  .tile-multi { grid-column: span 2; }
+  .tiles { grid-template-columns: 1fr; }
+  .tile-multi { grid-column: auto; }
   .mcta {
     display: flex;
     position: fixed;

@@ -5,24 +5,25 @@ export default function Hero() {
     <>
       <section id="top" className="hero">
         <div className="hero-inner">
-          <div className="hero-meta">2026 하반기 · 인사팀 · AIR센터</div>
           <div className="hero-eyebrow">AI 행사 선택 가이드</div>
           <h1 className="hero-title">나에게 맞는<br />AI 행사 찾기</h1>
           <p className="hero-lede">하반기(7월 이후) AIR센터가 준비한 세 가지 AI 행사입니다. 모두 전 직원이 참여 대상이며, 부담·목표·숙련도에 따라 나에게 맞는 하나를 고르면 됩니다. 단, 참여를 위한 여건이 충분한지 확인해보시기 바랍니다.</p>
 
           <nav className="tiles" aria-label="빠른 바로가기">
             <a className="tile" href="mailto:postech-air@postech.ac.kr">
-              <span className="tile-pill">이메일</span>
+              <span className="tile-pill">Event 1</span>
               <span className="tile-t">① Working Group 참여 문의</span>
               <span className="tile-d">postech-air@postech.ac.kr</span>
             </a>
-            <a className="tile" href="https://forms.cloud.microsoft/r/hfkNYYATZj" target="_blank" rel="noopener">
-              <span className="tile-pill">설문 폼</span>
-              <span className="tile-t">② 고급교육 사전수요조사</span>
-              <span className="tile-d">forms.cloud.microsoft ↗</span>
-            </a>
             <div className="tile tile-multi">
-              <span className="tile-pill req">필수 2종</span>
+              <span className="tile-pill">Event 2</span>
+              <span className="tile-t">② 고급교육</span>
+              <span className="tile-links">
+                <a href="https://forms.cloud.microsoft/r/hfkNYYATZj" target="_blank" rel="noopener">사전수요조사 ↗</a>
+              </span>
+            </div>
+            <div className="tile tile-multi">
+              <span className="tile-pill">Event 3</span>
               <span className="tile-t">③ 공모전 신청</span>
               <span className="tile-links">
                 <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">참가신청서 ↗</a>

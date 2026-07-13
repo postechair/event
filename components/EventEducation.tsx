@@ -1,7 +1,7 @@
 export default function EventEducation() {
   return (
     <section className="sec alt" id="pg-edu" data-screen-label="② 고급교육 (AX Leaders)">
-      <div className="wrap"><div className="narrow">
+      <div className="wrap">
       <div className="eyebrow">행사 안내 ②</div>
       <div className="ev" style={{ marginTop: 14 }}>
         <div className="band"><span className="bb">집중 교육 · 인증형</span><h2 className="bt">고급교육 · AX Leaders</h2><span className="bm">행정직원 · 차수당 8명 이내</span></div>
@@ -42,7 +42,7 @@ export default function EventEducation() {
           <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>기초부터 <b>체계적으로 배우고 싶은 분</b>, 3일 집중 참여가 가능하고 수료·인증이라는 분명한 목표를 원하는 행정직원.</p></div>
         </div>
       </div>
-      </div></div>
+      </div>
     </section>
   );
 }

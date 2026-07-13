@@ -1,7 +1,7 @@
 export default function EventCompetition() {
   return (
     <section className="sec" id="pg-comp" data-screen-label="③ 공모전 (AX 실증 사례 출품 챌린지)">
-      <div className="wrap"><div className="narrow">
+      <div className="wrap">
       <div className="eyebrow">행사 안내 ③</div>
       <div className="ev" style={{ marginTop: 14 }}>
         <div className="band"><span className="bb">공모(출품)형</span><h2 className="bt">공모전 · AX 실증 사례 출품 챌린지</h2><span className="bm">전 직원 대상</span></div>
@@ -65,7 +65,7 @@ export default function EventCompetition() {
           <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>이미 <b>AI로 만든 결과물이 있거나</b>, 정해진 커리큘럼 없이 자유롭게 도전해 성과를 인정받고 수상까지 노리고 싶은 분. 개인·팀 모두 참여할 수 있습니다.</p></div>
         </div>
       </div>
-      </div></div>
+      </div>
     </section>
   );
 }

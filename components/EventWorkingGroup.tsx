@@ -1,7 +1,7 @@
 export default function EventWorkingGroup() {
   return (
     <section className="sec" id="pg-wg" data-screen-label="① Working Group">
-      <div className="wrap"><div className="narrow">
+      <div className="wrap">
       <div className="eyebrow">행사 안내 ①</div>
       <div className="ev" style={{ marginTop: 14 }}>
         <div className="band"><span className="bb">지속형 · 실무 공동 구현</span><h2 className="bt">Working Group</h2><span className="bm">전 직원 · 하반기 소규모 운영</span></div>
@@ -33,7 +33,7 @@ export default function EventWorkingGroup() {
           <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>꾸준히 시간을 내어 <b>내 업무를 AI로 실제 바꾸고 싶은 분</b>, 혼자보다 AIR센터와 밀착해 함께 배우며 지속적으로 성장하고 싶은 분.</p></div>
         </div>
       </div>
-      </div></div>
+      </div>
     </section>
   );
 }
