@@ -63,7 +63,7 @@ export default function GuideDiagnostic() {
       </div>
       <div className="legend">
         <div className="lg"><div className="lgh"><span className="lgn">1</span>Working Group</div><div className="lgd">꾸준히 시간을 내어 내 업무를 AI로 실제 바꾸고 싶은 분</div></div>
-        <div className="lg"><div className="lgh"><span className="lgn">2</span>AX부트캠프(고급교육)</div><div className="lgd">체계적으로 몰입하며 과제를 완수하고 수료를 원하는 분</div></div>
+        <div className="lg"><div className="lgh"><span className="lgn">2</span>AX부트캠프(고급교육)</div><div className="lgd">체계적으로 몰입하며 과제를 완수하고 수료 및 현업 연계를 원하는 분</div></div>
         <div className="lg"><div className="lgh"><span className="lgn">3</span>공모전</div><div className="lgd">이미 AI를 활용하여 업무 효율을 높이거나 업무를 자동화하는 등 AX 경험이 있거나 자유롭게 도전하고 그 성과를 인정받고 싶은 분</div></div>
       </div>
       </div>
