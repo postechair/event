@@ -56,7 +56,7 @@ export default function GuideDiagnostic() {
           <div className="qnode"><div className="qnum">Q3</div><div className="qtext">가장 중요한 <span style={{ color: "var(--primary)" }}>목표</span>는 무엇인가요?</div></div>
           <div className="branches">
             <div className="branch"><button type="button" className={ansCls(2, 0)} aria-pressed={sel[2] === 0} onClick={() => pick(2, 0)}>내 업무를 실제로 바꾸고 계속 성장</button><span className="arrow">→</span><a className={resCls(2, 0)} aria-current={sel[2] === 0 ? "true" : undefined} href="#pg-wg">① Working Group</a></div>
-            <div className="branch"><button type="button" className={ansCls(2, 1)} aria-pressed={sel[2] === 1} onClick={() => pick(2, 1)}>체계적으로 배우고 수료까지</button><span className="arrow">→</span><a className={resCls(2, 1)} aria-current={sel[2] === 1 ? "true" : undefined} href="#pg-edu">② AX부트캠프(고급교육)</a></div>
+            <div className="branch"><button type="button" className={ansCls(2, 1)} aria-pressed={sel[2] === 1} onClick={() => pick(2, 1)}>체계적으로 배우고 수료 및 현업 연계까지</button><span className="arrow">→</span><a className={resCls(2, 1)} aria-current={sel[2] === 1 ? "true" : undefined} href="#pg-edu">② AX부트캠프(고급교육)</a></div>
             <div className="branch"><button type="button" className={ansCls(2, 2)} aria-pressed={sel[2] === 2} onClick={() => pick(2, 2)}>성과를 인정받고 수상까지</button><span className="arrow">→</span><a className={resCls(2, 2)} aria-current={sel[2] === 2 ? "true" : undefined} href="#pg-comp">③ 공모전</a></div>
           </div>
         </div>

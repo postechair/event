@@ -39,7 +39,12 @@ export default function EventEducation() {
                           </ul>
           </div>
 
-          <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p><b>체계적이고 집중적으로 학습·실습하고 현업으로도 연계하고 싶은 분</b>, 3일 집중 참여가 가능하고 수료·현장 적용이라는 분명한 목표를 원하는 분.</p></div>
+          <div className="fit"><div className="fith">이런 분께 딱 맞아요</div>
+            <ul>
+              <li><b>체계적이고 집중적으로 학습·실습하고 현업으로도 연계하고 싶은 분</b></li>
+              <li>3일 집중 참여가 가능하고 수료·현장 적용이라는 분명한 목표를 원하는 분</li>
+            </ul>
+          </div>
 
           <div className="fit"><div className="fith">신청 방법</div><p>사전수요조사 설문에 응답 (수요에 따라 선발 과정이 발생할 수 있음)</p></div>
         </div>

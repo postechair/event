@@ -153,6 +153,16 @@ a.tile-t:hover { background: var(--primary-bg); color: var(--primary-heavy); }
 .fit { background: var(--primary-bg); border: 1px solid var(--primary-bg-active); border-radius: 12px; padding: 14px 16px; margin-top: 14px; }
 .fith { font: 700 14px/1 var(--font-base), system-ui; color: var(--primary-heavy); margin: 0 0 9px; letter-spacing: .02em; }
 .fit p { margin: 0; font-size: 15.5px; line-height: 1.55; color: var(--fg-normal); }
+/* 핑크 박스 내용은 항목 1개여도 불릿 표기 — .info li 와 동일 규격으로 통일 */
+.fit p, .applyzone > .applyp { padding-left: 16px; position: relative; }
+.fit p::before, .applyzone > .applyp::before { content: ""; position: absolute; left: 2px; top: 10px; width: 5px; height: 5px; border-radius: 999px; background: var(--primary); }
+.fit ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.fit li { font-size: 15.5px; line-height: 1.55; color: var(--fg-normal); padding-left: 16px; position: relative; }
+.fit li::before { content: ""; position: absolute; left: 2px; top: 10px; width: 5px; height: 5px; border-radius: 999px; background: var(--primary); }
+.fit li b { color: var(--fg-strong); }
+/* ※ 각주 줄 — 불릿 없이 표기 */
+.fit .fitnote { margin-top: 8px; padding-left: 0; font-size: 14px; color: var(--fg-alternative); }
+.fit .fitnote::before { display: none; }
 
 /* ---- diagnostic flow ---- */
 .flow { margin-top: 22px; display: flex; flex-direction: column; gap: 14px; }
