@@ -56,14 +56,14 @@ export default function GuideDiagnostic() {
           <div className="qnode"><div className="qnum">Q3</div><div className="qtext">가장 중요한 <span style={{ color: "var(--primary)" }}>목표</span>는 무엇인가요?</div></div>
           <div className="branches">
             <div className="branch"><button type="button" className={ansCls(2, 0)} aria-pressed={sel[2] === 0} onClick={() => pick(2, 0)}>내 업무를 실제로 바꾸고 계속 성장</button><span className="arrow">→</span><a className={resCls(2, 0)} aria-current={sel[2] === 0 ? "true" : undefined} href="#pg-wg">① Working Group</a></div>
-            <div className="branch"><button type="button" className={ansCls(2, 1)} aria-pressed={sel[2] === 1} onClick={() => pick(2, 1)}>체계적으로 배우고 수료·인증 획득</button><span className="arrow">→</span><a className={resCls(2, 1)} aria-current={sel[2] === 1 ? "true" : undefined} href="#pg-edu">② AX부트캠프(고급교육)</a></div>
+            <div className="branch"><button type="button" className={ansCls(2, 1)} aria-pressed={sel[2] === 1} onClick={() => pick(2, 1)}>체계적으로 배우고 수료까지</button><span className="arrow">→</span><a className={resCls(2, 1)} aria-current={sel[2] === 1 ? "true" : undefined} href="#pg-edu">② AX부트캠프(고급교육)</a></div>
             <div className="branch"><button type="button" className={ansCls(2, 2)} aria-pressed={sel[2] === 2} onClick={() => pick(2, 2)}>성과를 인정받고 수상까지</button><span className="arrow">→</span><a className={resCls(2, 2)} aria-current={sel[2] === 2 ? "true" : undefined} href="#pg-comp">③ 공모전</a></div>
           </div>
         </div>
       </div>
       <div className="legend">
         <div className="lg"><div className="lgh"><span className="lgn">1</span>Working Group</div><div className="lgd">꾸준히 시간을 내어 내 업무를 AI로 실제 바꾸고 싶은 분</div></div>
-        <div className="lg"><div className="lgh"><span className="lgn">2</span>AX부트캠프(고급교육)</div><div className="lgd">체계적으로 몰입하며 과제를 완수하고 수료·인증을 원하는 분</div></div>
+        <div className="lg"><div className="lgh"><span className="lgn">2</span>AX부트캠프(고급교육)</div><div className="lgd">체계적으로 몰입하며 과제를 완수하고 수료를 원하는 분</div></div>
         <div className="lg"><div className="lgh"><span className="lgn">3</span>공모전</div><div className="lgd">이미 AI를 활용하여 업무 효율을 높이거나 업무를 자동화하는 등 AX 경험이 있거나 자유롭게 도전하고 그 성과를 인정받고 싶은 분</div></div>
       </div>
       </div>

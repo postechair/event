@@ -4,7 +4,7 @@ export default function EventEducation() {
       <div className="wrap">
       <div className="eyebrow">행사 안내 ②</div>
       <div className="ev" style={{ marginTop: 14 }}>
-        <div className="band"><span className="bb">집중 교육 · 인증형</span><h2 className="bt">AX부트캠프(고급교육)</h2></div>
+        <div className="band"><span className="bb">집중 교육형</span><h2 className="bt">AX부트캠프(고급교육)</h2></div>
         <div className="evb">
           <div className="spec">
             <div className="speccard"><div className="speck">목적</div><div className="specv">실무형 AX Leader 육성<small>행정업무를 AI로 혁신하는 부서별 실무 인력 양성</small></div></div>
@@ -33,14 +33,13 @@ export default function EventEducation() {
           </div>
 
           <div className="info">
-            <div className="infok">수료 &amp; 인증</div>
+            <div className="infok">수료</div>
             <ul>
               <li><b>교육 수료</b> — 전 일정(3일) 이수 + 프로토타입 완성 시 수료 인정</li>
-              <li><b>AX Leader 인증</b> — 현장 적용까지 완주 시 POSTECH AX Leader로 인증</li>
-            </ul>
+                          </ul>
           </div>
 
-          <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p><b>체계적이고 집중적으로 학습·실습하고 현업으로도 연계하고 싶은 분</b>, 3일 집중 참여가 가능하고 수료·인증·현장 적용이라는 분명한 목표를 원하는 분.</p></div>
+          <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p><b>체계적이고 집중적으로 학습·실습하고 현업으로도 연계하고 싶은 분</b>, 3일 집중 참여가 가능하고 수료·현장 적용이라는 분명한 목표를 원하는 분.</p></div>
 
           <div className="fit"><div className="fith">신청 방법</div><p>사전수요조사 설문에 응답 (수요에 따라 선발 과정이 발생할 수 있음)</p></div>
         </div>
