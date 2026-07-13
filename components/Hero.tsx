@@ -13,7 +13,7 @@ export default function Hero() {
             <a className="tile-t" href="#pg-wg">① Working Group</a>
             <span className="minitag">지속형 · 실무 공동 구현</span>
             <span className="minid">소규모로 매주 모여, 내 업무의 실제 문제를 AI로 함께 해결하고 업무에 적용합니다.</span>
-            <div className="minimeta"><div><b>형태</b>소규모 그룹(~10명)</div><div><b>시간</b>주 1회·1시간+</div><div><b>지원</b>Claude Pro·멘토링</div></div>
+            <div className="minimeta"><div><b>형태</b>소규모 그룹(10명 내외)</div><div><b>시간</b>주 1회·1시간+</div><div><b>지원</b>Claude Pro·멘토링</div></div>
             <span className="tile-d">참여문의 : <a href="mailto:postech-air@postech.ac.kr">postech-air@postech.ac.kr</a></span>
           </div>
           <div className="tile">
