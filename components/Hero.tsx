@@ -21,7 +21,7 @@ export default function Hero() {
             <a className="tile-t" href="#pg-edu">② AX부트캠프(고급교육)</a>
             <span className="minitag">집중 교육형</span>
             <span className="minid">3일 집중 교육과 현장 적용으로 '1인 1과제'를 완주하는 AX Leader 양성 과정입니다.</span>
-            <div className="minimeta"><div><b>형태</b>집합(차수당 8명)</div><div><b>시간</b>3일·일 5시간</div><div><b>보상</b>수료</div></div>
+            <div className="minimeta"><div><b>형태</b>집합(차수당 8명)</div><div><b>시간</b>3일·일 5시간</div><div><b>보상</b>수료·현업 연계</div></div>
             <span className="tile-links">
               <a href="https://forms.cloud.microsoft/r/hfkNYYATZj" target="_blank" rel="noopener">사전수요조사 ↗</a>
             </span>
