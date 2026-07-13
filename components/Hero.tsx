@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-inner">
         <div className="hero-eyebrow">AI 행사 선택 가이드</div>
         <h1 className="hero-title">나에게 맞는 AI 행사 찾기</h1>
-        <p className="hero-lede">하반기(7월 이후) AIR센터가 준비한 세 가지 AI 행사입니다. 모두 전 직원이 참여 대상이며, 부담·목표·숙련도에 따라 나에게 맞는 하나를 고르면 됩니다. 단, 참여를 위한 여건이 충분한지 확인해보시기 바랍니다.</p>
+        <p className="hero-lede">하반기(7월 이후) AIR센터가 준비한 세 가지 AI 행사입니다. 모두 전 직원이 참여 대상이며, 부담·목표·숙련도에 따라 나에게 맞는 하나를 고르면 됩니다.</p>
 
         <nav className="tiles" aria-label="빠른 바로가기">
           <div className="tile">
