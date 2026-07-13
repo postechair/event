@@ -47,7 +47,8 @@ for (const [label, href] of [["행사 찾기", "#guide"], ["한눈 비교", "#co
   await page.click(`.site-nav a[href="${href}"]`);
   await page.waitForTimeout(150);
   const top = await page.evaluate((h) => document.querySelector(h).getBoundingClientRect().top, href);
-  results.push([`앵커 ${label} → ${href} 상단 ${Math.round(top)}px (네비 가림 없음)`, top >= 55 && top <= 200]);
+  // 마지막 섹션은 페이지 끝에 닿아 76px 위치까지 못 올라올 수 있음 — 가림 없음(≥55)과 가시성(<700)만 검사
+  results.push([`앵커 ${label} → ${href} 상단 ${Math.round(top)}px (네비 가림 없음)`, top >= 55 && top < 700]);
 }
 
 // 진단 인터랙션

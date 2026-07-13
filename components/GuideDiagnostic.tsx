@@ -27,8 +27,7 @@ export default function GuideDiagnostic() {
     <section className="sec" id="guide" data-screen-label="선택 가이드 · 진단형">
       <div className="wrap">
       <div className="eyebrow">나에게 맞는 행사 찾기</div>
-      <h2 className="ptitle">세 가지 질문으로 찾는<br />나의 AI 행사</h2>
-      <p className="psub">순서대로 따라오세요. 답을 고르면 나에게 맞는 행사로 이어집니다. 여러 개가 해당돼도 좋습니다 — 하나만 골라도, 함께 참여해도 됩니다.</p>
+      <h2 className="ptitle">세 가지 질문으로 찾는 나의 AI 행사</h2>
       <div className="flow">
         <div className="q" id="diag-q1">
           <div className="qnode"><div className="qnum">Q1</div><div className="qtext">이미 <span style={{ color: "var(--primary)" }}>AI로 만든 산출물</span>이 있나요?<span className="note">코드·앱·업무 자동화·문서 등 — 완성했거나 도전해 본 결과물</span></div></div>

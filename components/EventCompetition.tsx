@@ -9,7 +9,7 @@ export default function EventCompetition() {
           <div className="spec">
             <div className="speccard"><div className="speck">지원 자격 · 형태</div><div className="specv">개인 또는 팀<small>전 직원 · 팀은 4명 이하</small></div></div>
             <div className="speccard"><div className="speck">진행 방식</div><div className="specv">공모(출품)형<small>AI 사용 도구 제한 없음</small></div></div>
-            <div className="speccard"><div className="speck">제출 기간</div><div className="specv">7.15 ~ 10.14<small>2026. 07. 15(수) ~ 10. 14(수)</small></div></div>
+            <div className="speccard"><div className="speck">활동기간</div><div className="specv">7.15 ~ 10.14<small>2026. 07. 15(수) ~ 10. 14(수)</small></div></div>
           </div>
 
           <div className="info">
@@ -60,6 +60,28 @@ export default function EventCompetition() {
                 <div className="drow">AIR센터 컨설팅 신청서<span className="pill opt">선택</span></div>
               </div>
             </div>
+          </div>
+
+          <div className="sech">공모전 신청 링크</div>
+          <div className="links">
+            <a className="linkbtn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">
+              <span className="ln">1</span><span className="lt"><span className="lk">참가신청서 작성 <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/Pages/ResponsePage.aspx?id=…SEVITVcxTURESS4u</span></span><span className="lgo">열기 →</span>
+            </a>
+            <a className="linkbtn" href="https://forms.cloud.microsoft/r/ge3tZCAkLd" target="_blank" rel="noopener">
+              <span className="ln">2</span><span className="lt"><span className="lk">AX 경험 설명서 (서면평가 양식) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/r/ge3tZCAkLd</span></span><span className="lgo">열기 →</span>
+            </a>
+            <a className="linkbtn" href="https://forms.cloud.microsoft/r/VSRvGb0Asb" target="_blank" rel="noopener">
+              <span className="ln">3</span><span className="lt"><span className="lk">컨설팅 신청서 작성 <span className="pill opt" style={{ marginLeft: 6 }}>선택</span></span><span className="lu">forms.cloud.microsoft/r/VSRvGb0Asb</span></span><span className="lgo">열기 →</span>
+            </a>
+          </div>
+
+          <div className="sech">하반기 주요 일정</div>
+          <div className="tl">
+            <div className="tlrow"><div className="tld">7. 15 (수)</div><div className="tlt">공모전 접수 시작<small>Working Group은 7월부터 상시 · 고급교육은 사전 수요조사 후 차수 편성</small></div></div>
+            <div className="tlrow"><div className="tld">7. 29 (수)</div><div className="tlt">공모전 · 라이선스 신청 마감</div></div>
+            <div className="tlrow"><div className="tld">8. 26 (수)</div><div className="tlt">공모전 · 컨설팅 신청 마감</div></div>
+            <div className="tlrow"><div className="tld">10. 14 (수)</div><div className="tlt">공모전 접수 마감</div></div>
+            <div className="tlrow"><div className="tld">연말</div><div className="tlt">우수 사례 성과 공유회<small>고급교육 현장 적용 성과 발표와 함께 진행</small></div></div>
           </div>
 
           <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>이미 <b>AI로 만든 결과물이 있거나</b>, 정해진 커리큘럼 없이 자유롭게 도전해 성과를 인정받고 수상까지 노리고 싶은 분. 개인·팀 모두 참여할 수 있습니다.</p></div>

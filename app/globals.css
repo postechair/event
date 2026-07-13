@@ -58,7 +58,7 @@ a:hover { color: var(--primary-strong); }
 .hero-inner { max-width: 1140px; margin: 0 auto; padding: 44px 24px 40px; }
 .hero-eyebrow { font: 700 12px/1 var(--font-base), system-ui; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
 .hero-title { margin: 14px 0 0; font-size: 36px; font-weight: 700; letter-spacing: -.03em; line-height: 1.15; color: #fff; }
-.hero-lede { margin: 14px 0 0; font-size: 14.5px; line-height: 1.6; opacity: .92; max-width: 62ch; }
+.hero-lede { margin: 14px 0 0; font-size: 14.5px; line-height: 1.6; opacity: .92; }
 
 /* 빠른 바로가기 타일 — 행사별 신청 경로 + 직접 폼 링크 */
 .tiles { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
@@ -80,16 +80,22 @@ a.tile:hover { background: rgba(255,255,255,.16); color: #fff; }
 .tile-links { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
 .tile-links a { font-size: 12.5px; font-weight: 700; color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); border-radius: 8px; padding: 7px 10px; text-align: center; }
 .tile-links a:hover { background: rgba(255,255,255,.22); color: #fff; }
+/* 타일에 통합된 행사 요약(구 mini3)·공통 안내 — 적색 배경 색 보정 */
+.tile .minitag { color: rgba(255,255,255,.85); margin-top: 2px; }
+.tile .minid { color: rgba(255,255,255,.88); margin-top: 6px; flex: 1; }
+.tile .minimeta { border-top: 1px solid rgba(255,255,255,.25); }
+.tile .minimeta div { color: rgba(255,255,255,.85); }
+.tile .minimeta b { color: #fff; }
+.tile-d a { color: #fff; text-decoration: underline; }
+.tile-d a:hover { color: #fff; opacity: .85; }
+a.tile-t:hover { background: var(--primary-bg); color: var(--primary-heavy); }
+.hero .note-strip { background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.22); color: rgba(255,255,255,.9); }
+.hero .note-strip b { color: #fff; }
 
 /* ---- 섹션 레이아웃 ---- */
 .sec { width: 100%; padding: 56px 24px; scroll-margin-top: 76px; }
 .sec.alt { background: var(--bg-alternative); border-top: 1px solid var(--line-subtle); border-bottom: 1px solid var(--line-subtle); }
 .sec > .wrap { max-width: 1140px; margin: 0 auto; }
-.hero-sub { padding-top: 36px; padding-bottom: 44px; }
-
-/* mini 카드 앵커화 (카드 전체 클릭) */
-a.mini { color: inherit; }
-a.mini:hover { border-color: var(--primary-bg-active); box-shadow: var(--shadow-strong); color: inherit; }
 
 /* ---- 통합 푸터 ---- */
 .site-footer { border-top: 1px solid var(--line-subtle); padding: 26px 24px 36px; }
@@ -242,11 +248,7 @@ button.ans:hover { border-color: var(--line); background: var(--fill); }
 .linkbtn .lt .lu { display: block; font-size: 12px; color: var(--fg-assistive); margin-top: 2px; word-break: break-all; line-height: 1.35; }
 .linkbtn .lgo { flex: none; font-size: 13px; font-weight: 700; color: var(--primary); }
 
-/* 행사 요약 카드 */
-.mini3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 22px; }
-.mini { border: 1px solid var(--line-subtle); border-top: 4px solid var(--primary); border-radius: 13px; padding: 17px 16px; background: var(--bg-elevated); display: flex; flex-direction: column; box-shadow: var(--shadow-emphasize); }
-.mininum { width: 30px; height: 30px; border-radius: 999px; background: var(--primary); color: #fff; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
-.minih { font-size: 15.5px; font-weight: 700; color: var(--fg-strong); letter-spacing: -.01em; line-height: 1.25; }
+/* 행사 요약 (타일 내 통합 표시) */
 .minitag { font-size: 11px; font-weight: 600; color: var(--primary); margin-top: 3px; }
 .minid { font-size: 12.5px; line-height: 1.55; color: var(--fg-alternative); margin-top: 11px; flex: 1; }
 .minimeta { margin-top: 12px; padding-top: 11px; border-top: 1px solid var(--line-subtle); display: flex; flex-direction: column; gap: 5px; }
@@ -254,6 +256,12 @@ button.ans:hover { border-color: var(--line); background: var(--fill); }
 .minimeta b { color: var(--primary-heavy); font-weight: 700; flex: none; width: 44px; }
 .note-strip { margin-top: 20px; background: var(--fill-subtle); border: 1px solid var(--line-subtle); border-radius: 12px; padding: 14px 18px; display: flex; flex-wrap: wrap; gap: 8px 26px; font-size: 12.5px; color: var(--fg-neutral); }
 .note-strip b { color: var(--fg-strong); }
+
+/* 신청 방법 카드 내 링크 재안내 (공모전) */
+.cardlinks { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+.cardlinks div { display: flex; align-items: center; gap: 8px; }
+.cardlinks a { font-weight: 700; }
+.cardlinks .pill { margin-left: 0; }
 
 /* ---- 인라인 grid 치환 유틸 (값은 디자인 인라인 스타일과 동일) ---- */
 .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -276,7 +284,6 @@ button.ans:hover { border-color: var(--line); background: var(--fill); }
   .hero-inner { padding: 32px 16px 28px; }
   .hero-title { font-size: 30px; }
   .tiles { grid-template-columns: 1fr; }
-  .tile-multi { grid-column: auto; }
   .mcta {
     display: flex;
     position: fixed;
@@ -291,7 +298,7 @@ button.ans:hover { border-color: var(--line); background: var(--fill); }
   .mcta a.pri { background: var(--primary); border-color: var(--primary); color: #fff; }
   .site-footer { padding-bottom: 20px; }
   .ptitle { font-size: 27px; }
-  .spec, .roles, .legend, .mini3, .g2, .g3, .g2x16 { grid-template-columns: 1fr; }
+  .spec, .roles, .legend, .g2, .g3, .g2x16 { grid-template-columns: 1fr; }
   .branch { flex-wrap: wrap; }
   .branch .res { flex: 1; min-width: 0; }
   .band { flex-wrap: wrap; }

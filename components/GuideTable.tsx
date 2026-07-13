@@ -3,8 +3,7 @@ export default function GuideTable() {
     <section className="sec alt" id="compare" data-screen-label="선택 가이드 · 비교표형">
       <div className="wrap">
       <div className="eyebrow">나에게 맞는 행사 찾기</div>
-      <h2 className="ptitle">한 표로 비교하는<br />3개의 AI 행사</h2>
-      <p className="psub">투입 시간·숙련도·목표를 기준으로 세 행사를 내 상황에 맞게 비교해보세요.</p>
+      <h2 className="ptitle">한 표로 비교하는 3개의 AI 행사</h2>
       <div className="tablewrap">
         <table className="cmp">
           <thead><tr>
