@@ -54,7 +54,7 @@ export default function EventCompetition() {
             </div>
           </div>
 
-          <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>이미 <b>AI로 만든 결과물이 있거나</b>, 정해진 커리큘럼 없이 자유롭게 도전해 성과를 인정받고 수상까지 노리고 싶은 분. 개인·팀 모두 참여할 수 있습니다.</p></div>
+          <div className="fit"><div className="fith">이런 분께 딱 맞아요</div><p>이미 <b>AI를 활용하여 업무에 유의미한 도움을 받은 경험이 있거나</b>, 정해진 커리큘럼 없이 자유롭게 도전해 성과를 인정받고 수상까지 노리고 싶은 분. 개인·팀 모두 참여할 수 있습니다.</p></div>
 
           <div className="applyzone">
             <div className="fith">신청방법</div>

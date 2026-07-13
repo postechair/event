@@ -30,7 +30,7 @@ export default function GuideDiagnostic() {
       <h2 className="ptitle">세 가지 질문으로 찾는 나의 AI 행사</h2>
       <div className="flow">
         <div className="q" id="diag-q1">
-          <div className="qnode"><div className="qnum">Q1</div><div className="qtext">이미 <span style={{ color: "var(--primary)" }}>AI로 만든 산출물</span>이 있나요?<span className="note">코드·앱·업무 자동화·문서 등 — 완성했거나 도전해 본 결과물</span></div></div>
+          <div className="qnode"><div className="qnum">Q1</div><div className="qtext">이미 <span style={{ color: "var(--primary)" }}>AI를 활용하여 업무에 유의미한 도움을 받은 경험(또는 산출물)</span>이 있나요?<span className="note">코드·앱·업무 자동화·문서 등 — 완성했거나 도전해 본 결과물</span></div></div>
           <div className="branches">
             <div className="branch"><button type="button" className={ansCls(0, 0)} aria-pressed={sel[0] === 0} onClick={() => pick(0, 0)}>네, 보여줄 결과물이 있어요</button><span className="arrow">→</span><a className={resCls(0, 0)} aria-current={sel[0] === 0 ? "true" : undefined} href="#pg-comp">③ 공모전으로 바로 출품</a></div>
             <div className="branch"><button type="button" className={ansCls(0, 1)} aria-pressed={sel[0] === 1} onClick={() => pick(0, 1, true)}>아직 없어요 · 배우는 중이에요</button><span className="arrow">↓</span><span className="res next">다음 질문으로</span></div>

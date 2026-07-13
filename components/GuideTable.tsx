@@ -13,7 +13,7 @@ export default function GuideTable() {
             <th scope="col"><span className="cn">③</span><span className="ct">공모전</span></th>
           </tr></thead>
           <tbody>
-            <tr><th scope="row">한 줄 소개</th><td><b>실무 공동 구현</b><br />내 업무 문제를 함께 해결</td><td><b>집중 양성 과정</b><br />1인 1과제 완주형</td><td><b>자유 출품 챌린지</b><br />AX 사례·산출물 제출</td></tr>
+            <tr><th scope="row">한 줄 소개</th><td><b>실무 공동 구현</b><br />내 업무 문제를 함께 해결</td><td><b>집중 양성 과정</b><br />1인 1과제 완주형</td><td><b>자유 출품 챌린지</b><br />AX 사례 또는 산출물 제출</td></tr>
             <tr><th scope="row">참여 및 선발 형태&nbsp;</th><td>개인 또는 업무단위 그룹(4명 이하)<br />— 팀별 추천 또는 지원 후 선발 과정 있음</td><td>집합 교육(8명 이내)<br />— 수요에 따라 선발 과정이 발생할 수 있음</td><td>개인 또는 팀(4명 이하)<br />— 제한 없음</td></tr>
             <tr className="em"><th scope="row">필요 시간</th><td><b>높음</b> · 주 1회·1시간+ 미팅 + 개인 실습 (연말까지)</td><td><b>중간</b> · 3일 집중(일 5시간) + 현장 적용</td><td><b>낮음~자유</b> · 내 페이스로 준비해 제출</td></tr>
             <tr><th scope="row">권장 AI 경험수준<br /></th><td>중급 이상<br />(AI를 업무에 매일 사용)</td><td>중급 이상<br />(AI를 업무에 매일 사용)</td><td>제한 없음<br /></td></tr>
