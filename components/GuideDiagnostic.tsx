@@ -9,6 +9,14 @@ export default function GuideDiagnostic() {
     setSel((prev) => {
       const copy = [...prev];
       copy[q] = a;
+      // 경로 일관성: Q1 "네"(즉시 ③)는 Q2·Q3 선택을 지우고,
+      // Q2·Q3 선택은 Q1을 "아직 없어요" 경로로 정렬 — 추천이 상충 표시되지 않도록
+      if (q === 0 && a === 0) {
+        copy[1] = null;
+        copy[2] = null;
+      } else if (q > 0 && copy[0] === 0) {
+        copy[0] = 1;
+      }
       return copy;
     });
     if (next) {

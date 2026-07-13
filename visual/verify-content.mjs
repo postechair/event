@@ -114,7 +114,27 @@ for (const raw of chunks) {
   if (!newText.includes(c) && !newText.includes(applyTerms(c))) missing.push(c);
 }
 
-console.log(`청크 ${seen.size}건 중 검사 ${checked}건 · 예외 ${excepted}건`);
+// 4) 핵심 문구 존재 단언 — EXCEPTIONS 사각지대 보완 (삭제 승인과 무관하게
+//    현재 페이지에 반드시 있어야 하는 문구; 회귀 시 즉시 검출)
+const MUST_EXIST = [
+  "2026 AIR EVENT",
+  "Working Group",
+  "AX부트캠프(고급교육)",
+  "공모전",
+  "참여 대상",
+  "postech-air@postech.ac.kr",
+  "신청 방법",
+  "세 가지 질문으로 찾는 나의 AI 행사",
+  "한 표로 비교하는 3개의 AI 행사",
+];
+const absent = MUST_EXIST.filter((m) => !newText.includes(norm(m)));
+if (absent.length) {
+  console.log(`❌ 핵심 문구 누락 ${absent.length}건:`);
+  for (const a of absent) console.log("  -", a);
+  process.exit(1);
+}
+
+console.log(`청크 ${seen.size}건 중 검사 ${checked}건 · 예외 ${excepted}건 · 핵심 문구 ${MUST_EXIST.length}건 존재`);
 if (missing.length) {
   console.log(`❌ 누락 ${missing.length}건:`);
   for (const m of missing) console.log("  -", m.slice(0, 120));

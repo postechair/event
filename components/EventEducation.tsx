@@ -1,6 +1,6 @@
 export default function EventEducation() {
   return (
-    <section className="sec alt" id="pg-edu" data-screen-label="② AX부트캠프(고급교육) (AX Leaders)">
+    <section className="sec alt" id="pg-edu" data-screen-label="② AX부트캠프(고급교육)">
       <div className="wrap">
       <div className="eyebrow">행사 안내 ②</div>
       <div className="ev" style={{ marginTop: 14 }}>

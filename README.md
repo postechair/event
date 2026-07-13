@@ -1,7 +1,7 @@
-# POSTECH AIR센터 — AI 행사 선택 가이드
+# POSTECH AIR센터 — 2026 AIR EVENT
 
-2026 하반기 POSTECH AI 행사(① Working Group · ② 고급교육 AX Leaders · ③ 공모전) 안내
-페이지. GitHub Pages 로 공개 배포한다.
+2026 하반기 POSTECH AI 행사(① Working Group · ② AX부트캠프(고급교육) · ③ 공모전)
+안내 페이지. GitHub Pages 로 공개 배포한다.
 
 - 배포 주소: https://postechair.github.io/event/
 - 디자인 SSoT: claude.ai/design 프로젝트 "AIR센터 행사 선택 가이드"
