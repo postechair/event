@@ -94,7 +94,10 @@ const norm = (s) =>
   s.replace(/ /g, " ").replace(/\s+/g, " ").trim();
 
 /* 승인된 용어 개정 — 기준선 청크에 적용한 형태도 포함으로 인정 (2026-07-13) */
-const TERM_MAP = [["고급교육", "AX부트캠프(고급교육)"]];
+const TERM_MAP = [
+  ["고급교육", "AX부트캠프(고급교육)"],
+  ["공모전", "AX 공모전"], // 2026-07-14 용어 개정
+];
 const applyTerms = (s) => {
   let out = s;
   for (const [from, to] of TERM_MAP) out = out.split(from).join(to);

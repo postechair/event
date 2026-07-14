@@ -10,7 +10,7 @@ export default function GuideTable() {
             <th scope="col">기준</th>
             <th scope="col"><span className="cn">①</span><span className="ct">Working Group</span></th>
             <th scope="col"><span className="cn">②</span><span className="ct">AX부트캠프(고급교육)</span></th>
-            <th scope="col"><span className="cn">③</span><span className="ct">공모전</span></th>
+            <th scope="col"><span className="cn">③</span><span className="ct">AX 공모전</span></th>
           </tr></thead>
           <tbody>
             <tr><th scope="row">한 줄 소개</th><td><b>실무 공동 구현</b><br />내 업무 문제를 함께 해결</td><td><b>집중 양성 과정</b><br />1인 1과제 완주형</td><td><b>자유 출품 챌린지</b><br />AX 사례 또는 산출물 제출</td></tr>
@@ -28,7 +28,7 @@ export default function GuideTable() {
       <div className="chiprow">
 
 
-        <span className="chip">꾸준히 함께 성장 → ① Working Group</span><span className="chip">집중·몰입·체계적 → ② AX부트캠프(고급교육)</span><span className="chip">시간 제약없이 자유롭게 참여 → ③ 공모전</span>
+        <span className="chip">꾸준히 함께 성장 → ① Working Group</span><span className="chip">집중·몰입·체계적 → ② AX부트캠프(고급교육)</span><span className="chip">시간 제약없이 자유롭게 참여 → ③ AX 공모전</span>
       </div>
       </div>
     </section>

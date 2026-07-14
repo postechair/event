@@ -1,10 +1,10 @@
 export default function EventCompetition() {
   return (
-    <section className="sec" id="pg-comp" data-screen-label="③ 공모전 (AX 실증 사례 출품 챌린지)">
+    <section className="sec" id="pg-comp" data-screen-label="③ AX 공모전 (AX 실증 사례 출품 챌린지)">
       <div className="wrap">
       <div className="eyebrow">행사 안내 <span className="evnum">3</span></div>
       <div className="ev" style={{ marginTop: 14 }}>
-        <div className="band"><span className="bb">공모(출품)형</span><h2 className="bt">공모전</h2></div>
+        <div className="band"><span className="bb">공모(출품)형</span><h2 className="bt">AX 공모전</h2></div>
         <div className="evb">
           <div className="spec">
             <div className="speccard"><div className="speck">목적</div><div className="specv">AX 사례(또는 산출물) 공유 및 아이디어 교환</div></div>
@@ -71,7 +71,7 @@ export default function EventCompetition() {
           <div className="applyzone">
             <div className="fith">신청방법</div>
             <p className="applyp">아래를 참고하여 신청</p>
-            <div className="sech">공모전 참여 링크</div>
+            <div className="sech">AX 공모전 참여 링크</div>
             <div className="links">
               <a className="linkbtn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">
                 <span className="ln">1</span><span className="lt"><span className="lk">참가신청서(AI 라이선스 신청 포함) 작성 (~7.29) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/Pages/ResponsePage.aspx?id=…SEVITVcxTURESS4u</span></span><span className="lgo">열기 →</span>
@@ -85,7 +85,7 @@ export default function EventCompetition() {
             </div>
             <div className="sech">일정</div>
             <div className="tl">
-              <div className="tlrow"><div className="tld">7. 15 (수)</div><div className="tlt">공모전 접수 시작</div></div>
+              <div className="tlrow"><div className="tld">7. 15 (수)</div><div className="tlt">AX 공모전 접수 시작</div></div>
               <div className="tlrow"><div className="tld">7. 29 (수)</div><div className="tlt">참가신청서(AI 라이선스 신청 포함) 마감</div></div>
               <div className="tlrow"><div className="tld">8. 26 (수)</div><div className="tlt">컨설팅 신청 마감</div></div>
               <div className="tlrow"><div className="tld">10. 14 (수)</div><div className="tlt">AX 경험 설명서 작성 마감</div></div>
