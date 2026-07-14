@@ -47,7 +47,23 @@ export default function EventEducation() {
             </ul>
           </div>
 
-          <div className="fit"><div className="fith">신청 방법</div><p>사전수요조사 설문에 응답 (수요에 따라 선발 과정이 발생할 수 있음)</p></div>
+          <div className="applyzone">
+            <div className="fith">신청 방법</div>
+            <p className="applyp">사전수요조사 설문에 응답 (수요에 따라 선발 과정이 발생할 수 있음)</p>
+            <div className="sech">사전수요조사 설문 링크</div>
+            <div className="links">
+              <a className="linkbtn" href="https://forms.cloud.microsoft/r/hfkNYYATZj" target="_blank" rel="noopener">
+                <span className="ln">1</span><span className="lt"><span className="lk">사전수요조사</span><span className="lu">forms.cloud.microsoft/r/hfkNYYATZj</span></span><span className="lgo">열기 →</span>
+              </a>
+            </div>
+            <div className="sech">일정</div>
+            <div className="tl">
+              <div className="tlrow"><div className="tld">7. 15 (수)</div><div className="tlt">사전수요조사 설문 시작</div></div>
+              <div className="tlrow"><div className="tld">7. 24 (금)</div><div className="tlt">사전수요조사 설문 마감</div></div>
+              <div className="tlrow"><div className="tld">8~9월</div><div className="tlt">교육생 선발 및 3일 교육 시행</div></div>
+              <div className="tlrow"><div className="tld">교육종료 후</div><div className="tlt">현업 연계</div></div>
+            </div>
+          </div>
         </div>
       </div>
       </div>
