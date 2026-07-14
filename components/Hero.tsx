@@ -33,7 +33,7 @@ export default function Hero() {
             <span className="minid">AI를 활용한 실증 사례에 대해 자유롭게 출품하는 챌린지입니다.</span>
             <div className="minimeta"><div><b>형태</b>개인·팀(≤4명)</div><div><b>기간</b>7.15~10.14</div><div><b>보상</b>시상(최대 20명)</div></div>
             <span className="tile-links">
-              <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">참가신청서 (AI 라이선스 신청 포함) ↗</a>
+              <a href="https://forms.cloud.microsoft/r/ma8zZBZQGd" target="_blank" rel="noopener">참가신청서 (AI 라이선스 신청 포함) ↗</a>
               <a href="https://forms.cloud.microsoft/r/ge3tZCAkLd" target="_blank" rel="noopener">AX 경험 설명서 ↗</a>
             </span>
           </div>

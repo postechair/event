@@ -23,7 +23,7 @@ export default function ApplySection() {
           <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}><span className="lgn">3</span><span style={{ fontSize: 16, fontWeight: 700, color: "var(--fg-strong)" }}>AX 공모전</span></div>
           <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}>아래 <b style={{ color: "var(--fg-strong)" }}>온라인 신청서</b>를 작성해 제출하세요.
             <div className="cardlinks">
-              <div><a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">참가신청서 (AI 라이선스 신청 포함) ↗</a><span className="pill req">필수</span></div>
+              <div><a href="https://forms.cloud.microsoft/r/ma8zZBZQGd" target="_blank" rel="noopener">참가신청서 (AI 라이선스 신청 포함) ↗</a><span className="pill req">필수</span></div>
               <div><a href="https://forms.cloud.microsoft/r/ge3tZCAkLd" target="_blank" rel="noopener">AX 경험 설명서 ↗</a><span className="pill req">필수</span></div>
               <div><a href="https://forms.cloud.microsoft/r/VSRvGb0Asb" target="_blank" rel="noopener">컨설팅 신청서 ↗</a><span className="pill opt">선택</span></div>
             </div>

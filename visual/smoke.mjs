@@ -36,7 +36,7 @@ const firstScreen = await page.evaluate(() => {
   return {
     wg: q('.tiles a[href^="mailto:"]'),
     edu: q('.tiles a[href*="hfkNYYATZj"]'),
-    comp1: q('.tiles a[href*="ResponsePage.aspx"]'),
+    comp1: q('.tiles a[href*="ma8zZBZQGd"]'),
     comp2: q('.tiles a[href*="ge3tZCAkLd"]'),
   };
 });

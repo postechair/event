@@ -73,8 +73,8 @@ export default function EventCompetition() {
             <p className="applyp">아래를 참고하여 신청</p>
             <div className="sech">AX 공모전 참여 링크</div>
             <div className="links">
-              <a className="linkbtn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">
-                <span className="ln">1</span><span className="lt"><span className="lk">참가신청서(AI 라이선스 신청 포함) 작성 (~7.29) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/Pages/ResponsePage.aspx?id=…SEVITVcxTURESS4u</span></span><span className="lgo">열기 →</span>
+              <a className="linkbtn" href="https://forms.cloud.microsoft/r/ma8zZBZQGd" target="_blank" rel="noopener">
+                <span className="ln">1</span><span className="lt"><span className="lk">참가신청서(AI 라이선스 신청 포함) 작성 (~7.29) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/r/ma8zZBZQGd</span></span><span className="lgo">열기 →</span>
               </a>
               <a className="linkbtn" href="https://forms.cloud.microsoft/r/ge3tZCAkLd" target="_blank" rel="noopener">
                 <span className="ln">2</span><span className="lt"><span className="lk">AX 경험 설명서 작성 (~10.14) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/r/ge3tZCAkLd</span></span><span className="lgo">열기 →</span>

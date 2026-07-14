@@ -11,7 +11,7 @@ const __dir = dirname(fileURLToPath(import.meta.url));
 const html = readFileSync(resolve(__dir, "../docs/index.html"), "utf8");
 
 const REQUIRED = [
-  ["공모전 참가신청서", "forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u"],
+  ["공모전 참가신청서", "forms.cloud.microsoft/r/ma8zZBZQGd"],
   ["AX 경험 설명서", "forms.cloud.microsoft/r/ge3tZCAkLd"],
   ["컨설팅 신청서", "forms.cloud.microsoft/r/VSRvGb0Asb"],
   ["사전수요조사", "forms.cloud.microsoft/r/hfkNYYATZj"],
