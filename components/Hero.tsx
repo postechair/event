@@ -28,7 +28,7 @@ export default function Hero() {
           </div>
           <div className="tile">
             <span className="tile-pill">Event 3</span>
-            <a className="tile-t" href="#pg-comp">③ 공모전 신청</a>
+            <a className="tile-t" href="#pg-comp">③ 공모전</a>
             <span className="minitag">공모(출품)형 · 챌린지</span>
             <span className="minid">AI를 활용한 실증 사례에 대해 자유롭게 출품하는 챌린지입니다.</span>
             <div className="minimeta"><div><b>형태</b>개인·팀(≤4명)</div><div><b>기간</b>7.15~10.14</div><div><b>보상</b>시상(최대 20명)</div></div>
