@@ -33,6 +33,12 @@ export default function EventCompetition() {
             <div className="barrow"><span className="barlab">타 부서 확산 가능성</span><span className="bartrack"><span className="barfill" style={{ width: "37.5%" }}></span></span><span className="barval">15</span></div>
           </div>
 
+          <div className="info">
+            <ul>
+              <li>평가 과정에서 <b>AX 경험 또는 해당과정의 산출물</b>에 대해 깊이 이해하고자 <b>대면평가 과정이 추가</b>될 수 있습니다.</li>
+            </ul>
+          </div>
+
           <div className="g2x16">
             <div>
               <div className="sech" style={{ marginTop: 0 }}>시상</div>
