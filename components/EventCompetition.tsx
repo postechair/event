@@ -83,7 +83,6 @@ export default function EventCompetition() {
               <div className="tlrow"><div className="tld">7. 29 (수)</div><div className="tlt">참가신청서(AI 라이선스 신청 포함) 마감</div></div>
               <div className="tlrow"><div className="tld">8. 26 (수)</div><div className="tlt">컨설팅 신청 마감</div></div>
               <div className="tlrow"><div className="tld">10. 14 (수)</div><div className="tlt">AX 경험 설명서 작성 마감</div></div>
-              <div className="tlrow"><div className="tld">연말</div><div className="tlt">우수 사례 성과 공유회<small>AX부트캠프(고급교육) 현장 적용 성과 발표와 함께 진행</small></div></div>
             </div>
           </div>
         </div>
