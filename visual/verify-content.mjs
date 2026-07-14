@@ -95,7 +95,7 @@ const norm = (s) =>
 
 /* 승인된 용어 개정 — 기준선 청크에 적용한 형태도 포함으로 인정 (2026-07-13) */
 const TERM_MAP = [
-  ["고급교육", "AX부트캠프(고급교육)"],
+  ["고급교육", "AX 부트캠프(고급교육)"], // 2026-07-14 띄어쓰기 통일
   ["공모전", "AX 공모전"], // 2026-07-14 용어 개정
 ];
 const applyTerms = (s) => {
@@ -145,7 +145,7 @@ for (const raw of chunks) {
 const MUST_EXIST = [
   "2026 AIR EVENT",
   "Working Group",
-  "AX부트캠프(고급교육)",
+  "AX 부트캠프(고급교육)",
   "공모전",
   "참여 대상",
   "postech-air@postech.ac.kr",
