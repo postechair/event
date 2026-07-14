@@ -68,21 +68,21 @@ export default function EventCompetition() {
             <div className="sech">공모전 참여 링크</div>
             <div className="links">
               <a className="linkbtn" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=jOnzv8pcXEWtyF_ST8mQjfaXwssGAtFFnAAnJOxYAqlUMkRWSzQ4WlJBWFZEWDYzSEVITVcxTURESS4u" target="_blank" rel="noopener">
-                <span className="ln">1</span><span className="lt"><span className="lk">참가신청서 작성 <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/Pages/ResponsePage.aspx?id=…SEVITVcxTURESS4u</span></span><span className="lgo">열기 →</span>
+                <span className="ln">1</span><span className="lt"><span className="lk">참가신청서(AI 라이선스 신청 포함) 작성 (~7.29) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/Pages/ResponsePage.aspx?id=…SEVITVcxTURESS4u</span></span><span className="lgo">열기 →</span>
               </a>
               <a className="linkbtn" href="https://forms.cloud.microsoft/r/ge3tZCAkLd" target="_blank" rel="noopener">
-                <span className="ln">2</span><span className="lt"><span className="lk">AX 경험 설명서 <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/r/ge3tZCAkLd</span></span><span className="lgo">열기 →</span>
+                <span className="ln">2</span><span className="lt"><span className="lk">AX 경험 설명서 작성 (~10.14) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/r/ge3tZCAkLd</span></span><span className="lgo">열기 →</span>
               </a>
               <a className="linkbtn" href="https://forms.cloud.microsoft/r/VSRvGb0Asb" target="_blank" rel="noopener">
-                <span className="ln">3</span><span className="lt"><span className="lk">컨설팅 신청서 작성 <span className="pill opt" style={{ marginLeft: 6 }}>선택</span></span><span className="lu">forms.cloud.microsoft/r/VSRvGb0Asb</span></span><span className="lgo">열기 →</span>
+                <span className="ln">3</span><span className="lt"><span className="lk">컨설팅 신청서 작성 (~8.26) <span className="pill opt" style={{ marginLeft: 6 }}>선택</span></span><span className="lu">forms.cloud.microsoft/r/VSRvGb0Asb</span></span><span className="lgo">열기 →</span>
               </a>
             </div>
             <div className="sech">일정</div>
             <div className="tl">
               <div className="tlrow"><div className="tld">7. 15 (수)</div><div className="tlt">공모전 접수 시작</div></div>
               <div className="tlrow"><div className="tld">7. 29 (수)</div><div className="tlt">참가신청서(AI 라이선스 신청 포함) 마감</div></div>
-              <div className="tlrow"><div className="tld">8. 26 (수)</div><div className="tlt">공모전 · 컨설팅 신청 마감</div></div>
-              <div className="tlrow"><div className="tld">10. 14 (수)</div><div className="tlt">공모전 접수 마감</div></div>
+              <div className="tlrow"><div className="tld">8. 26 (수)</div><div className="tlt">컨설팅 신청 마감</div></div>
+              <div className="tlrow"><div className="tld">10. 14 (수)</div><div className="tlt">AX 경험 설명서 작성 마감</div></div>
               <div className="tlrow"><div className="tld">연말</div><div className="tlt">우수 사례 성과 공유회<small>AX부트캠프(고급교육) 현장 적용 성과 발표와 함께 진행</small></div></div>
             </div>
           </div>
