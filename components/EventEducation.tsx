@@ -53,7 +53,7 @@ export default function EventEducation() {
             <div className="sech">사전수요조사 설문 링크</div>
             <div className="links">
               <a className="linkbtn" href="https://forms.cloud.microsoft/r/hfkNYYATZj" target="_blank" rel="noopener">
-                <span className="ln">1</span><span className="lt"><span className="lk">사전수요조사 (7.29)</span><span className="lu">forms.cloud.microsoft/r/hfkNYYATZj</span></span><span className="lgo">열기 →</span>
+                <span className="ln">1</span><span className="lt"><span className="lk">사전수요조사 (7.29) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/r/hfkNYYATZj</span></span><span className="lgo">열기 →</span>
               </a>
             </div>
             <div className="sech">일정</div>
