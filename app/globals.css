@@ -110,7 +110,9 @@ a.tile-t:hover { background: var(--primary-bg); color: var(--primary-heavy); }
    이하 컴포넌트 스타일 — 디자인 원본 값 그대로 (변경: .linkbtn 대형화만)
    ===================================================================== */
 
-.eyebrow { font: 700 14px/1 var(--font-base), system-ui; letter-spacing: .14em; color: var(--primary); text-transform: uppercase; margin: 0 0 12px; }
+.eyebrow { font: 700 14px/1 var(--font-base), system-ui; letter-spacing: .14em; color: var(--primary); text-transform: uppercase; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
+/* 행사 번호 배지 — 원문자(①②③) 가독성 대체, 범례 .lgn 과 동일 계열 */
+.evnum { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 999px; background: var(--primary); color: #fff; font-size: 14px; font-weight: 700; letter-spacing: 0; }
 .ptitle { font-size: 35px; line-height: 1.18; letter-spacing: -.025em; font-weight: 700; color: var(--fg-strong); margin: 0; }
 .psub { font-size: 17px; line-height: 1.6; color: var(--fg-alternative); margin: 11px 0 0; max-width: 52ch; }
 

@@ -2,7 +2,7 @@ export default function EventCompetition() {
   return (
     <section className="sec" id="pg-comp" data-screen-label="③ 공모전 (AX 실증 사례 출품 챌린지)">
       <div className="wrap">
-      <div className="eyebrow">행사 안내 ③</div>
+      <div className="eyebrow">행사 안내 <span className="evnum">3</span></div>
       <div className="ev" style={{ marginTop: 14 }}>
         <div className="band"><span className="bb">공모(출품)형</span><h2 className="bt">공모전</h2></div>
         <div className="evb">

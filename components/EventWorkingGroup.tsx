@@ -2,7 +2,7 @@ export default function EventWorkingGroup() {
   return (
     <section className="sec" id="pg-wg" data-screen-label="① Working Group">
       <div className="wrap">
-      <div className="eyebrow">행사 안내 ①</div>
+      <div className="eyebrow">행사 안내 <span className="evnum">1</span></div>
       <div className="ev" style={{ marginTop: 14 }}>
         <div className="band"><span className="bb">지속형 · 실무 공동 구현</span><h2 className="bt">Working Group</h2></div>
         <div className="evb">
