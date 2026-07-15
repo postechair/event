@@ -53,6 +53,12 @@ a:hover { color: var(--primary-strong); }
 }
 .nav-cta:hover { background: var(--primary-strong); color: #fff; }
 
+/* ---- 개별 행사 페이지 상단 복귀 바 ---- */
+.backbar { position: sticky; top: 0; z-index: 100; background: var(--bg); border-bottom: 1px solid var(--line-subtle); }
+.backbar .wrap { max-width: 1140px; margin: 0 auto; padding: 10px 24px; }
+.backbtn { display: inline-flex; align-items: center; gap: 6px; background: var(--primary); color: #fff; font-size: 15.5px; font-weight: 700; padding: 9px 16px; border-radius: var(--radius-md); }
+.backbtn:hover { background: var(--primary-strong); color: #fff; }
+
 /* ---- 히어로 풀폭 밴드 (cover-hero 그라데이션 승격, 텍스트 값은 표지 원본) ---- */
 .hero { background: linear-gradient(135deg, #A61955 0%, #7E1444 100%); color: #fff; scroll-margin-top: 60px; }
 .hero-inner { max-width: 1140px; margin: 0 auto; padding: 44px 24px 40px; }

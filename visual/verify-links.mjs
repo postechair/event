@@ -24,4 +24,24 @@ for (const [name, needle] of REQUIRED) {
   console.log(`${count > 0 ? "✅" : "❌"} ${name}: ${count}회`);
   if (count === 0) fail = 1;
 }
+
+/* 개별 행사 페이지 — 존재 + 핵심 링크 + 전체 EVENT 복귀 버튼 */
+const SUBPAGES = [
+  ["2026-01 (WG)", "../docs/2026-01/index.html", ["mailto:postech-air@postech.ac.kr", 'href="/event/"']],
+  ["2026-02 (부트캠프)", "../docs/2026-02/index.html", ["forms.cloud.microsoft/r/hfkNYYATZj", 'href="/event/"']],
+  ["2026-03 (공모전)", "../docs/2026-03/index.html", ["forms.cloud.microsoft/r/ma8zZBZQGd", "forms.cloud.microsoft/r/ge3tZCAkLd", "forms.cloud.microsoft/r/VSRvGb0Asb", 'href="/event/"']],
+];
+for (const [name, path, needles] of SUBPAGES) {
+  let h;
+  try {
+    h = readFileSync(resolve(__dir, path), "utf8");
+  } catch {
+    console.log(`❌ ${name}: 파일 없음`);
+    fail = 1;
+    continue;
+  }
+  const missing = needles.filter((n) => !h.includes(n));
+  console.log(`${missing.length === 0 ? "✅" : "❌"} ${name}${missing.length ? `: 누락 ${missing.join(", ")}` : ""}`);
+  if (missing.length) fail = 1;
+}
 process.exit(fail);

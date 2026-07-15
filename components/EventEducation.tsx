@@ -1,8 +1,8 @@
-export default function EventEducation() {
+export default function EventEducation({ eyebrow = "행사 안내" }: { eyebrow?: string }) {
   return (
     <section className="sec alt" id="pg-edu" data-screen-label="② AX 부트캠프(고급교육)">
       <div className="wrap">
-      <div className="eyebrow">행사 안내 <span className="evnum">2</span></div>
+      <div className="eyebrow">{eyebrow} <span className="evnum">2</span></div>
       <div className="ev" style={{ marginTop: 14 }}>
         <div className="band"><span className="bb">집중 교육형</span><h2 className="bt">AX 부트캠프(고급교육)</h2></div>
         <div className="evb">

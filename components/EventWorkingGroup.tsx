@@ -1,8 +1,8 @@
-export default function EventWorkingGroup() {
+export default function EventWorkingGroup({ eyebrow = "행사 안내" }: { eyebrow?: string }) {
   return (
     <section className="sec" id="pg-wg" data-screen-label="① Working Group">
       <div className="wrap">
-      <div className="eyebrow">행사 안내 <span className="evnum">1</span></div>
+      <div className="eyebrow">{eyebrow} <span className="evnum">1</span></div>
       <div className="ev" style={{ marginTop: 14 }}>
         <div className="band"><span className="bb">지속형 · 실무 공동 구현</span><h2 className="bt">Working Group</h2></div>
         <div className="evb">
@@ -38,7 +38,7 @@ export default function EventWorkingGroup() {
             </ul>
           </div>
 
-          <div className="fit"><div className="fith">신청 방법</div><p>AIR센터에 직접 문의(이메일, 전화 등)</p></div>
+          <div className="fit"><div className="fith">신청 방법</div><p>AIR센터에 직접 문의(이메일, 전화 등) — <a href="mailto:postech-air@postech.ac.kr">postech-air@postech.ac.kr</a> · 054-279-3501</p></div>
         </div>
       </div>
       </div>

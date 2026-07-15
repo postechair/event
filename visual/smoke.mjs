@@ -78,6 +78,16 @@ const mchecks = await m.evaluate(() => {
 results.push(["모바일 하단 sticky CTA 표시", !!mchecks.ctaVisible]);
 results.push(["모바일 첫 화면에 바로가기 타일 노출 시작", !!mchecks.tileStarts]);
 await m.close();
+
+// 4) 개별 행사 페이지: 복귀 버튼 + 반응형
+for (const slug of ["2026-01", "2026-02", "2026-03"]) {
+  const sp = await browser.newPage({ viewport: { width: 390, height: 900 } });
+  await sp.goto(`http://127.0.0.1:${port}/event/${slug}/`, { waitUntil: "networkidle" });
+  const back = await sp.locator("a.backbtn").getAttribute("href");
+  const sw = await sp.evaluate(() => document.documentElement.scrollWidth);
+  results.push([`/${slug} 복귀 버튼(href=${back}) · 390px 오버플로 없음(${sw})`, back === "/event/" && sw <= 390]);
+  await sp.close();
+}
 await browser.close();
 
 let fail = 0;
