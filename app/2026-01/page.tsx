@@ -13,7 +13,7 @@ export default function Page() {
     <>
       <BackBar />
       <main>
-        <EventWorkingGroup eyebrow="AIR센터 2026년 행사 안내" />
+        <EventWorkingGroup eyebrow="AIR센터 2026년 행사 안내" contact />
       </main>
       <SiteFooter />
     </>

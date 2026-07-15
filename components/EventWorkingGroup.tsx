@@ -1,4 +1,4 @@
-export default function EventWorkingGroup({ eyebrow = "행사 안내" }: { eyebrow?: string }) {
+export default function EventWorkingGroup({ eyebrow = "행사 안내", contact = false }: { eyebrow?: string; contact?: boolean }) {
   return (
     <section className="sec" id="pg-wg" data-screen-label="① Working Group">
       <div className="wrap">
@@ -38,7 +38,7 @@ export default function EventWorkingGroup({ eyebrow = "행사 안내" }: { eyebr
             </ul>
           </div>
 
-          <div className="fit"><div className="fith">신청 방법</div><p>AIR센터에 직접 문의(이메일, 전화 등) — <a href="mailto:postech-air@postech.ac.kr">postech-air@postech.ac.kr</a> · 054-279-3501</p></div>
+          <div className="fit"><div className="fith">신청 방법</div><p>AIR센터에 직접 문의(이메일, 전화 등){contact && <> — <a href="mailto:postech-air@postech.ac.kr">postech-air@postech.ac.kr</a> · 054-279-3501</>}</p></div>
         </div>
       </div>
       </div>
