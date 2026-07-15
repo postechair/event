@@ -5,7 +5,7 @@ export default function BackBar() {
   return (
     <div className="backbar">
       <div className="wrap">
-        <Link className="backbtn" href="/">AIR 센터 전체 EVENT 바로 가기 →</Link>
+        <Link className="backbtn" href="/">AIR 센터 2026년 전체 EVENT 바로 가기 →</Link>
       </div>
     </div>
   );
