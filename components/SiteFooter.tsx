@@ -6,7 +6,7 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="wrap">
         <img src={wordmark.src} alt="POSTECH" />
-        <span>인사팀 · AIR센터 &nbsp;|&nbsp; postech-air@postech.ac.kr</span>
+        <span>AIR센터 &nbsp;|&nbsp; postech-air@postech.ac.kr</span>
       </div>
     </footer>
   );
