@@ -13,6 +13,7 @@ export default function SiteNav() {
           <a href="#compare">한눈 비교</a>
           <a href="#pg-wg">행사 안내</a>
         </nav>
+        <a className="nav-home" href="https://postechair.github.io/">POSTECH AIR 홈 →</a>
         <a className="nav-cta" href="#pg-apply">신청·일정</a>
       </div>
     </header>

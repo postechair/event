@@ -16,6 +16,7 @@ const REQUIRED = [
   ["컨설팅 신청서", "forms.cloud.microsoft/r/VSRvGb0Asb"],
   ["사전수요조사", "forms.cloud.microsoft/r/hfkNYYATZj"],
   ["WG 이메일(mailto)", "mailto:postech-air@postech.ac.kr"],
+  ["POSTECH AIR 홈 링크", 'href="https://postechair.github.io/"'],
 ];
 
 let fail = 0;
