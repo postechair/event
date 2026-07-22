@@ -19,7 +19,8 @@ export default function Hero() {
             <div className="minimeta"><div><b>형태</b>소규모 그룹(10명 내외)</div><div><b>시간</b>주 1회·1시간+</div><div><b>지원</b>Claude Pro·멘토링</div></div>
             <span className="tile-d">참여문의 : <a href="mailto:postech-air@postech.ac.kr">postech-air@postech.ac.kr</a></span>
           </div>
-          <div className="tile">
+          <div className="tile tile-status-host">
+            <span className="tile-status status-soon">마감 임박</span>
             <span className="tile-pill">Event 2</span>
             <a className="tile-t" href="#pg-edu">② AX 부트캠프(고급교육)</a>
             <span className="minitag">집중 교육형</span>
@@ -29,7 +30,8 @@ export default function Hero() {
               <a href="https://forms.cloud.microsoft/r/hfkNYYATZj" target="_blank" rel="noopener">사전수요조사 ↗</a>
             </span>
           </div>
-          <div className="tile">
+          <div className="tile tile-status-host">
+            <span className="tile-status status-ext">신청 마감 연장</span>
             <span className="tile-pill">Event 3</span>
             <a className="tile-t" href="#pg-comp">③ AX 공모전</a>
             <span className="minitag">공모(출품)형 · 챌린지</span>
