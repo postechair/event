@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BackBar from "@/components/BackBar";
+import Link from "next/link";
 import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
@@ -8,13 +8,13 @@ export const metadata: Metadata = {
     "POSTECH AIR센터 Working Group 2026년 상반기 참여자 산출물 사례집 — 표준 데이터 대시보드 실습에서 출발해 실제 업무 도메인으로 확장한 산출물을, 참여자가 스스로 설계·개발했습니다. 익명 정리(기술 스택·핵심 기능·작업 방식).",
 };
 
-/* 완전 익명 사례집 — 학생 식별정보·보안 세부·부정평가 배제, 도메인·구현 세부 일반화 (오너 승인 방침).
-   컬러톤: POSTECH 굿즈 가이드 G-Color 팔레트로 타 페이지와 차별화. */
+/* 완전 익명 사례집 — 학생 식별정보·보안 세부·부정평가 배제, 도메인·구현 세부 일반화 (오너 승인).
+   디자인 컨셉: 다크 청록 네이비 + 시안/바이올렛 네온 + 궤도 그래픽 (참고 디자인 컨셉 반영). */
 type Track = "심화" | "응용" | "기본";
-const TRACK_LABEL: Record<Track, string> = {
-  심화: "심화 · 독자 풀스택",
-  응용: "응용 · 업무 도메인 재구성",
-  기본: "기본 · 표준 실습 완성",
+const TRACK_META: Record<Track, { code: string; label: string; sub: string }> = {
+  심화: { code: "A", label: "심화 · 독자 풀스택", sub: "표준 실습을 넘어 독자 풀스택으로 확장한 결과물" },
+  응용: { code: "B", label: "응용 · 업무 도메인 재구성", sub: "표준 패턴을 자기 업무 도메인으로 재적용" },
+  기본: { code: "C", label: "기본 · 표준 실습 완성", sub: "표준 커리큘럼을 견실하게 완성" },
 };
 
 const CASES: {
@@ -33,7 +33,7 @@ const CASES: {
     features: [
       "엑셀 업로드 시 부서 업무현황을 자동 취합·재분류",
       "기관 공식 양식 주간업무보고를 표·도형·서식까지 그대로 문서로 자동 생성",
-      "관심 인물·키워드를 기준으로 관련 뉴스 동향을 자동 수집",
+      "관심 인물·키워드를 기준으로 관련 뉴스 동향을 자동 수집(병렬 처리)",
       "온라인 신청 접수 창구를 갖춘 업무 포털",
     ],
     way: "100여 개 파트에 걸친 구현 이력·교훈을 개발 일지로 축적하며 대규모 코드를 반복 개선. 코딩 에이전트와 자동 테스트를 작업 흐름에 통합.",
@@ -148,7 +148,6 @@ const CASES: {
   },
 ];
 
-/* 상단 3대 테마 — 선언적·강렬한 요약 */
 const THEMES: { no: string; head: string; body: string }[] = [
   { no: "01", head: "표준을 넘어, 내 업무로", body: "주어진 실습에서 멈추지 않고, 각자 매일 쓰는 업무를 실제로 돌아가는 도구로 다시 지었습니다." },
   { no: "02", head: "처음부터 끝까지, 스스로의 손으로", body: "기획·설계·개발·검증까지 전 과정을 참여자가 직접 해냈습니다. 지식보다 의지가 만든 결과물입니다." },
@@ -162,29 +161,62 @@ const PATTERNS: [string, string][] = [
   ["스스로 검증하는 습관", "자동·수동 점검으로 만든 것을 스스로 확인하고, 정규화·모듈화·단일 근거 같은 설계 원칙을 적용했습니다."],
 ];
 
+const TRACK_ANCHOR: Record<Track, string> = { 심화: "track-a", 응용: "track-b", 기본: "track-c" };
+
 export default function WorkingGroupCases2026H1() {
   const tracks: Track[] = ["심화", "응용", "기본"];
+  const counters: Record<Track, number> = { 심화: 0, 응용: 0, 기본: 0 };
   return (
-    <>
-      <BackBar />
-      <main className="wg">
-        <section className="wg-hero">
-          <div className="wg-wrap">
-            <div className="wg-eyebrow">POSTECH AIR · Working Group · 2026 상반기</div>
-            <h1 className="wg-title">2026년 상반기<br /><span className="grad">WG 참여자 산출물 사례집</span></h1>
-            <p className="wg-lede">
-              워킹그룹은 <b>데이터 대시보드 표준 실습</b>에서 출발했습니다. 여러 참여자가 여기서 멈추지 않고
-              <b> 자기 업무 도메인</b>으로 프로젝트를 재구성했고, 일부는 상담 챗봇·업무 자동화 플랫폼·3D 시각화까지 나아갔습니다.
-            </p>
-            <div className="wg-selfmade">
-              <span className="sm-badge">100% 참여자 자체 개발</span>
-              <span className="sm-text">아래 모든 산출물은 <b>참여자가 스스로 기획·설계·개발</b>했습니다. 표준 실습부터 독자 프로젝트까지, 직접 만든 결과물입니다.</span>
-            </div>
-            <p className="wg-note">※ 개인 식별정보 없이 프로젝트의 기술적 특징·기능·작업 방식만 담았습니다.</p>
-          </div>
-        </section>
+    <div className="wg" id="top">
+      <header className="wg-nav">
+        <div className="wg-wrap">
+          <Link className="nav-brand" href="/">POSTECH <span>AIR</span></Link>
+          <nav className="nav-links">
+            <a href="#top">Overview</a>
+            <a href="#track-a">Advanced</a>
+            <a href="#track-b">Applied</a>
+            <a href="#track-c">Foundation</a>
+            <a href="#patterns">Patterns</a>
+          </nav>
+          <Link className="nav-back" href="/">2026 AIR EVENT →</Link>
+        </div>
+      </header>
 
-        <section className="wg-themes">
+      <main>
+        <section className="wg-hero">
+          <div className="wg-wrap hero-grid">
+            <div className="hero-copy">
+              <div className="wg-eyebrow"><span className="tick" />POSTECH AIR · WORKING GROUP · 2026 상반기</div>
+              <p className="hero-kicker">2026년 상반기</p>
+              <h1 className="wg-title">WG 참여자<br /><span className="grad">산출물 사례집</span></h1>
+              <p className="wg-lede">
+                워킹그룹은 <b>데이터 대시보드 표준 실습</b>에서 출발했습니다. 여러 참여자가 여기서 멈추지 않고
+                <b> 자기 업무 도메인</b>으로 프로젝트를 재구성했고, 일부는 상담 챗봇·업무 자동화 플랫폼·3D 시각화까지 나아갔습니다.
+              </p>
+              <div className="hero-actions">
+                <a className="wg-cta" href="#track-a">프로젝트 탐색하기 →</a>
+                <div className="hero-self">
+                  <span className="self-check">✓</span>
+                  <div><b>100% 참여자 자체 개발</b><span>기획 · 설계 · 개발 · 검증</span></div>
+                </div>
+              </div>
+              <p className="wg-note">※ 개인 식별정보 없이 프로젝트의 기술적 특징·기능·작업 방식만 담았습니다.</p>
+            </div>
+
+            <div className="hero-visual" aria-hidden="true">
+              <div className="orbit">
+                <div className="orbit-ring r1" />
+                <div className="orbit-ring r2" />
+                <div className="orbit-ring r3" />
+                <div className="orbit-core"><span className="core-wg">WG</span><span className="core-sub">2026.1H</span></div>
+                <i className="orbit-dot d1" /><i className="orbit-dot d2" /><i className="orbit-dot d3" />
+                <span className="orbit-chip chip-tl"><b>OUTPUTS</b>10</span>
+                <span className="orbit-chip chip-tr"><b>TRACKS</b>03</span>
+                <span className="orbit-chip chip-bl"><b>BUILD MODE</b>SELF</span>
+              </div>
+            </div>
+          </div>
+
           <div className="wg-wrap">
             <div className="theme-grid">
               {THEMES.map((t) => (
@@ -198,44 +230,65 @@ export default function WorkingGroupCases2026H1() {
           </div>
         </section>
 
-        {tracks.map((tk) => {
+        {tracks.map((tk, ti) => {
           const items = CASES.filter((c) => c.track === tk);
+          const meta = TRACK_META[tk];
           return (
-            <section className={"wg-sec wg-band-" + tk} key={tk}>
+            <section className={"wg-sec wg-band-" + tk} id={TRACK_ANCHOR[tk]} key={tk}>
               <div className="wg-wrap">
-                <h2 className="wg-sech"><span className={"trk trk-" + tk}>{TRACK_LABEL[tk]}</span></h2>
+                <div className="track-head">
+                  <div>
+                    <div className="track-tag">TRACK #{String(ti + 1).padStart(2, "0")}</div>
+                    <h2 className="wg-sech2">{meta.label}</h2>
+                  </div>
+                  <p className="track-sub">{meta.sub}</p>
+                </div>
                 <div className="case-grid">
-                  {items.map((c) => (
-                    <article className="case" key={c.title}>
-                      <h3 className="case-t">{c.title}</h3>
-                      <p className="case-s">{c.summary}</p>
-                      <div className="case-stack">
-                        {c.stack.map((s) => <span className="tag" key={s}>{s}</span>)}
-                      </div>
-                      <div className="case-block">
-                        <div className="case-h">핵심 기능</div>
-                        <ul className="case-feat">
-                          {c.features.map((f, i) => <li key={i}>{f}</li>)}
-                        </ul>
-                      </div>
-                      <div className="case-block">
-                        <div className="case-h">작업 방식</div>
-                        <p className="case-way">{c.way}</p>
-                      </div>
-                    </article>
-                  ))}
+                  {items.map((c) => {
+                    counters[tk] += 1;
+                    const code = `${meta.code}-${counters[tk]}`;
+                    return (
+                      <article className="case" key={c.title}>
+                        <div className="case-code">{code}</div>
+                        <h3 className="case-t">{c.title}</h3>
+                        <p className="case-s">{c.summary}</p>
+                        <div className="case-stack">
+                          {c.stack.map((s) => <span className="tag" key={s}>{s}</span>)}
+                        </div>
+                        <div className="case-block">
+                          <div className="case-h">핵심 기능</div>
+                          <ul className="case-feat">
+                            {c.features.map((f, i) => <li key={i}>{f}</li>)}
+                          </ul>
+                        </div>
+                        <div className="case-block">
+                          <div className="case-h">작업 방식</div>
+                          <p className="case-way">{c.way}</p>
+                        </div>
+                      </article>
+                    );
+                  })}
                 </div>
               </div>
             </section>
           );
         })}
 
-        <section className="wg-sec wg-sec-pattern">
+        <section className="wg-sec wg-sec-pattern" id="patterns">
           <div className="wg-wrap">
-            <h2 className="wg-sech2">작업 방식에서 관찰된 공통 패턴</h2>
+            <div className="track-head">
+              <div>
+                <div className="track-tag">PATTERNS</div>
+                <h2 className="wg-sech2">작업 방식에서 관찰된 공통 패턴</h2>
+              </div>
+            </div>
             <div className="pat-grid">
-              {PATTERNS.map(([t, d]) => (
-                <div className="pat" key={t}><h4>{t}</h4><p>{d}</p></div>
+              {PATTERNS.map(([t, d], i) => (
+                <div className="pat" key={t}>
+                  <div className="pat-no">{String(i + 1).padStart(2, "0")}</div>
+                  <h4>{t}</h4>
+                  <p>{d}</p>
+                </div>
               ))}
             </div>
           </div>
@@ -243,19 +296,19 @@ export default function WorkingGroupCases2026H1() {
 
         <section className="wg-campaign">
           <div className="wg-wrap">
-            <p className="camp-lead">POSTECH의 AX는 여러분의 손으로 만들어집니다.</p>
+            <p className="camp-lead">POSTECH의 AX는<br /><span className="pt">여러분의 손으로 만들어집니다.</span></p>
             <p className="camp-sub">
               기술에 대한 지식과 경험보다, <b>무궁무진한 상상력과 바꿔보려는 의지</b>가 더 중요합니다.<br />
               다음 반기, 여러분의 아이디어가 다음 사례집의 주인공이 되기를 기다립니다.
             </p>
             <div className="camp-contact">
-              산출물에 대한 상세 정보 확인을 원하시면 <b>AIR센터</b>로 문의해 주세요. —{" "}
+              산출물에 대한 상세 정보 확인을 원하시면 <b>AIR센터</b>로 문의해 주세요.
               <a href="mailto:postech-air@postech.ac.kr">postech-air@postech.ac.kr</a>
             </div>
           </div>
         </section>
       </main>
       <SiteFooter />
-    </>
+    </div>
   );
 }
