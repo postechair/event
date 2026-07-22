@@ -182,13 +182,6 @@ a:hover { color: var(--primary-strong); }
 .case-t { margin: 0; font-size: 19px; font-weight: 800; color: #fff; letter-spacing: -.015em; line-height: 1.35; }
 .case-s { margin: 9px 0 0; font-size: 14px; line-height: 1.6; color: var(--txt-2); }
 
-/* 캡처 프레임 — 브라우저 크롬 목업 */
-.case-shot { margin: 16px 0 4px; border: 1px solid var(--line-2); border-radius: 12px; overflow: hidden; background: #1a1a26; box-shadow: 0 8px 30px rgba(0,0,0,.4); }
-.case-shot .chrome { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: rgba(255,255,255,.04); border-bottom: 1px solid var(--line); }
-.case-shot .dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.22); }
-.case-shot .barlabel { margin-left: 8px; font: 600 11px/1 var(--mono); color: var(--txt-3); letter-spacing: .04em; }
-.case-shot img { display: block; width: 100%; height: auto; }
-
 .case-stack { margin: 16px 0 4px; display: flex; flex-wrap: wrap; gap: 7px; }
 .tag { font: 600 12px/1 var(--mono); letter-spacing: .01em; color: var(--g-light-purple); background: rgba(204,172,208,.08); border: 1px solid rgba(204,172,208,.22); border-radius: 7px; padding: 5px 10px; }
 .case-block { margin-top: 18px; }
