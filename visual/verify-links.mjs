@@ -17,6 +17,7 @@ const REQUIRED = [
   ["사전수요조사", "forms.cloud.microsoft/r/hfkNYYATZj"],
   ["WG 이메일(mailto)", "mailto:postech-air@postech.ac.kr"],
   ["POSTECH AIR 홈 링크", 'href="https://postechair.github.io/"'],
+  ["공모전 마감 연장 공지 배너", "로 연장되었습니다"],
 ];
 
 let fail = 0;

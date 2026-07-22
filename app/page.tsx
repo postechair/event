@@ -1,3 +1,4 @@
+import NoticeBar from "@/components/NoticeBar";
 import SiteNav from "@/components/SiteNav";
 import Hero from "@/components/Hero";
 import GuideDiagnostic from "@/components/GuideDiagnostic";
@@ -12,6 +13,7 @@ import MobileCta from "@/components/MobileCta";
 export default function Home() {
   return (
     <>
+      <NoticeBar />
       <SiteNav />
       <main>
         <Hero />

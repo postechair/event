@@ -29,6 +29,19 @@ await page.goto(url, { waitUntil: "networkidle" });
 await page.evaluate(() => document.fonts.ready);
 await page.screenshot({ path: `${out}/fullpage-1600.png`, fullPage: true });
 
+// 공지 배너: 표시 + 닫기 동작 + 닫힘 기억(재로드)
+{
+  const barVisible = await page.locator(".noticebar").isVisible();
+  const hasDeadline = (await page.locator(".notice-text").textContent())?.includes("8.26(수)");
+  await page.locator(".notice-close").click();
+  await page.waitForTimeout(100);
+  const goneAfterClose = (await page.locator(".noticebar").count()) === 0;
+  await page.reload({ waitUntil: "networkidle" });
+  const staysGone = (await page.locator(".noticebar").count()) === 0;
+  results.push(["공지 배너 표시 + 8.26 문구", barVisible && !!hasDeadline]);
+  results.push(["공지 배너 닫기 + 재로드 후 유지", goneAfterClose && staysGone]);
+}
+
 // SC1 데스크톱: 스크롤 없이 행사별 신청 경로 3종 (mailto + 수요조사 + 공모전 2링크)
 const firstScreen = await page.evaluate(() => {
   const vis = (el) => { const r = el.getBoundingClientRect(); return r.top >= 0 && r.bottom <= window.innerHeight; };
