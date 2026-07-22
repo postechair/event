@@ -32,7 +32,15 @@ const SUBPAGES = [
   ["2026-01 (WG)", "../docs/2026-01/index.html", ["mailto:postech-air@postech.ac.kr", 'href="/event/"']],
   ["2026-02 (부트캠프)", "../docs/2026-02/index.html", ["forms.cloud.microsoft/r/hfkNYYATZj", 'href="/event/"']],
   ["2026-03 (공모전)", "../docs/2026-03/index.html", ["forms.cloud.microsoft/r/ma8zZBZQGd", "forms.cloud.microsoft/r/ge3tZCAkLd", "forms.cloud.microsoft/r/VSRvGb0Asb", 'href="/event/"']],
+  ["Working Group 사례집", "../docs/working-group/index.html", ["함께 만든 것들", "부서 통합 업무 자동화 플랫폼", "연구규정 RAG 챗봇", 'href="/event/"']],
 ];
+
+/* WG 섹션 → 사례집 진입 링크 (메인 페이지) */
+{
+  const has = html.includes('href="/event/working-group/"') || html.includes('href="/event/working-group"');
+  console.log(`${has ? "✅" : "❌"} WG 사례집 진입 링크`);
+  if (!has) fail = 1;
+}
 for (const [name, path, needles] of SUBPAGES) {
   let h;
   try {

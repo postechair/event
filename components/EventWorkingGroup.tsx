@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function EventWorkingGroup({ eyebrow = "행사 안내", contact = false }: { eyebrow?: string; contact?: boolean }) {
   return (
     <section className="sec" id="pg-wg" data-screen-label="① Working Group">
@@ -6,6 +8,7 @@ export default function EventWorkingGroup({ eyebrow = "행사 안내", contact =
       <div className="ev" style={{ marginTop: 14 }}>
         <div className="band"><span className="bb">지속형 · 실무 공동 구현</span><h2 className="bt">Working Group</h2></div>
         <div className="evb">
+          <Link className="wg-caselink" href="/working-group">2026 상반기 활동 사례 보기 — 함께 만든 것들 →</Link>
           <div className="spec">
             <div className="speccard"><div className="speck">목적</div><div className="specv">실무 문제 공동 해결<small>업무에서 실제 발생하는 문제를 정의하고, 활용 가능한 수준까지 함께 구현</small></div></div>
             <div className="speccard"><div className="speck">대상 · 규모</div><div className="specv">전 직원 · 10명 내외<small>하반기 소규모로 재편 (기존 22명 → 10명 내외)</small></div></div>

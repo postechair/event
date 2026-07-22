@@ -71,6 +71,52 @@ a:hover { color: var(--primary-strong); }
 .backbtn { display: inline-flex; align-items: center; gap: 6px; background: var(--primary); color: #fff; font-size: 15.5px; font-weight: 700; padding: 9px 16px; border-radius: var(--radius-md); }
 .backbtn:hover { background: var(--primary-strong); color: #fff; }
 
+/* ---- WG 섹션 → 사례집 진입 링크 ---- */
+.wg-caselink { display: block; margin: 0 0 18px; padding: 13px 18px; border: 1px solid var(--primary-bg-active, var(--line-subtle)); border-left: 4px solid var(--primary); border-radius: var(--radius-md); background: var(--primary-bg); color: var(--primary-heavy, var(--primary)); font-size: 15px; font-weight: 700; }
+.wg-caselink:hover { background: var(--primary-bg-active); color: var(--primary-strong); }
+
+/* ---- Working Group 활동 사례집 ---- */
+.wg-hero { background: linear-gradient(135deg, #A61955 0%, #7E1444 100%); color: #fff; }
+.wg-wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.wg-hero .wg-wrap { padding: 46px 24px 42px; }
+.wg-hero .eyebrow { font: 700 13px/1 var(--font-base), system-ui; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
+.wg-title { margin: 14px 0 0; font-size: 38px; font-weight: 700; letter-spacing: -.03em; line-height: 1.15; color: #fff; }
+.wg-lede { margin: 16px 0 0; font-size: 16.5px; line-height: 1.7; opacity: .95; max-width: 80ch; }
+.wg-lede b { font-weight: 700; }
+.wg-note { margin: 12px 0 0; font-size: 13.5px; opacity: .8; }
+
+.wg-sec { padding: 40px 0; }
+.wg-sec-alt { background: var(--bg-alternative); border-top: 1px solid var(--line-subtle); }
+.wg-sech { margin: 0 0 18px; }
+.trk { display: inline-block; font-size: 14px; font-weight: 800; letter-spacing: .01em; color: #fff; border-radius: 999px; padding: 6px 16px; }
+.trk-심화 { background: var(--primary); }
+.trk-응용 { background: var(--primary-heavy, #7E1444); }
+.trk-기본 { background: var(--fg-neutral); }
+.wg-sech2 { margin: 0 0 18px; font-size: 20px; font-weight: 800; color: var(--fg-strong); letter-spacing: -.01em; }
+
+.case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.case { border: 1px solid var(--line-subtle); border-top: 3px solid var(--primary); border-radius: 14px; background: var(--bg-elevated); box-shadow: var(--shadow-emphasize); padding: 22px 22px; display: flex; flex-direction: column; }
+.case-t { margin: 0; font-size: 18.5px; font-weight: 800; color: var(--fg-strong); letter-spacing: -.01em; line-height: 1.35; }
+.case-s { margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: var(--fg-neutral); }
+.case-stack { margin: 14px 0 4px; display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: 12px; font-weight: 700; color: var(--primary-heavy, #7E1444); background: var(--primary-bg); border-radius: 6px; padding: 3px 9px; }
+.case-block { margin-top: 16px; }
+.case-h { font-size: 12.5px; font-weight: 800; letter-spacing: .04em; color: var(--fg-alternative); text-transform: uppercase; margin-bottom: 8px; }
+.case-feat { margin: 0; padding: 0; list-style: none; display: grid; gap: 7px; }
+.case-feat li { position: relative; padding-left: 15px; font-size: 14px; line-height: 1.6; color: var(--fg-neutral); }
+.case-feat li::before { content: ""; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--primary); }
+.case-way { margin: 0; font-size: 13.5px; line-height: 1.65; color: var(--fg-alternative); }
+
+.pat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.pat { border: 1px solid var(--line-subtle); border-radius: 12px; background: var(--bg-elevated); padding: 18px 20px; }
+.pat h4 { margin: 0 0 8px; font-size: 15.5px; font-weight: 800; color: var(--primary); }
+.pat p { margin: 0; font-size: 14px; line-height: 1.65; color: var(--fg-neutral); }
+
+@media (max-width: 760px) {
+  .wg-title { font-size: 30px; }
+  .case-grid, .pat-grid { grid-template-columns: 1fr; }
+}
+
 /* ---- 히어로 풀폭 밴드 (cover-hero 그라데이션 승격, 텍스트 값은 표지 원본) ---- */
 .hero { background: linear-gradient(135deg, #A61955 0%, #7E1444 100%); color: #fff; scroll-margin-top: 60px; }
 .hero-inner { max-width: 1140px; margin: 0 auto; padding: 44px 24px 40px; }
