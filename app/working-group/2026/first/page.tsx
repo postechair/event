@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import BackBar from "@/components/BackBar";
 import SiteFooter from "@/components/SiteFooter";
+import shotSafety from "@/assets/wg/case-safety.png";
+import shotCohort from "@/assets/wg/case-cohort.png";
+
+const SHOTS: Record<string, { src: string; label: string }> = {
+  "이수현황 자동 리포트 (도구 + 웹)": { src: shotSafety.src, label: "safety-completion.app" },
+  "성적 대시보드의 코호트 분석 확장": { src: shotCohort.src, label: "cohort-analytics.app" },
+};
 
 export const metadata: Metadata = {
   title: "2026 상반기 WG 참여자 산출물 사례집 | 2026 AIR EVENT",
@@ -171,7 +178,7 @@ export default function WorkingGroupCases2026H1() {
         <section className="wg-hero">
           <div className="wg-wrap">
             <div className="wg-eyebrow">POSTECH AIR · Working Group · 2026 상반기</div>
-            <h1 className="wg-title">2026년 상반기<br />WG 참여자 산출물 사례집</h1>
+            <h1 className="wg-title">2026년 상반기<br /><span className="grad">WG 참여자 산출물 사례집</span></h1>
             <p className="wg-lede">
               워킹그룹은 <b>데이터 대시보드 표준 실습</b>에서 출발했습니다. 여러 참여자가 여기서 멈추지 않고
               <b> 자기 업무 도메인</b>으로 프로젝트를 재구성했고, 일부는 상담 챗봇·업무 자동화 플랫폼·3D 시각화까지 나아갔습니다.
@@ -209,6 +216,12 @@ export default function WorkingGroupCases2026H1() {
                     <article className="case" key={c.title}>
                       <h3 className="case-t">{c.title}</h3>
                       <p className="case-s">{c.summary}</p>
+                      {SHOTS[c.title] && (
+                        <div className="case-shot">
+                          <div className="chrome"><span className="dot" /><span className="dot" /><span className="dot" /><span className="barlabel">{SHOTS[c.title].label}</span></div>
+                          <img src={SHOTS[c.title].src} alt={`${c.title} 화면 (더미 데이터, 민감정보 마스킹)`} loading="lazy" />
+                        </div>
+                      )}
                       <div className="case-stack">
                         {c.stack.map((s) => <span className="tag" key={s}>{s}</span>)}
                       </div>
