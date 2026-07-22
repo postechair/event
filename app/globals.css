@@ -20,16 +20,16 @@ body {
 a { color: var(--primary); text-decoration: none; }
 a:hover { color: var(--primary-strong); }
 
-/* ---- 상단 공지 배너 ---- */
-.noticebar { background: linear-gradient(135deg, #A61955 0%, #7E1444 100%); color: #fff; }
+/* ---- 상단 공지 배너 (히어로 레드와 구분되는 다크 뉴트럴 표면) ---- */
+.noticebar { background: var(--inverse-bg); color: var(--inverse-fg); }
 .notice-inner { max-width: 1140px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; gap: 12px; }
-.notice-badge { flex: none; font-size: 12px; font-weight: 800; letter-spacing: .02em; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 3px 10px; }
-.notice-text { margin: 0; font-size: 14.5px; line-height: 1.5; color: #fff; }
+.notice-badge { flex: none; font-size: 12px; font-weight: 800; letter-spacing: .02em; color: var(--inverse-fg); background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 3px 10px; }
+.notice-text { margin: 0; font-size: 14.5px; line-height: 1.5; color: var(--inverse-fg); }
 .notice-text b { font-weight: 700; }
-.notice-text s { opacity: .72; }
-.notice-text a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
-.notice-text a:hover { color: #fff; opacity: .85; }
-.notice-close { flex: none; margin-left: auto; background: transparent; border: 0; color: #fff; font-size: 22px; line-height: 1; cursor: pointer; padding: 0 4px; opacity: .8; }
+.notice-text s { opacity: .6; }
+.notice-text a { color: var(--inverse-fg); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+.notice-text a:hover { color: var(--inverse-fg); opacity: .82; }
+.notice-close { flex: none; margin-left: auto; background: transparent; border: 0; color: var(--inverse-fg); font-size: 22px; line-height: 1; cursor: pointer; padding: 0 4px; opacity: .8; }
 .notice-close:hover { opacity: 1; }
 
 /* ---- sticky 상단 네비 ---- */
