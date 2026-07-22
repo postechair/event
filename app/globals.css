@@ -277,6 +277,12 @@ a:hover { color: var(--primary-strong); }
   .pat-grid { grid-template-columns: 1fr; }
   .pat { border-right: 0 !important; padding: 24px 0 !important; }
 }
+@media (max-width: 640px) {
+  /* 궤도 그래픽(고정 420px)이 좁은 화면을 넘쳐 좌우가 잘리므로 모바일에서 숨김 (장식) */
+  .hero-visual { display: none; }
+  .hero-grid { padding-bottom: 36px; }
+  .wg-title { font-size: 38px; }
+}
 
 /* ---- 히어로 풀폭 밴드 (cover-hero 그라데이션 승격, 텍스트 값은 표지 원본) ---- */
 .hero { background: linear-gradient(135deg, #A61955 0%, #7E1444 100%); color: #fff; scroll-margin-top: 60px; }
