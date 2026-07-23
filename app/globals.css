@@ -115,9 +115,6 @@ a:hover { color: var(--primary-strong); }
 .tile-sticker { animation: wgStickerPulse 1.7s ease-in-out infinite; }
 .tile-sticker:hover { animation-play-state: paused; transform: rotate(6deg) scale(1.1); }
 .status-ext { animation: wgStatusPulse 1.7s ease-in-out infinite; transform-origin: center; }
-@media (prefers-reduced-motion: reduce) {
-  .tile-sticker, .status-ext { animation: none; }
-}
 
 /* ---- WG 섹션 → 사례집 진입 링크 ---- */
 .wg-caselink { display: block; margin: 0 0 18px; padding: 13px 18px; border: 1px solid var(--primary-bg-active, var(--line-subtle)); border-left: 4px solid var(--primary); border-radius: var(--radius-md); background: var(--primary-bg); color: var(--primary-heavy, var(--primary)); font-size: 15px; font-weight: 700; }

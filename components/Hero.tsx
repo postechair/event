@@ -13,7 +13,7 @@ export default function Hero() {
         <nav className="tiles" aria-label="빠른 바로가기">
           <TshirtCard />
           <div className="tile tile-wg">
-            <Link className="tile-sticker" href="/working-group/2026/first"><span className="star">★</span> 2026 상반기<br />참여자 산출물 사례집</Link>
+            <Link className="tile-sticker" href="/working-group/2026/first"><span className="star">★</span> 2026 상반기<br />참여자 산출물 사례집<br />바로가기 →</Link>
             <span className="tile-pill">Event 1</span>
             <a className="tile-t" href="#pg-wg">① Working Group</a>
             <span className="minitag">지속형 · 실무 공동 구현</span>
