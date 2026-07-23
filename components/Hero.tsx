@@ -31,7 +31,7 @@ export default function Hero() {
             </span>
           </div>
           <div className="tile tile-status-host">
-            <span className="tile-status status-ext">신청 마감 연장</span>
+            <span className="tile-status status-ext">신청 마감 연장 : 8.26(수)까지</span>
             <span className="tile-pill">Event 3</span>
             <a className="tile-t" href="#pg-comp">③ AX 공모전</a>
             <span className="minitag">공모(출품)형 · 챌린지</span>

@@ -512,6 +512,10 @@ button.ans:hover { border-color: var(--line); background: var(--fill); }
 
 /* ---- 인라인 grid 치환 유틸 (값은 디자인 인라인 스타일과 동일) ---- */
 .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+/* 라이선스 지원 기간 주의 박스 (앰버 톤, 굿즈 G-Color) */
+.notebox { font-size: 13px; line-height: 1.6; color: var(--fg-neutral); background: var(--g-cream); border: 1px solid var(--g-gold); border-left: 3px solid var(--g-orange); border-radius: 8px; padding: 9px 12px; }
+.notebox b { color: var(--fg-strong); font-weight: 700; }
+.notebox b:first-child { color: var(--g-orange); font-weight: 800; margin-right: 5px; }
 .g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .g2x16 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; margin-top: 18px; }
 

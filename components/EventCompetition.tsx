@@ -18,6 +18,7 @@ export default function EventCompetition({ eyebrow = "행사 안내" }: { eyebro
             <div className="speccard" style={{ padding: "15px 16px" }}>
               <div style={{ fontSize: 14.5, fontWeight: 700, color: "var(--primary)", marginBottom: 6 }}>라이선스 지원 : 참가신청서 작성 시 신청</div>
               <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}>라이선스 신청서 제출자(팀) 심사 후 <b style={{ color: "var(--fg-strong)" }}>AI 라이선스(Claude Pro)</b> 제공. 팀은 팀원 개인별 제공. <span style={{ color: "var(--fg-alternative)" }}>Working Group 등으로 이미 지원받은 경우 제외.</span></div>
+              <div className="notebox" style={{ marginTop: 10 }}><b>주의</b> 7.29(수)까지 접수된 라이선스 신청분은 <b>2개월(8·9월 사용)</b> 지원되며, 이후 접수분은 <b>1개월(9월 사용)</b> 지원됩니다.</div>
             </div>
             <div className="speccard" style={{ padding: "15px 16px" }}>
               <div style={{ fontSize: 14.5, fontWeight: 700, color: "var(--primary)", marginBottom: 6 }}>AIR센터 지원 : 8.26(수)까지 별도 신청서 작성</div>
