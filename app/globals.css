@@ -106,7 +106,8 @@ a:hover { color: var(--primary-strong); }
 .tile-status-host { position: relative; }
 .tile-status { position: absolute; top: -9px; right: -7px; z-index: 3; transform: rotate(4deg); font-size: 11.5px; font-weight: 800; letter-spacing: -.01em; color: #fff; border: 2px solid #fff; border-radius: 999px; padding: 5px 11px; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,.28); }
 .status-soon { background: #F47920; }
-.status-ext { background: #0f9d63; }
+.status-ext { background: #0f9d63; text-align: center; }
+.tile-status-sub { display: block; margin-top: 3px; font-size: 10px; font-weight: 700; letter-spacing: -.01em; opacity: .95; }
 
 /* ---- WG 섹션 → 사례집 진입 링크 ---- */
 .wg-caselink { display: block; margin: 0 0 18px; padding: 13px 18px; border: 1px solid var(--primary-bg-active, var(--line-subtle)); border-left: 4px solid var(--primary); border-radius: var(--radius-md); background: var(--primary-bg); color: var(--primary-heavy, var(--primary)); font-size: 15px; font-weight: 700; }
@@ -292,7 +293,9 @@ a:hover { color: var(--primary-strong); }
 .hero-lede { margin: 14px 0 0; font-size: 16.5px; line-height: 1.6; opacity: .92; }
 
 /* 빠른 바로가기 타일 — 행사별 신청 경로 + 직접 폼 링크 */
-.tiles { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.tiles { margin-top: 28px; display: grid; grid-template-columns: 0.82fr 1fr 1fr 1fr; gap: 12px; }
+.tile-img { padding: 0; overflow: hidden; background: #fff; align-items: stretch; justify-content: center; }
+.tile-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; }
 .tile {
   display: flex;
   flex-direction: column;

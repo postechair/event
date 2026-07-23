@@ -1,4 +1,5 @@
 import Link from "next/link";
+import tshirt from "@/assets/TshirtsAIR01.png";
 
 /** 히어로 풀폭 밴드 + 이벤트별 통합 카드(빠른 바로가기 + 행사 요약 + 공통 안내)
  *  문구는 원문 그대로 — 요약 카드(구 mini3)와 공통 안내(note-strip)를 타일에 통합 */
@@ -10,6 +11,7 @@ export default function Hero() {
         <p className="hero-lede">2026년 하반기 AIR센터가 준비한 세 가지 AI 행사를 안내드립니다. 모두 전 직원이 참여 대상이며, 부담·목표·숙련도에 따라 내 상황에 맞는 event를 선택하시기 바랍니다.</p>
 
         <nav className="tiles" aria-label="빠른 바로가기">
+          <div className="tile tile-img"><img src={tshirt.src} alt="POSTECH AIR 티셔츠 디자인" /></div>
           <div className="tile tile-wg">
             <Link className="tile-sticker" href="/working-group/2026/first"><span className="star">★</span> 2026 상반기<br />참여자 산출물 사례집</Link>
             <span className="tile-pill">Event 1</span>
@@ -31,7 +33,7 @@ export default function Hero() {
             </span>
           </div>
           <div className="tile tile-status-host">
-            <span className="tile-status status-ext">신청 마감 연장 : 8.26(수)까지</span>
+            <span className="tile-status status-ext">신청 마감 연장 : 8.26(수)까지<span className="tile-status-sub">라이선스 최대 2개월 지원</span></span>
             <span className="tile-pill">Event 3</span>
             <a className="tile-t" href="#pg-comp">③ AX 공모전</a>
             <span className="minitag">공모(출품)형 · 챌린지</span>
