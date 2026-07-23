@@ -22,7 +22,7 @@ export default function Hero() {
             <span className="tile-d">참여문의 : <a href="mailto:postech-air@postech.ac.kr">postech-air@postech.ac.kr</a></span>
           </div>
           <div className="tile tile-status-host">
-            <span className="tile-status status-soon">마감 임박</span>
+            <span className="tile-status status-soon">사전수요조사 마감 임박<span className="tile-status-sub">7.29(수)까지</span></span>
             <span className="tile-pill">Event 2</span>
             <a className="tile-t" href="#pg-edu">② AX 부트캠프(고급교육)</a>
             <span className="minitag">집중 교육형</span>

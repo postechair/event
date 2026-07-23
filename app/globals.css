@@ -105,7 +105,7 @@ a:hover { color: var(--primary-strong); }
 /* Event2/3 상태 배지 — 사례집 딱지보다 작게, 색으로 성격 구분 */
 .tile-status-host { position: relative; }
 .tile-status { position: absolute; top: -9px; right: -7px; z-index: 3; transform: rotate(4deg); font-size: 11.5px; font-weight: 800; letter-spacing: -.01em; color: #fff; border: 2px solid #fff; border-radius: 999px; padding: 5px 11px; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,.28); }
-.status-soon { background: #F47920; }
+.status-soon { background: #F47920; text-align: center; animation: wgStatusPulse 1.7s ease-in-out infinite; transform-origin: center; }
 .status-ext { background: #0f9d63; text-align: center; }
 .tile-status-sub { display: block; margin-top: 3px; font-size: 10px; font-weight: 700; letter-spacing: -.01em; opacity: .95; }
 
