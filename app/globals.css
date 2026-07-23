@@ -109,6 +109,16 @@ a:hover { color: var(--primary-strong); }
 .status-ext { background: #0f9d63; text-align: center; }
 .tile-status-sub { display: block; margin-top: 3px; font-size: 10px; font-weight: 700; letter-spacing: -.01em; opacity: .95; }
 
+/* 강조 pulse — 딱지가 조금씩 커졌다 작아졌다 (회전각 유지) */
+@keyframes wgStickerPulse { 0%, 100% { transform: rotate(6deg) scale(1); } 50% { transform: rotate(6deg) scale(1.08); } }
+@keyframes wgStatusPulse  { 0%, 100% { transform: rotate(4deg) scale(1); } 50% { transform: rotate(4deg) scale(1.07); } }
+.tile-sticker { animation: wgStickerPulse 1.7s ease-in-out infinite; }
+.tile-sticker:hover { animation-play-state: paused; transform: rotate(6deg) scale(1.1); }
+.status-ext { animation: wgStatusPulse 1.7s ease-in-out infinite; transform-origin: center; }
+@media (prefers-reduced-motion: reduce) {
+  .tile-sticker, .status-ext { animation: none; }
+}
+
 /* ---- WG 섹션 → 사례집 진입 링크 ---- */
 .wg-caselink { display: block; margin: 0 0 18px; padding: 13px 18px; border: 1px solid var(--primary-bg-active, var(--line-subtle)); border-left: 4px solid var(--primary); border-radius: var(--radius-md); background: var(--primary-bg); color: var(--primary-heavy, var(--primary)); font-size: 15px; font-weight: 700; }
 .wg-caselink:hover { background: var(--primary-bg-active); color: var(--primary-strong); }
@@ -294,8 +304,16 @@ a:hover { color: var(--primary-strong); }
 
 /* 빠른 바로가기 타일 — 행사별 신청 경로 + 직접 폼 링크 */
 .tiles { margin-top: 28px; display: grid; grid-template-columns: 0.82fr 1fr 1fr 1fr; gap: 12px; }
-.tile-img { padding: 0; overflow: hidden; background: #fff; align-items: stretch; justify-content: center; }
+.tile-img { position: relative; padding: 0; overflow: hidden; background: #fff; align-items: stretch; justify-content: center; cursor: zoom-in; font: inherit; }
 .tile-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; }
+.tile-img-zoom { position: absolute; left: 0; right: 0; bottom: 0; font-size: 12px; font-weight: 700; color: #fff; background: rgba(126,20,68,.72); padding: 7px 10px; text-align: center; opacity: 0; transition: opacity .18s; }
+.tile-img:hover .tile-img-zoom, .tile-img:focus-visible .tile-img-zoom { opacity: 1; }
+
+/* 이미지 확대 모달 */
+.img-modal { position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,.82); display: flex; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out; }
+.img-modal img { max-width: min(92vw, 720px); max-height: 92vh; border-radius: 12px; box-shadow: 0 24px 70px rgba(0,0,0,.55); cursor: default; }
+.img-modal-close { position: fixed; top: 18px; right: 22px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.4); color: #fff; font-size: 26px; line-height: 1; cursor: pointer; }
+.img-modal-close:hover { background: rgba(255,255,255,.26); }
 .tile {
   display: flex;
   flex-direction: column;
