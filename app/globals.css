@@ -303,6 +303,7 @@ a:hover { color: var(--primary-strong); }
 .tiles { margin-top: 28px; display: grid; grid-template-columns: 0.82fr 1fr 1fr 1fr; gap: 12px; }
 .tile-img { position: relative; padding: 0; overflow: hidden; background: #fff; align-items: stretch; justify-content: center; cursor: zoom-in; font: inherit; }
 .tile-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; }
+.tile-img-label { position: absolute; left: 0; right: 0; top: 0; z-index: 1; font-size: 12.5px; font-weight: 800; letter-spacing: -.01em; color: #fff; background: linear-gradient(180deg, rgba(126,20,68,.92) 0%, rgba(126,20,68,.62) 70%, rgba(126,20,68,0) 100%); padding: 9px 10px 16px; text-align: center; }
 .tile-img-zoom { position: absolute; left: 0; right: 0; bottom: 0; font-size: 12px; font-weight: 700; color: #fff; background: rgba(126,20,68,.72); padding: 7px 10px; text-align: center; opacity: 0; transition: opacity .18s; }
 .tile-img:hover .tile-img-zoom, .tile-img:focus-visible .tile-img-zoom { opacity: 1; }
 

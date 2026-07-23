@@ -16,7 +16,8 @@ export default function TshirtCard() {
 
   return (
     <>
-      <button className="tile tile-img" onClick={() => setOpen(true)} aria-label="티셔츠 디자인 크게 보기">
+      <button className="tile tile-img" onClick={() => setOpen(true)} aria-label="AIR센터 오시는 길 — 티셔츠 디자인 크게 보기">
+        <span className="tile-img-label">AIR센터 오시는 길</span>
         <img src={tshirt.src} alt="POSTECH AIR 티셔츠 디자인" />
         <span className="tile-img-zoom" aria-hidden="true">⛶ 크게 보기</span>
       </button>
