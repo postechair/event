@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/styles.css";
 import "./globals.css";
+import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   title: "2026 AIR EVENT | POSTECH AIR센터",
@@ -15,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics code="postechair" />
+      </body>
     </html>
   );
 }
