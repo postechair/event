@@ -13,9 +13,9 @@ export default function ApplySection() {
         </div>
         <div className="speccard" style={{ padding: "15px 16px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}><span className="lgn">2</span><span style={{ fontSize: 16, fontWeight: 700, color: "var(--fg-strong)" }}>AX 부트캠프(고급교육)</span></div>
-          <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}><b style={{ color: "var(--fg-strong)" }}>사전 수요조사 설문</b><b>에 응답해주세요.</b> 참여 의사와 가능 일정을 받아 차수를 편성합니다.
+          <div style={{ fontSize: 14.5, lineHeight: 1.6, color: "var(--fg-neutral)" }}><b style={{ color: "var(--fg-strong)" }}>사전 수요조사가 마감되었습니다.</b> (7.29(수) 마감) 접수된 응답을 바탕으로 차수를 편성하며, 이후 일정은 응답자에게 개별 안내됩니다.
             <div className="cardlinks">
-              <div><a href="https://forms.cloud.microsoft/r/hfkNYYATZj" target="_blank" rel="noopener">사전수요조사 ↗</a></div>
+              <div><span className="closed">사전수요조사</span><span className="pill opt">마감</span></div>
             </div>
           </div>
         </div>

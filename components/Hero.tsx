@@ -20,14 +20,14 @@ export default function Hero() {
             <span className="tile-d">참여문의 : <a href="mailto:postech-air@postech.ac.kr">postech-air@postech.ac.kr</a></span>
           </div>
           <div className="tile tile-status-host">
-            <span className="tile-status status-soon">사전수요조사 마감 임박<span className="tile-status-sub">7.29(수)까지</span></span>
+            <span className="tile-status status-closed">사전수요조사 마감<span className="tile-status-sub">7.29(수) 마감되었습니다</span></span>
             <span className="tile-pill">Event 2</span>
             <a className="tile-t" href="#pg-edu">② AX 부트캠프(고급교육)</a>
             <span className="minitag">집중 교육형</span>
             <span className="minid">3일 집중 교육과 현장 적용으로 '1인 1과제'를 완주하는 AX Leader 양성 과정입니다.</span>
             <div className="minimeta"><div><b>형태</b>집합(차수당 8명)</div><div><b>시간</b>3일·일 5시간</div><div><b>보상</b>수료·현업 연계</div></div>
             <span className="tile-links">
-              <a href="https://forms.cloud.microsoft/r/hfkNYYATZj" target="_blank" rel="noopener">사전수요조사 ↗</a>
+              <span className="closed">사전수요조사 마감되었습니다</span>
             </span>
           </div>
           <div className="tile tile-status-host">

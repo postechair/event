@@ -42,18 +42,24 @@ await page.screenshot({ path: `${out}/fullpage-1600.png`, fullPage: true });
   results.push(["공지 배너 닫기 + 재로드 후 유지", goneAfterClose && staysGone]);
 }
 
-// SC1 데스크톱: 스크롤 없이 행사별 신청 경로 3종 (mailto + 수요조사 + 공모전 2링크)
+// SC1 데스크톱: 스크롤 없이 행사별 신청 경로 노출 (mailto + 공모전 2링크)
+// 2026-07-28: Event2(AX 부트캠프) 사전수요조사 마감 → 폼 링크를 걷어내고 마감 표기로 대체(오너 지시).
+// 따라서 edu는 링크가 아니라 '.tile-links .closed' 마감 표기가 보이는지 검사한다.
 const firstScreen = await page.evaluate(() => {
   const vis = (el) => { const r = el.getBoundingClientRect(); return r.top >= 0 && r.bottom <= window.innerHeight; };
   const q = (sel) => { const el = document.querySelector(sel); return el ? vis(el) : false; };
   return {
     wg: q('.tiles a[href^="mailto:"]'),
-    edu: q('.tiles a[href*="hfkNYYATZj"]'),
+    eduClosed: q('.tiles .tile-links .closed'),
     comp1: q('.tiles a[href*="ma8zZBZQGd"]'),
     comp2: q('.tiles a[href*="ge3tZCAkLd"]'),
   };
 });
-results.push(["첫 화면(1600×900) 내 신청 경로 4링크 전부 노출", Object.values(firstScreen).every(Boolean)]);
+results.push(["첫 화면(1600×900) 내 신청 경로 노출 (Event2는 마감 표기)", Object.values(firstScreen).every(Boolean)]);
+
+// Event2 마감 불변식: 페이지 어디에도 사전수요조사 폼으로 가는 클릭 가능 링크가 없어야 한다
+const eduLiveLinks = await page.$$eval('a[href*="hfkNYYATZj"]', (els) => els.length);
+results.push([`Event2 사전수요조사 폼 링크 0건 (마감, 실제 ${eduLiveLinks}건)`, eduLiveLinks === 0]);
 
 // 앵커 점프 — 네비(60px)에 가리지 않는지
 for (const [label, href] of [["행사 찾기", "#guide"], ["한눈 비교", "#compare"], ["행사 안내", "#pg-wg"], ["신청·일정", "#pg-apply"]]) {

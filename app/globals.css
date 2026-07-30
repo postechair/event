@@ -107,6 +107,8 @@ a:hover { color: var(--primary-strong); }
 .tile-status { position: absolute; top: -9px; right: -7px; z-index: 3; transform: rotate(4deg); font-size: 11.5px; font-weight: 800; letter-spacing: -.01em; color: #fff; border: 2px solid #fff; border-radius: 999px; padding: 5px 11px; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,.28); }
 .status-soon { background: #F47920; text-align: center; animation: wgStatusPulse 1.7s ease-in-out infinite; transform-origin: center; }
 .status-ext { background: #0f9d63; text-align: center; }
+/* 마감 배지 — 정적(맥동 없음)·중립 회색조. 마감된 항목에 긴급성을 주지 않기 위해 애니메이션을 쓰지 않는다 */
+.status-closed { background: #6b7280; text-align: center; }
 .tile-status-sub { display: block; margin-top: 3px; font-size: 10px; font-weight: 700; letter-spacing: -.01em; opacity: .95; }
 
 /* 강조 pulse — 딱지가 조금씩 커졌다 작아졌다 (회전각 유지) */
@@ -319,6 +321,8 @@ a.tile:hover { background: rgba(255,255,255,.16); color: #fff; }
 .tile-links { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
 .tile-links a { font-size: 14.5px; font-weight: 700; color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); border-radius: 8px; padding: 7px 10px; text-align: center; }
 .tile-links a:hover { background: rgba(255,255,255,.22); color: #fff; }
+/* 히어로 타일 내 마감 표기 — 링크 자리를 대체(클릭 불가). 어두운 타일 배경이라 흰 계열 유지 */
+.tile-links .closed { font-size: 14.5px; font-weight: 700; color: rgba(255,255,255,.72); background: rgba(255,255,255,.07); border: 1px dashed rgba(255,255,255,.3); border-radius: 8px; padding: 7px 10px; text-align: center; }
 /* 타일에 통합된 행사 요약(구 mini3)·공통 안내 — 적색 배경 색 보정 */
 .tile .minitag { color: rgba(255,255,255,.85); margin-top: 2px; }
 .tile .minid { color: rgba(255,255,255,.88); margin-top: 6px; flex: 1; }
@@ -517,6 +521,14 @@ button.ans:hover { border-color: var(--line); background: var(--fill); }
 .cardlinks div { display: flex; align-items: center; gap: 8px; }
 .cardlinks a { font-weight: 700; }
 .cardlinks .pill { margin-left: 0; }
+/* 마감된 신청 링크 — 링크를 걷어내고(폼 유입 차단) 마감 사실만 표기 */
+.cardlinks .closed { font-weight: 700; color: var(--fg-assistive); text-decoration: line-through; }
+.linkbtn-off { display: flex; align-items: center; gap: 13px; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--bg-alternative); opacity: .72; cursor: not-allowed; }
+.linkbtn-off .ln { flex: none; width: 34px; height: 34px; border-radius: 8px; background: var(--bg-elevated); color: var(--fg-assistive); font-size: 17px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.linkbtn-off .lt { flex: 1; }
+.linkbtn-off .lt .lk { display: block; font-size: 17px; font-weight: 700; color: var(--fg-neutral); }
+.linkbtn-off .lt .lu { display: block; font-size: 14px; color: var(--fg-assistive); margin-top: 2px; text-decoration: line-through; word-break: break-all; line-height: 1.35; }
+.linkbtn-off .lgo { flex: none; font-size: 15px; font-weight: 800; color: var(--fg-assistive); }
 
 /* ---- 인라인 grid 치환 유틸 (값은 디자인 인라인 스타일과 동일) ---- */
 .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }

@@ -49,17 +49,17 @@ export default function EventEducation({ eyebrow = "행사 안내" }: { eyebrow?
 
           <div className="applyzone">
             <div className="fith">신청 방법</div>
-            <p className="applyp">사전수요조사 설문에 응답 (수요에 따라 선발 과정이 발생할 수 있음)</p>
+            <p className="applyp"><b>사전수요조사가 마감되었습니다.</b> (7.29(수) 마감) 이후 일정은 응답자에게 개별 안내됩니다.</p>
             <div className="sech">사전수요조사 설문 링크</div>
             <div className="links">
-              <a className="linkbtn" href="https://forms.cloud.microsoft/r/hfkNYYATZj" target="_blank" rel="noopener">
-                <span className="ln">1</span><span className="lt"><span className="lk">사전수요조사 (7.29) <span className="pill req" style={{ marginLeft: 6 }}>필수</span></span><span className="lu">forms.cloud.microsoft/r/hfkNYYATZj</span></span><span className="lgo">열기 →</span>
-              </a>
+              <div className="linkbtn-off" aria-disabled="true">
+                <span className="ln">1</span><span className="lt"><span className="lk">사전수요조사 (7.29) <span className="pill opt" style={{ marginLeft: 6 }}>마감</span></span><span className="lu">forms.cloud.microsoft/r/hfkNYYATZj</span></span><span className="lgo">마감되었습니다</span>
+              </div>
             </div>
             <div className="sech">일정</div>
             <div className="tl">
               <div className="tlrow"><div className="tld">7. 15 (수)</div><div className="tlt">사전수요조사 설문 시작</div></div>
-              <div className="tlrow"><div className="tld">7. 29 (수)</div><div className="tlt">사전수요조사 설문 마감</div></div>
+              <div className="tlrow"><div className="tld">7. 29 (수)</div><div className="tlt">사전수요조사 설문 마감 <b>(마감되었습니다)</b></div></div>
               <div className="tlrow"><div className="tld">8~9월</div><div className="tlt">교육생 선발 및 3일 교육 시행</div></div>
               <div className="tlrow"><div className="tld">교육종료 후</div><div className="tlt">현업 연계</div></div>
             </div>
